@@ -1,0 +1,55 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.button_and_review_container h6{
+    font-size: 20px;
+    font-weight: bold;
+}
+.button_and_review_container{
+    position: relative;
+    margin-top: 50px;
+}
+.honest_review{
+    position: relative;
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.honest_review_ctn{
+    width: 25px;
+    position: relative;
+}
+.honest_review_pfp_first,
+.honest_review_pfp_second,
+.honest_review_pfp_third,
+.honest_review_pfp_forth{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+}
+.rating{
+    display: flex;
+    justify-content: start;
+    margin-top: 50px;
+}
+.rating h6{
+    margin-left: 5px;
+}

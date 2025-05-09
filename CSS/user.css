@@ -1,0 +1,76 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.user{
+    background-position: relative;
+    height: 400px;
+    background-color: whitesmoke;
+}
+.bg{
+    width: 100%;
+    height: 250px;
+    background-image: 
+    linear-gradient(
+    rgba(232, 255, 228, 0.2),
+    rgba(232, 255, 228, 0.2)
+    ),
+    url('../Img/bg_stats.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 180px;
+}
+.stats-section {
+    position: absolute;
+    width: 1000px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--Fresh_Herb);
+}
+.stat-item {
+	text-align: center;
+	padding: 20px;
+}
+
+.stat-item .number {
+	font-size: 2.5rem;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 0.5rem;
+    color: var(--Forest_Canopy);
+}
+
+.stat-item .number::after {
+	content: '';
+	width: 50px;
+	height: 3px;
+	background-color: var(--Deep_Emerald);
+	display: block;
+	margin: 8px auto 0;
+}
+
+.stat-item .label {
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	color: var(--Forest_Canopy);
+	letter-spacing: 1px;
+}

@@ -1,0 +1,139 @@
+/* overall footer */
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+footer {
+	position: relative;
+	background-color: #f5f5fa;
+	color: #343a40;
+	/* ↑ increased top & bottom padding for extra height */
+	padding: 8rem 0 6rem;
+	overflow: hidden;
+}
+
+footer::before,
+footer::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	z-index: 0;
+	background: rgba(0, 184, 7, 0.15);
+}
+
+/* larger, shifted blobs so they still overlap gracefully */
+footer::before {
+	width: 800px;
+	height: 800px;
+	top: -250px;
+	left: -250px;
+}
+
+footer::after {
+	width: 1000px;
+	height: 1000px;
+	bottom: -350px;
+	right: -350px;
+}
+
+footer .container {
+	position: relative;
+	z-index: 1;
+}
+
+/* rest of your rules unchanged… */
+footer .small.text-muted {
+	line-height: 1.6;
+}
+
+footer h6,
+footer .card-title {
+	color: #212529;
+}
+
+footer h6 {
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+	letter-spacing: 0.05em;
+}
+/* Buttons under brand */
+footer .btn-dark.btn-sm {
+	background-color: #1e1d4c;
+	border-color: #1e1d4c;
+}
+
+footer .btn-dark.btn-sm:hover {
+	background-color: var(--Frosted_Lime) !important; 
+	border-color: var(--Neon_Leaf);
+}
+.first_footer_app_button{
+    border-radius: 20px;
+    background-color: var(--Midnight_Pine);
+}
+footer .btn-outline-secondary.btn-sm {
+	border-color: var(--Neon_Leaf) !important;
+	color: var(--Dark_Forest) !important;
+}
+footer .btn-outline-secondary.btn-sm:hover {
+	background-color: var(--Frosted_Lime) !important;
+	color: #fff;
+}
+
+/* Links in lists */
+footer ul a {
+	color: #6c757d;
+	transition: color 0.2s;
+}
+
+footer ul a:hover {
+	color: var(--Dark_Forest);
+	text-decoration: none;
+}
+
+/* Contact card */
+footer .card {
+	border-radius: 1rem;
+}
+
+footer .card-body small.text-primary {
+	font-weight: 700;
+}
+
+footer .card-body h5 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Social icons */
+footer .bi {
+	font-size: 1.2rem;
+	transition: color 0.2s;
+}
+
+footer .bi:hover {
+	color: var(--Mossy_Stone);
+}
+
+/* Bottom bar */
+footer .border-top {
+	border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+footer .small {
+	color: #6c757d;
+}

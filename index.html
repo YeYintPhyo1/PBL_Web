@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Healthy Diet</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/carousel.css">
+        <link rel="stylesheet" href="CSS/our_objective.css">
+        <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/user.css">
+        <link rel="stylesheet" href="CSS/comment.css">
+        <link rel="stylesheet" href="CSS/honest_review.css">
+        <link rel="stylesheet" href="CSS/footer.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <header class="main-header navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">Chillout</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">About Us</a></li>
+                        <!-- Recipes Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="main-nav__link nav-link "
+                                href="#"
+                                id="recipesDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown">
+                            Diets <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="recipesDropdown">
+                                <li><a class="dropdown-item" href="#">Breakfast Plan</a></li>
+                                <li><a class="dropdown-item" href="#">Lunch Plan</a></li>
+                                <li><a class="dropdown-item" href="#">Dinner Plan</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Explore</a></li>
+                    </ul>
+                    <button class="button type1">
+                        <span class="btn-txt">Hello</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+        <div class="horizontal_nav_bar">
+            <nav class="sidebar" for="check">
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar_nav-link">
+                        <span class="item-icon">
+                        <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="item-text">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar_nav-link">
+                        <span class="item-icon">
+                        <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="item-text">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar_nav-link">
+                        <span class="item-icon">
+                        <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="item-text">Home</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Hero Banner -->
+        <section class="banner-section">
+            <div class="container">
+                <span class="seasonal-tagline d-block mb-3">SUMMER SEASON</span>
+                <h1 class="primary-title display-4 fw-bold mb-4">Smoothiesthat<br>Everyone loves!</h1>
+                <p class="organic-heading lead mb-3">Huge range of organic smoothies for customers</p>
+                <div class="button_and_review_container">
+                    <button class="homepage-button mb-4">Learn More</button>
+                    <h6>Honest Review</h6>
+                    <div class="honest_review">
+                        <div class="honest_review_ctn">
+                            <img class="honest_review_pfp_first" src="Img/Honest Revie PFP/ko_omm.jpg" alt="honest_review_pfp">
+                        </div>
+                        <div class="honest_review_ctn">
+                            <img class="honest_review_pfp_second" src="Img/Honest Revie PFP/myaing.jpg" alt="honest_review_pfp">
+                        </div>
+                        <div class="honest_review_ctn">
+                            <img class="honest_review_pfp_third" src="Img/Honest Revie PFP/pfp_3.jpg" alt="honest_review_pfp">
+                        </div>
+                        <div class="honest_review_ctn">
+                            <img class="honest_review_pfp_forth" src="Img/Honest Revie PFP/pfp_1.jpg" alt="honest_review_pfp">
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="bi bi-star-fill"></i>
+                        <h6>4.5K</h6>
+                    </div>
+                </div>
+            </div>
+            <section class="homepage-carousel">
+                <div class="container">
+                    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators (direct child of .carousel) -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></button>
+                            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Second slide"></button>
+                            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Third slide"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <img src="Img/bg_pic.jpg" class="d-block w-100 carousel-image" alt="Summer Special Smoothie">
+                                <div class="carousel-content">
+                                    <h3 class="carousel-title">Summer Berry Blast</h3>
+                                    <p class="carousel-description">Fresh organic berries with almond milk</p>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <img src="Img/healthy diet.jpg" class="d-block w-100 carousel-image" alt="Tropical Mix">
+                                <div class="carousel-content">
+                                    <h3 class="carousel-title">Tropical Paradise</h3>
+                                    <p class="carousel-description">Exotic fruits with coconut water base</p>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <img src="Img/healthy diet.jpg" class="d-block w-100 carousel-image" alt="Green Detox">
+                                <div class="carousel-content">
+                                    <h3 class="carousel-title">Green Detox</h3>
+                                    <p class="carousel-description">Kale, spinach & apple combination</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Prev/Next controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="container_cover_image">
+                        <img src="Img/kids eating1.png" class="cover_image" alt="eating">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Testimonials -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Our Main Features</h2>
+                    <p class="text-muted mb-5">
+                        On her way she met a copy. The copy warned the Little Blind Text, that where it came 
+                        from it would have been rewritten a thousand times and everything that was left from 
+                        its origin would be the word.
+                    </p>
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-card active">
+                                    <div class="icon"><i class="bi bi-people"></i></div>
+                                    <h5>Organization</h5>
+                                    <p class="small">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-card">
+                                    <div class="icon "><i class="bi bi-bar-chart"></i></div>
+                                    <h5>Marketing Strategy</h5>
+                                    <p class="small">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-card">
+                                    <div class="icon "><i class="bi bi-pie-chart"></i></div>
+                                    <h5>Risk Analysis</h5>
+                                    <p class="small">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-card">
+                                    <div class="icon "><i class="bi bi-wallet2"></i></div>
+                                    <h5>Capital Market</h5>
+                                    <p class="small">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT SIDE: Story Card -->
+                <div class="col-lg-4">
+                    <div class="story-card">
+                        <img src="Img/nutritionist.jpg" alt="Team meeting">
+                        <h5>Read Our Success Story for Inspiration</h5>
+                        <p class="small text-muted">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of 
+                            the Semantics, a large language ocean.
+                        </p>
+                        <p class="small text-muted">
+                            On her way she met a copy. The copy warned the Little Blind Text, that where it came from 
+                            it would have been rewritten a thousand times and everything that was left from its origin 
+                            would be the word.
+                        </p>
+                        <button class="homepage-button mb-4"><a href="#" class="story-card-text">Learn More</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="user">
+            <div class="bg">
+                <section class="stats-section bg-light">
+                    <div class="container_stats">
+                        <div class="row">
+                            <div class="col-6 col-md-3 stat-item">
+                                <div class="number">705</div>
+                                <div class="label">Projects Completed</div>
+                            </div>
+                            <div class="col-6 col-md-3 stat-item">
+                                <div class="number">809</div>
+                                <div class="label">Satisfied Customers</div>
+                            </div>
+                            <div class="col-6 col-md-3 stat-item">
+                                <div class="number">335</div>
+                                <div class="label">Awards Received</div>
+                            </div>
+                            <div class="col-6 col-md-3 stat-item">
+                                <div class="number">35</div>
+                                <div class="label">Years of Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="container py-5 text-center feature_ctn">
+            <span class="badge text-dark mb-2 p-3 rounded-pill">Why Should We Eat Healthy Food 🔥</span>
+            <h2 class="fw-bold mb-5">
+                The Ultimate Guide to Healthy Eating,<br>
+                How to Build a Balanced Diet for a Stronger Body and Mind
+            </h2>
+            <div class="row align-items-stretch gx-5">
+                <!-- Left Column (Breakfast / Lunch / Dinner) -->
+                <div class="col-lg-4 d-flex flex-column justify-content-center align-items-end">
+                    <div class="feature-box feature-box_first">
+                        <img src="Img/bg_pic.jpg" alt="Breakfast" class="feature-icon">
+                        <div class="feature-text">
+                            <h5>Breakfast</h5>
+                            <p>Choose health on every plate.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box feature-box_middle">
+                        <img src="Img/bg_stats.png" alt="Lunch" class="feature-icon">
+                        <div class="feature-text">
+                            <h5>Lunch</h5>
+                            <p>Simple, fresh, and full of life.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <img src="Img/bg_stats3.jpg" alt="Dinner" class="feature-icon">
+                        <div class="feature-text">
+                            <h5>Dinner</h5>
+                            <p>Wellness begins with your plate.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Middle Image -->
+                <div class="col-lg-4 d-flex justify-content-center align-items-cente">
+                    <img src="Img/dish.png" alt="Healthy Bowl" class="middle-image">
+                </div>
+                <!-- Right Column (Reasons) -->
+                <div class="col-lg-4 d-flex flex-column justify-content-center align-items-start">
+                    <div class="feature-box right_column_feature-box_first">
+                        <img src="Img/bg_pic.jpg" alt="Breakfast" class="feature-icon">
+                        <div class="feature-text">
+                            <h5>Breakfast</h5>
+                            <p>Choose health on every plate.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box right_column_feature-box_middle">
+                        <img src="Img/bg_stats.png" alt="Lunch" class="feature-icon">
+                        <div class="feature-text">
+                            <h5>Lunch</h5>
+                            <p>Simple, fresh, and full of life.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box right_column_feature-box_last">
+                        <img src="Img/bg_stats3.jpg" alt="Dinner" class="feature-icon">
+                        <div class="feature-text">
+                            <h5>Dinner</h5>
+                            <p>Wellness begins with your plate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-carousel-bg">
+            <div class="container">
+                <div id="commentCarouselCustom" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner text-center">
+                        <!-- Slide 1 (Active) -->
+                        <div class="carousel-item active">
+                            <div class="d-flex flex-column align-items-center">
+                                <img
+                                    src="Img/Honest Revie PFP/myaing.jpg"
+                                    alt="Profile Picture"
+                                    class="rounded-circle comment-carousel-img mb-3"
+                                    />
+                                <div class="comment-carousel-title">Director</div>
+                                <div class="comment-carousel-name">Person Name</div>
+                                <p class="comment-carousel-text">
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    varius in enim in eros elementum tristique. Duis cursus, mi quis
+                                    viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="d-flex flex-column align-items-center">
+                                <img
+                                    src="Img/Honest Revie PFP/ko_omm.jpg"
+                                    alt="Profile Picture"
+                                    class="rounded-circle comment-carousel-img mb-3"
+                                    />
+                                <div class="comment-carousel-title">Marketing Manager</div>
+                                <div class="comment-carousel-name">Another Person</div>
+                                <p class="comment-carousel-text">
+                                    "Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                    fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget."
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="d-flex flex-column align-items-center">
+                                <img
+                                    src="Img/Honest Revie PFP/pfp_3.jpg"
+                                    alt="Profile Picture"
+                                    class="rounded-circle comment-carousel-img mb-3"
+                                    />
+                                <div class="comment-carousel-title">Team Lead</div>
+                                <div class="comment-carousel-name">Third Person</div>
+                                <p class="comment-carousel-text">
+                                    "Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
+                                    ut sem vitae risus tristique posuere. Proin ac neque a nulla tincidunt ultricies."
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Add more slides here if needed -->
+                    </div>
+                    <!-- Prev button -->
+                    <button
+                        class="carousel-control-prev button-17"
+                        type="button"
+                        data-bs-target="#commentCarouselCustom"
+                        data-bs-slide="prev"
+                        >
+                        <div class="button-top">
+                            <span class="material-icons">❮</span>
+                        </div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <!-- Next button -->
+                    <button
+                        class="carousel-control-next button-17"
+                        type="button"
+                        data-bs-target="#commentCarouselCustom"
+                        data-bs-slide="next"
+                        >
+                        <div class="button-top">
+                            <span class="material-icons">❯</span>
+                        </div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Footer using Bootstrap 5 -->
+        <!-- Footer using Bootstrap 5 with larger, taller content -->
+        <footer class="text-dark py-5">
+            <div class="container">
+                <div class="row gy-5">
+                    <!-- Brand & Download -->
+                    <div class="col-md-4">
+                        <a href="#" class="d-inline-block mb-4">
+                        <img src="/assets/logo-niotech.svg" alt="Niotech Logo" height="50">
+                        </a>
+                        <p class="fs-5 text-muted mb-4">
+                            It is a long established fact that a reader will be<br>
+                            distracted by the readable content when looking.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-dark btn-lg rounded-5">
+                            <i class="bi bi-apple me-2"></i> App Store
+                            </a>
+                            <a href="#" class="btn btn-outline-secondary btn-lg rounded-5">
+                            <i class="bi bi-android2 me-2"></i> Play Store
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Links -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="fw-bold mb-3">Pages</h5>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Home</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About Us</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Integrations</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Features</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
+                                    <li><a href="#" class="text-muted text-decoration-none">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="fw-bold mb-3">Utility Pages</h5>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Project</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
+                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Project Details</a></li>
+                                    <li><a href="#" class="text-muted text-decoration-none">Our Team</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Card -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body py-4 px-4">
+                                <small class="text-primary text-uppercase fs-6">Address</small>
+                                <h4 class="card-title mt-2 mb-3">Ready To Get Started?</h4>
+                                <p class="fs-6 text-muted mb-2">
+                                    It is a long established fact that a reader will be distracted by the readable layout.
+                                </p>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-envelope-fill text-primary me-3 fs-4"></i>
+                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">contact.tech@gmail.com</a>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-envelope-fill text-primary me-3 fs-4"></i>
+                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted">info@niotech.com</a>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-telephone-fill text-primary me-3 fs-4"></i>
+                                        <span class="text-muted">+880 123 654 789 00</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="bi bi-telephone-fill text-primary me-3 fs-4"></i>
+                                        <span class="text-muted">+001 6520 698 00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Bar -->
+                <div class="row mt-5 pt-4 border-top">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 fs-6">
+                        © 2025 Fuchsia Fantastic Four. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end fs-5">
+                        <a href="#" class="text-muted me-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/b3928d282b.js" crossorigin="anonymous"></script>
+    </body>
+</html>

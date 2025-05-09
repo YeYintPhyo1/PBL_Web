@@ -1,0 +1,75 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.sidebar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 82px;
+    background-color: #e8ffe4;
+    width: 90px;
+    height: 730px;
+    z-index: 200;
+    padding-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #003406;
+    overflow: hidden;
+    transition: width .75s ease;
+}
+.sidebar:hover{
+    width: 200px;
+}
+.horizontal_nav_bar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.horizontal_nav_bar li{
+    padding: 10px 10px;
+    border-bottom: 2px solid #076d0c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.horizontal_nav_bar li:hover{
+    background-color: #caffc4;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.sidebar_nav-link{
+    display: inline-flex;
+    column-gap: 1rem;
+    color: inherit;
+    text-decoration: none;
+}
+.item-text{
+    color: #003406;
+    padding-left: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 1250px){
+    .sidebar{
+        display: none;
+    }
+}

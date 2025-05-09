@@ -1,0 +1,120 @@
+/*Comment*/
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.comment-carousel-bg {
+	background-color: whitesmoke;
+	color: var(--Midnight_Pine);
+	padding: 2rem 0;
+}
+.comment-carousel-img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+.comment-carousel-title {
+	color: var(--Deep_Emerald);
+	/* Accent color */
+	font-weight: 500;
+}
+.comment-carousel-name {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.comment-carousel-text {
+	max-width: 600px;
+	margin: 1rem auto;
+	font-size: 1rem;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	filter: invert(100%);
+}
+.carousel-item{
+	height: 280px;
+}
+.button-17 {
+	appearance: none;
+	position: relative;
+	border-width: 0;
+	padding: 0 8px;
+	width: 100px;
+    height: 50px;
+	box-sizing: border-box;
+	font: inherit;
+	cursor: pointer;
+	margin: 10px;
+	border-radius: 20px;
+}
+.button-17 .button-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	padding: 8px 16px;
+	transform: translateY(0);
+	color: #fff;
+	background: #9ef763;
+	background: linear-gradient(90deg, rgba(158, 247, 99, 1) 0%, rgba(87, 199, 133, 1) 100%);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	transition: transform 0.3s, border-radius 0.3s, background 10s;
+}
+.button-17:active .button-top {
+	border-radius: 10px 10px 8px 8px / 8px;
+	transform: translateY(2px);
+	background: #7fb35d;
+	background: linear-gradient(90deg, rgba(127, 179, 93, 1) 0%, rgba(87, 199, 133, 1) 100%);
+}
+.button-17 .button-base {
+	position: absolute;
+	z-index: 0;
+	top: 4px;
+	left: 0;
+	border-radius: 20px;
+	height: calc(100% - 4px);
+	background-color: rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.75),
+		inset 0 2px 2px rgba(0, 0, 0, 0.25);
+	transition: border-radius 0.2s, padding-top 0.2s;
+}
+
+.button-17:active .button-bottom {
+	border-radius: 10px 10px 8px 8px / 8px;
+	padding-top: 0;
+}
+
+.button-17:active .button-base {
+	border-radius: 10px 10px 8px 8px / 8px;
+}
+.carousel-control-prev.button-17,
+.carousel-control-next.button-17 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0;
+}
+.carousel-control-prev.button-17,
+.carousel-control-next.button-17 {
+	width: auto;
+	height: auto;
+	padding: 0;
+}

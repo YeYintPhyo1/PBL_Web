@@ -1,0 +1,133 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.homepage-carousel {
+    padding: 4rem 0 13px 0;
+    background-color: #f0ffef;
+    width: 1000px;
+    position: relative;
+}
+.carousel-navigation {
+    position: relative;
+    z-index: 2;
+}
+.carousel-slide {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.carousel-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-description {
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.carousel-button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgba(255, 107, 107, 0.8);
+    margin: 0 1rem;
+}
+/* fix the carousel height once and for all */
+#mainCarousel .carousel-inner,
+#mainCarousel .carousel-item {
+    height: 500px;        /* same height as your images */
+}
+
+/* make each image cover its slide exactly */
+#mainCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container_cover_image{
+    position: absolute;
+    right: 27rem;
+    top: 17.4rem;
+}
+.cover_image{
+    width: 600px;
+    overflow: hidden;
+}
+@media only screen and (min-width: 1401px){
+    .container_cover_image{
+        position: absolute;
+        right: 27rem;
+        top: 17.4rem;
+    }
+    .cover_image{
+        width: 600px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1400px){
+    .container_cover_image{
+        position: absolute;
+        right: 22rem;
+        top: 17.4rem;
+    }
+    .cover_image{
+        width: 600px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .container_cover_image{
+        position: absolute;
+        right: 20rem;
+        top: 17.4rem;
+    }
+    .cover_image{
+        width: 600px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1150px){
+    .cover_image{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .cover_image{
+        width: 200px;
+        overflow: hidden;
+    }
+}

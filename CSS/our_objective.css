@@ -1,0 +1,68 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.feature-card {
+	position: relative;
+	padding: 1.5rem;
+	background: whitesmoke;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	margin-bottom: 1.5rem;
+	clip-path: polygon(0% 0%,
+			calc(100% - 2.5rem) 0%,
+			100% 2.5rem,
+			100% 100%,
+			0% 100%);
+    color: #ffffff;
+    color: #0b7023;
+}
+
+.feature-card.active {
+	background: #d8ffd7;
+	color: #0b7023;
+}
+.feature-card:hover{
+    background: #d8ffd7;
+	color: #0b7023;
+    transition: .5s ease-in-out;
+}
+.feature-card .icon {
+	font-size: 2rem;
+	margin-bottom: 0.75rem;
+}
+/* RIGHT‑COLUMN CARD */
+.story-card {
+	border: 2px solid #8aff88;
+	padding: 1rem;
+	background: white;
+}
+.story-card-text{
+	text-decoration: none;
+	color: #0b7023;
+}
+.story-card img {
+	width: 100%;
+	border-radius: 0.5rem;
+	object-fit: cover;
+	margin-bottom: 1rem;
+}
+
+.story-card .btn {
+	margin-top: 1rem;
+}
