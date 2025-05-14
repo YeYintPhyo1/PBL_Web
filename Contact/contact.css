@@ -1,0 +1,178 @@
+/*First Section*/
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+.feature-list i {
+	color: var(--Neon_Leaf);
+	margin-right: 8px;
+}
+
+.phone-img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	position: absolute;
+}
+
+.badge-custom {
+	background-color: #ebe4ff;
+	color: #6f42c1;
+	font-weight: 500;
+}
+
+.button-download {
+	background-color: var(--Fresh_Spring);
+	color: var(--Dark_Forest);
+	padding: 10px 25px;
+	border-radius: 10px;
+	font-weight: 500;
+}
+
+.button-download:hover {
+	background-color: #5a35a0;
+}
+
+/**/
+/*Img*/
+.healthy_food {
+	width: 600px;
+	height: 600px;
+	object-fit: cover;
+	background-position: center;
+	border-radius: 50px;
+}
+
+/**/
+.contact-box {
+	background-color: #fbf8fe;
+	border: 1px solid #f2ebfc;
+	border-radius: 12px;
+	padding: 15px;
+	box-shadow: 0 0 6px rgba(136, 72, 255, 0.06);
+	height: 230px;
+	width: 265px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.contact-box img {
+	width: 40px;
+	height: 40px;
+	margin-bottom: 15px;
+}
+
+.contact-box h4 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.contact-box p {
+	font-size: 14px;
+	color: #666;
+	line-height: 1.4;
+	margin: 0;
+}
+
+/**/
+.contact-section {
+	padding: 80px 60px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 60px;
+}
+
+.map-container iframe {
+	width: 600px;
+	height: 600px;
+	border: 0;
+	border-radius: 10px;
+}
+
+.contact-form {
+	max-width: 850px;
+	flex: 1;
+}
+
+.contact-header h2 {
+	font-size: 48px;
+	font-weight: 800;
+	margin-bottom: 12px;
+}
+
+.contact-header p {
+	font-size: 18px;
+	color: #555;
+	margin-bottom: 30px;
+}
+
+label {
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 6px;
+	display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	padding: 18px;
+	font-size: 16px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+
+textarea {
+	height: 180px;
+	resize: none;
+}
+
+.form-row {
+	display: flex;
+	gap: 20px;
+}
+
+.form-row>div {
+	flex: 1;
+}
+
+.for-submit {
+	background-color: var(--Fresh_Herb);
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 30px;
+	padding: 14px 36px;
+	border: none;
+	margin-top: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.for-submit:hover {
+	background-color: var(--Forest_Canopy)
+}

@@ -22,7 +22,7 @@
     left: 0;
     bottom: 0;
     top: 82px;
-    background-color: #e8ffe4;
+    background-color: var(--Mint_Whisper);
     width: 90px;
     height: 730px;
     z-index: 200;

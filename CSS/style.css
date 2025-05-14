@@ -105,7 +105,7 @@
 /*Nav*/
 /*N*/
 .banner-section {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../Img/bg_fruit.jpg);
+    background: linear-gradient(rgba(2,0,0,0.5), rgba(0,0,0,0)), url(../Img/bg_fruit.jpg);
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -136,7 +136,7 @@
 	border-radius: 35px;
 	color: var(--Dark_Forest);
 	z-index: 1;
-	background: var(--Frosted_Lime);
+	background: var(--Mint_Whisper);
 	position: relative;
 	font-weight: 700;
 	font-size: 17px;
@@ -163,7 +163,7 @@
 .homepage-button:hover::before {
 	width: 100%;
 }
-/**/
+/*Button End*/
 .horizontal_nav_bar{
     margin-left: 2rem;
     margin-right: 10rem;

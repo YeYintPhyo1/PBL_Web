@@ -17,13 +17,15 @@
 	--Fresh_Herb: #6BBF69;
 	--Mossy_Stone: #368835;
 	--Deep_Forest_Night : #0E250E;
+	--underline-grey: #ccc;
+	--black: #000000;
+	--soft_black: #282c32;
+	--whitesmoke: #f5f5f5;
 }
 footer {
 	position: relative;
 	background-color: #f5f5fa;
 	color: #343a40;
-	/* ↑ increased top & bottom padding for extra height */
-	padding: 8rem 0 6rem;
 	overflow: hidden;
 }
 
@@ -72,28 +74,31 @@ footer h6 {
 	letter-spacing: 0.05em;
 }
 /* Buttons under brand */
-footer .btn-dark.btn-sm {
-	background-color: #1e1d4c;
+footer .btn-dark.btn-lg {
+	background-color: var(--soft_black);
 	border-color: #1e1d4c;
+	border-radius: 30px;
+}
+/* First-button override */
+footer .btn-dark.btn-lg.first_footer_app_button {
+	border-radius: 20px;
+	background-color: var(--Midnight_Pine);
 }
 
-footer .btn-dark.btn-sm:hover {
-	background-color: var(--Frosted_Lime) !important; 
-	border-color: var(--Neon_Leaf);
-}
-.first_footer_app_button{
-    border-radius: 20px;
-    background-color: var(--Midnight_Pine);
-}
-footer .btn-outline-secondary.btn-sm {
-	border-color: var(--Neon_Leaf) !important;
-	color: var(--Dark_Forest) !important;
-}
-footer .btn-outline-secondary.btn-sm:hover {
-	background-color: var(--Frosted_Lime) !important;
-	color: #fff;
+/* Outline-secondary button styles */
+footer .btn-outline-secondary.btn-lg {
+	border-radius: 30px;
+	border-color: var(--black) !important;
+	background-color: var(--whitesmoke);
+	color: var(--soft_black) !important;
 }
 
+footer .btn-outline-secondary.btn-lg:hover {
+	background-color: var(--Dark_Forest) !important;
+	transition: 1s;
+	color: var(--whitesmoke) !important;
+	border: none;
+}
 /* Links in lists */
 footer ul a {
 	color: #6c757d;
@@ -101,7 +106,6 @@ footer ul a {
 }
 
 footer ul a:hover {
-	color: var(--Dark_Forest);
 	text-decoration: none;
 }
 
@@ -120,13 +124,13 @@ footer .card-body h5 {
 }
 
 /* Social icons */
-footer .bi {
+footer .bottom_icons {
 	font-size: 1.2rem;
 	transition: color 0.2s;
 }
 
-footer .bi:hover {
-	color: var(--Mossy_Stone);
+footer .bottom_icons:hover {
+	color: var(--Dark_Forest) !important;
 }
 
 /* Bottom bar */
@@ -137,3 +141,60 @@ footer .border-top {
 footer .small {
 	color: #6c757d;
 }
+/*Underline*/
+.section-title {
+	position: relative;
+	display: inline-block;
+	/* shrink-wrap to text width */
+	padding-bottom: 15px;
+	/* space for the lines */
+}
+
+/* the green line */
+.section-title::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	/* length of the green underline */
+	height: 2px;
+	/* thickness */
+	background-color: var(--Forest_Canopy);
+}
+
+/* the grey line */
+.section-title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 36px;
+	/* spacing after the green line */
+	width: 60px;
+	/* length of the grey underline */
+	height: 2px;
+	background-color: var(--underline-grey);
+}
+
+/*Underline*/
+.footer_links {
+	/* Apply transition on padding-left with ease-in-out */
+	transition: padding-left 0.5s ease-in-out;
+	font-size: large;
+	/* Optional: set a small starting padding so it “slides in” nicely */
+	padding-left: 5px;
+}
+
+.footer_links:hover {
+	/* Slide out to 15px */
+	color: var(--Forest_Canopy);
+	padding-left: 15px;
+}
+
+/*Changes for Icon & Text*/
+.color_change {
+	color: var(--Forest_Canopy);
+	font-weight: bold;
+}
+
+/*Changes for Icon & Text*/

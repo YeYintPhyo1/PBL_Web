@@ -1,0 +1,116 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+	--underline-grey: #ccc;
+	--black: #000000;
+	--soft_black: #282c32;
+	--whitesmoke: #f5f5f5;
+}
+.book {
+	position: relative;
+	width: 350px;
+	/* wider than tall */
+	height: 200px;
+	perspective: 1500px;
+	margin: 1rem auto;
+}
+.book-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+    
+}
+.element_ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book_front_img{
+    width: 130px;
+    padding-right: 20px;
+}
+.element{
+    color: var(--soft_black);
+    background: url(../Img/cards/facts_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+}
+.element h5{
+    font-size: 19px;
+    padding-top: 12px;
+}
+.element h6{
+    font-size: 17px;
+}
+.element p{
+    font-size: 15px;
+}
+.cover,
+.inside {
+    border-left: 5px solid var(--Vivid_Emerald);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backface-visibility: hidden;
+	transition: transform 0.6s;
+    text-align: center;
+}
+/* front cover */
+.cover {
+	background-image: url(../Img/cards/book_front_cover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	cursor: pointer;
+	transform-origin: left center;
+	z-index: 2;
+}
+
+.book:hover .cover {
+	transform: rotateY(-81deg);
+}
+/* inside page */
+.inside {
+    background-image: url(../Img/cards/Inside_paper.jpg);
+    backdrop-filter: 10px;
+	transform: rotateY(0deg);
+	text-align: left;
+    padding-top: 10px;
+    color: #27221f;
+}
+.inside h6{
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3B2F2F;
+}
+.inside .inside_element{
+    color: #3B2F2F;
+    font-size: 16px;
+    font-weight: 500;
+}

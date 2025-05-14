@@ -1,0 +1,141 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+/*First Section*/
+.feature-list i {
+	color: var(--Neon_Leaf);
+	margin-right: 8px;
+}
+
+.phone-img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	position: absolute;
+}
+
+.badge-custom {
+	background-color: #ebe4ff;
+	color: #6f42c1;
+	font-weight: 500;
+}
+
+.button-download {
+	background-color: var(--Fresh_Spring);
+	color: var(--Dark_Forest);
+	padding: 10px 25px;
+	border-radius: 10px;
+	font-weight: 500;
+}
+
+.button-download:hover {
+	background-color: #5a35a0;
+}
+/*First Section*/
+/* CSS */
+.homepage-button{
+	padding: 10px 30px;
+	border: unset;
+	border-radius: 35px;
+	color: var(--Dark_Forest);
+	z-index: 1;
+	background: var(--Frosted_Lime);
+	position: relative;
+	font-weight: 700;
+	font-size: 17px;
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+}
+.homepage-button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: var(--Forest_Canopy);
+	z-index: -1;
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 450ms
+}
+.homepage-button:hover {
+	color: var(--Mint_Whisper);
+}
+.homepage-button:hover::before {
+	width: 100%;
+}
+/*Button*/
+/*Img*/
+.healthy_food{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 50px;
+}
+/*Section 2*/
+.main-title {
+	font-size: 2.8rem;
+	font-weight: 700;
+	color: #0a1d33;
+}
+
+.bold {
+	font-family: "Dancing Script", cursive;
+	font-optical-sizing: auto;
+	font-size: 3rem;
+	font-style: normal;
+	color: #4cd45e;
+	font-weight: 600;
+}
+
+.subtext {
+	font-size: 1rem;
+	color: #555;
+}
+
+.info-icon {
+	font-size: 2rem;
+	color: #6fcf97;
+}
+
+.info-box-title {
+	font-weight: 600;
+	color: #0a1d33;
+}
+
+.asein-button {
+	background-color: #45b36b;
+	color: white;
+	padding: 20px 40px;
+	border: none;
+	border-radius: 8px;
+	font-weight: 600;
+	margin-top: 25px;
+}
+
+.image-col img {
+	margin-right: 100px;
+	max-width: 80%;
+	height: auto;
+}
+/*Section 2*/

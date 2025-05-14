@@ -1,0 +1,40 @@
+
+.container_member{
+    padding-top: 150px;
+}
+.team-card {
+	background-color: #f7f6fa;
+	border-radius: 20px;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	transition: 0.3s;
+	position: relative;
+}
+.team-card:hover {
+	transform: translateY(-5px);
+}
+.image-container {
+	position: absolute;
+	top: -75px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.team-img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.fb-icons a {
+	margin: 0 8px;
+	text-decoration: none;
+	font-size: 18px;
+	color: var(--Forest_Canopy);
+	background: #e9f0ff;
+	border-radius: 50%;
+	padding: 8px 13px 9px 13px;
+	display: inline-block;
+}
