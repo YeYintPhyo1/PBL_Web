@@ -115,10 +115,33 @@
 .main-timeline .timeline:nth-child(2){ --main-color: #00b807; }
 .main-timeline .timeline:nth-child(3){ --main-color: #008b05; }
 .main-timeline .timeline:nth-child(4){ --main-color: #076d0c; }
-@media screen and (max-width:767px){
-    .main-timeline .timeline,
-    .main-timeline .timeline:nth-child(even){
-        width: 100%;
-        margin: 0 0 25px;
-    }
+@media screen and (max-width:770px) {
+	.main-timeline .timeline,
+	.main-timeline .timeline:nth-child(odd) {
+		width: 100%;
+		margin: 0 0 25px;
+	}
+	.main-timeline .timeline:nth-child(odd) .description {
+		text-align: left;
+	}
+	.main-timeline .timeline:nth-child(odd) {
+		margin: 0 0 25px 5px;
+		float: right;
+	}
+	.main-timeline .timeline:nth-child(odd) .timeline-content {
+		text-align: left;
+		padding: 0 0 0 15px;
+		border-left: 2px solid var(--main-color);
+		border-right: none;
+	}
+	.main-timeline .timeline:nth-child(odd) .timeline-content:before,
+	.main-timeline .timeline:nth-child(odd) .timeline-content:after {
+		right: auto;
+		left: -4px;
+	}
+	.main-timeline .timeline:nth-child(odd) .timeline-year {
+		right: auto;
+		left: -2px;
+		clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+	}
 }

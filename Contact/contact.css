@@ -121,8 +121,14 @@
 	font-size: 48px;
 	font-weight: 800;
 	margin-bottom: 12px;
+	color: var(--Neon_Leaf);
 }
-
+.contact-header span{
+	font-size: 48px;
+	font-weight: 800;
+	color: var(--Deep_Emerald);
+	margin-bottom: 12px;
+}
 .contact-header p {
 	font-size: 18px;
 	color: #555;
@@ -154,7 +160,7 @@ textarea {
 
 .form-row {
 	display: flex;
-	gap: 20px;
+	gap: 20px;	
 }
 
 .form-row>div {

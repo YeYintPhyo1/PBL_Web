@@ -48,63 +48,77 @@
                         <li class="nav-item"><a class="main-nav__link nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="main-nav__link nav-link" href="#">Contact Us</a></li>
                         <button class="button type1">
-                            <span class="btn-txt">Sign In</span>
+                        <span class="btn-txt">Sign In</span>
                         </button>
                     </ul>
                 </nav>
             </div>
         </header>
-        <div class="horizontal_nav_bar">
-            <nav class="sidebar" for="check">
-                <ul>
-                    <li>
-                        <a href="#" class="sidebar_nav-link">
-                        <span class="item-icon">
-                        <i class="fa-solid fa-house"></i>
-                        </span>
-                        <span class="item-text">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidebar_nav-link">
-                        <span class="item-icon">
-                        <i class="fa-solid fa-house"></i>
-                        </span>
-                        <span class="item-text">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="sidebar_nav-link">
-                        <span class="item-icon">
-                        <i class="fa-solid fa-house"></i>
-                        </span>
-                        <span class="item-text">Home</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
         <!-- Hero Banner -->
         <section class="banner-section">
             <div class="container">
-                <span class="seasonal-tagline d-block mb-3">SUMMER SEASON</span>
-                <h1 class="primary-title display-4 fw-bold mb-4">Smoothiesthat<br>Everyone loves!</h1>
+                <span class="seasonal-tagline d-block mb-3">NutriNest</span>
+                <h1 class="primary-title display-4 fw-bold mb-4">Flourish with Flavor<br>without the Waiver!</h1>
                 <p class="organic-heading lead mb-3">Huge range of organic smoothies for customers</p>
                 <div class="button_and_review_container">
                     <button class="homepage-button mb-4">Learn More</button>
                     <h6>Honest Review</h6>
                     <div class="honest_review">
+                        <!-- first reviewer -->
                         <div class="honest_review_ctn">
-                            <img class="honest_review_pfp_first" src="Img/Honest Revie PFP/ko_omm.jpg" alt="honest_review_pfp">
+                            <img
+                                class="honest_review_pfp_first"
+                                src="Img/Honest Revie PFP/ko_omm.jpg"
+                                alt="ko_omm"
+                                tabindex="0"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="focus"
+                                title="Ko Omm"
+                                data-bs-content="This platform’s courses are clear, concise, and genuinely helped me improve my scores!"
+                                data-bs-custom-class="custom-popover"
+                                >
                         </div>
+                        <!-- second reviewer -->
                         <div class="honest_review_ctn">
-                            <img class="honest_review_pfp_second" src="Img/Honest Revie PFP/myaing.jpg" alt="honest_review_pfp">
+                            <img
+                                class="honest_review_pfp_second"
+                                src="Img/Honest Revie PFP/myaing.jpg"
+                                alt="myaing"
+                                tabindex="0"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="focus"
+                                title="Myaing"
+                                data-bs-content="I loved the interactive exercises — they kept me engaged and made learning fun."
+                                data-bs-custom-class="custom-popover"
+                                >
                         </div>
+                        <!-- third -->
                         <div class="honest_review_ctn">
-                            <img class="honest_review_pfp_third" src="Img/Honest Revie PFP/pfp_3.jpg" alt="honest_review_pfp">
+                            <img
+                                class="honest_review_pfp_third"
+                                src="Img/Honest Revie PFP/pfp_3.jpg"
+                                alt="reviewer 3"
+                                tabindex="0"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="focus"
+                                title="Reviewer Three"
+                                data-bs-content="Well-structured lessons and great support from the instructors."
+                                data-bs-custom-class="custom-popover"
+                                >
                         </div>
+                        <!-- fourth (custom green popover) -->
                         <div class="honest_review_ctn">
-                            <img class="honest_review_pfp_forth" src="Img/Honest Revie PFP/pfp_1.jpg" alt="honest_review_pfp">
+                            <img
+                                class="honest_review_pfp_forth"
+                                src="Img/Honest Revie PFP/pfp_1.jpg"
+                                alt="reviewer 4"
+                                tabindex="0"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="focus"
+                                title="Reviewer Four"
+                                data-bs-content="The community is so helpful — I never felt stuck on any problem!"
+                                data-bs-custom-class="custom-popover"
+                                >
                         </div>
                     </div>
                     <div class="rating">
@@ -112,10 +126,29 @@
                         <h6>4.5K</h6>
                     </div>
                 </div>
+                <!-- Popper & Bootstrap JS -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+                        popoverTriggerList.forEach(function (el) {
+                        new     bootstrap.Popover(el, {
+                                placement: 'top',
+                                trigger: 'focus',
+                                container: 'body',
+                                customClass: el.getAttribute('data-bs-custom-class') || ''
+                            });
+                        });
+                    });
+                </script>
             </div>
             <section class="homepage-carousel">
-                <div class="container">
-                    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="container homepage-carousel-inner">
+                    <div class="image_ctn">
+                        <img src="Img/logo_remove_bg-nutri.png" alt="logo" class="carousel-img-logo">
+                        <p class="image-ctn-text">Join us to become healthier and wealthier. </p>
+                    </div>
+                    <div id="mainCarousel" class="carousel slide ctn-carousel" data-bs-ride="carousel">
                         <!-- Indicators (direct child of .carousel) -->
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></button>
@@ -167,9 +200,9 @@
         <!-- Testimonials -->
         <section class="container py-5">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-8 py-3">
                     <h2>Our Main Features</h2>
-                    <p class="text-muted mb-5">
+                    <p class="text-muted mb-4">
                         On her way she met a copy. The copy warned the Little Blind Text, that where it came 
                         from it would have been rewritten a thousand times and everything that was left from 
                         its origin would be the word.
@@ -209,20 +242,35 @@
                 </div>
                 <!-- RIGHT SIDE: Story Card -->
                 <div class="col-lg-4">
-                    <div class="story-card">
-                        <img src="Img/nutritionist.jpg" alt="Team meeting">
-                        <h5>Read Our Success Story for Inspiration</h5>
-                        <p class="small text-muted">
-                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of 
-                            the Semantics, a large language ocean.
-                        </p>
-                        <p class="small text-muted">
-                            On her way she met a copy. The copy warned the Little Blind Text, that where it came from 
-                            it would have been rewritten a thousand times and everything that was left from its origin 
-                            would be the word.
-                        </p>
-                        <button class="homepage-button mb-4">Learn More</button>
+                    <div class="card info-card mb-5 border-0">
+                        <div class="card-body">
+                            <!-- Icon in a circle -->
+                            <!-- Title -->
+                            <h5 class="card-title">Neurology Clinic</h5>
+                            <img src="Img/nutritionist.jpg" alt="doctor">
+                            <!-- Description -->
+                            <p class="text-muted mb-4">
+                                Some neurologists receive subspecialty training focusing on a particular area 
+                                of the fields, these training programs are called fellowships, and are one to two years.
+                            </p>
+                            <!-- Checklist -->
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                    Neurocritical Care
+                                </li>
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                    Neuro Oncology
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                    Geriatric Neurology
+                                </li>
+                            </ul>
+                            <!-- Read More button -->
+                            <button class="homepage-button mb-4">Read More</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,25 +311,25 @@
                 <!-- Left Column (Breakfast / Lunch / Dinner) -->
                 <div class="col-lg-4 d-flex flex-column justify-content-center align-items-end">
                     <div class="feature-box feature-box_first">
-                        <img src="Img/bg_pic.jpg" alt="Breakfast" class="feature-icon">
                         <div class="feature-text">
-                            <h5>Breakfast</h5>
-                            <p>Choose health on every plate.</p>
+                            <h5>Carbohydrates</h5>
+                            <p>Carbohydrates give your body the energy it needs to stay active and focused.</p>
                         </div>
+                        <img src="Img/bg_pic.jpg" alt="Breakfast" class="feature-icon">
                     </div>
                     <div class="feature-box feature-box_middle">
+                        <div class="feature-text">
+                            <h5>Proteins </h5>
+                            <p>Proteins help build muscles and repair cells, keeping your body strong.</p>
+                        </div>
                         <img src="Img/bg_stats.png" alt="Lunch" class="feature-icon">
-                        <div class="feature-text">
-                            <h5>Lunch</h5>
-                            <p>Simple, fresh, and full of life.</p>
-                        </div>
                     </div>
-                    <div class="feature-box">
-                        <img src="Img/bg_stats3.jpg" alt="Dinner" class="feature-icon">
+                    <div class="feature-box feature-box_third">
                         <div class="feature-text">
-                            <h5>Dinner</h5>
-                            <p>Wellness begins with your plate.</p>
+                            <h5>Fats</h5>
+                            <p>Fats provide energy, support brain health, and help absorb vitamins.</p>
                         </div>
+                        <img src="Img/bg_stats3.jpg" alt="Dinner" class="feature-icon">
                     </div>
                 </div>
                 <!-- Middle Image -->
@@ -290,25 +338,25 @@
                 </div>
                 <!-- Right Column (Reasons) -->
                 <div class="col-lg-4 d-flex flex-column justify-content-center align-items-start">
-                    <div class="feature-box right_column_feature-box_first">
+                    <div class="feature-box right_column_feature-box_forth">
                         <img src="Img/bg_pic.jpg" alt="Breakfast" class="feature-icon">
                         <div class="feature-text">
-                            <h5>Breakfast</h5>
-                            <p>Choose health on every plate.</p>
+                            <h5>Vitamins</h5>
+                            <p>Vitamins protect your body by boosting immunity and keeping organs healthy.</p>
                         </div>
                     </div>
-                    <div class="feature-box right_column_feature-box_middle">
+                    <div class="feature-box right_column_feature-box_fifth">
                         <img src="Img/bg_stats.png" alt="Lunch" class="feature-icon">
                         <div class="feature-text">
-                            <h5>Lunch</h5>
-                            <p>Simple, fresh, and full of life.</p>
+                            <h5>Minerals</h5>
+                            <p>Minerals strengthen bones, teeth, and support nerve and muscle function.</p>
                         </div>
                     </div>
-                    <div class="feature-box right_column_feature-box_last">
+                    <div class="feature-box right_column_feature-box_sixth">
                         <img src="Img/bg_stats3.jpg" alt="Dinner" class="feature-icon">
                         <div class="feature-text">
-                            <h5>Dinner</h5>
-                            <p>Wellness begins with your plate.</p>
+                            <h5>Water</h5>
+                            <p>Water keeps you hydrated, helps digestion, and controls body temperature.</p>
                         </div>
                     </div>
                 </div>
@@ -326,12 +374,10 @@
                                     alt="Profile Picture"
                                     class="rounded-circle comment-carousel-img mb-3"
                                     />
-                                <div class="comment-carousel-title">Director</div>
-                                <div class="comment-carousel-name">Person Name</div>
+                                <div class="comment-carousel-title">Reviews</div>
+                                <div class="comment-carousel-name">Myaing</div>
                                 <p class="comment-carousel-text">
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    varius in enim in eros elementum tristique. Duis cursus, mi quis
-                                    viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                                    "I used your food guide to plan meals for my kids. It helped me give them the right portions. I also waste less food now!"
                                 </p>
                             </div>
                         </div>
@@ -343,11 +389,10 @@
                                     alt="Profile Picture"
                                     class="rounded-circle comment-carousel-img mb-3"
                                     />
-                                <div class="comment-carousel-title">Marketing Manager</div>
-                                <div class="comment-carousel-name">Another Person</div>
+                                <div class="comment-carousel-title">Reviews</div>
+                                <div class="comment-carousel-name">KO OMM</div>
                                 <p class="comment-carousel-text">
-                                    "Pellentesque habitant morbi tristique senectus et netus et malesuada
-                                    fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget."
+                                    "Your food pyramid page helped me understand what to eat. I now eat more rice and vegetables and less junk food"
                                 </p>
                             </div>
                         </div>
@@ -359,11 +404,10 @@
                                     alt="Profile Picture"
                                     class="rounded-circle comment-carousel-img mb-3"
                                     />
-                                <div class="comment-carousel-title">Team Lead</div>
-                                <div class="comment-carousel-name">Third Person</div>
+                                <div class="comment-carousel-title">Reviews</div>
+                                <div class="comment-carousel-name">Shwe Thar</div>
                                 <p class="comment-carousel-text">
-                                    "Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-                                    ut sem vitae risus tristique posuere. Proin ac neque a nulla tincidunt ultricies."
+                                    "I never knew my age needed different food types. Your website made it easy. I eat less meat and more greens now."
                                 </p>
                             </div>
                         </div>

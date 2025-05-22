@@ -53,3 +53,50 @@
 .rating h6{
     margin-left: 5px;
 }
+/* 1. The popover container */
+.popover.my-popover {
+  --bs-popover-bg: #1e293b;           /* dark-blue background */
+  --bs-popover-border-color: #334155; /* slightly lighter border */
+  --bs-popover-inner-padding: 1rem;   /* more padding */
+  --bs-popover-border-radius: 1.25rem;/* rounder corners */
+  background-color: var(--bs-popover-bg);
+  border: 1px solid var(--bs-popover-border-color);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  font-family: 'Segoe UI', sans-serif;
+  color: #f1f5f9;                     /* light text */
+}
+
+/* 2. Header */
+/* Custom popover styling */
+.popover.custom-popover {
+	--bs-popover-bg: #f5fff4;
+	/* Green background */
+	--bs-popover-border-color: #28a745;
+	/* Green border */
+}
+
+.popover.custom-popover .popover-header {
+	background-color: #008b05;
+	/* Darker green header */
+	color: #fff;
+}
+
+.popover.custom-popover .popover-body {
+	color: #218838;
+}
+/* 4. Arrow */
+.popover.my-popover .popover-arrow::before {
+  border-top-color: var(--bs-popover-border-color) !important;
+}
+.popover.my-popover .popover-arrow::after {
+  border-top-color: var(--bs-popover-bg) !important;
+}
+
+/* 5. Optional: Add a little pulsing animation on show */
+@keyframes pop-in {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.popover.my-popover.show {
+  animation: pop-in 0.15s ease-out forwards;
+}

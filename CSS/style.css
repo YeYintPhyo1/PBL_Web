@@ -16,6 +16,7 @@
 	--Forest_Canopy: #076d0c;
 	--Dark_Forest: #0b5c10;
 	--Midnight_Pine: #003406;
+	--Soft_Black: #282c32;
 }
 :root {
 	--Dewdrop: #E4F5E3;
@@ -105,13 +106,22 @@
 /*Nav*/
 /*N*/
 .banner-section {
-    background: linear-gradient(rgba(2,0,0,0.5), rgba(0,0,0,0)), url(../Img/bg_fruit.jpg);
+    background:
+		radial-gradient(circle at left bottom,
+			/* center the gradient at bottom-left */
+			rgba(154, 255, 144, 0.1) 0%,
+			/* strong tint at the very corner */
+			rgba(154, 255, 144, 0) 70%
+			/* fade out to transparent by 70% of the radius */
+		),
+		/* second layer: your fruit image */
+	url("../Img/bg_fruit.jpg") no-repeat center/cover;
     background-size: cover;
     background-position: center;
     min-height: 80vh;
     display: flex;
     align-items: center;
-    color: white;
+    color: var(--Soft_Black);
     text-align: left;
     padding: 2rem;
     padding-left: 10%;
@@ -164,20 +174,7 @@
 	width: 100%;
 }
 /*Button End*/
-.horizontal_nav_bar{
-    margin-left: 2rem;
-    margin-right: 10rem;
-    font-size: 30px;
-}
-.menu{
-    position: absolute;
-    color: #000000;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-.horizontal_nav_bar input{
-    display: none;
-}
+
 /*Tip*/
 .feature_ctn {
 	/* container padding handled by .container and py-5 */
@@ -188,6 +185,7 @@
 	border-bottom-right-radius: 100px;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .badge{
 	background-color: #F0FFF4;                       /* page behind */
 	background-image: linear-gradient(
@@ -199,16 +197,26 @@
 }
 .feature-box {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	gap: 15px;
 	text-align: left;
 	margin-bottom: 1.5rem;
+	padding-right: 10px;
 }
 .feature-box_first{
-	padding-right: 15px;
+	text-align: right;
+	padding-right: 0;
+	padding-left: 10px;
 }
 .feature-box_middle{
-	padding-right: 25px;
+	text-align: right;
+	padding-right: 0;
+	padding-left: 10px;
+}
+.feature-box_third{
+	text-align: right;
+	padding-right: 0;
+	padding-left: 10px;
 }
 .right_column_feature-box_first,.right_column_feature-box_middle,.right_column_feature-box_last{
 	padding-left: 35px;
