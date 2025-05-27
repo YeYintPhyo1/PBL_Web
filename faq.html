@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food FAQ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container-custom {
+            max-width: 1200px;
+            margin: 50px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .cartoon-container {
+            background-color: #e8f5e9;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .cartoon-img {
+            max-width: 100%;
+            height: auto;
+        }
+        .faq-container {
+            padding: 40px;
+        }
+        .faq-header {
+            color: #2e7d32;
+            margin-bottom: 30px;
+            font-weight: 700;
+            position: relative;
+        }
+        .faq-header:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #81c784;
+            border-radius: 2px;
+        }
+        .accordion-button {
+            font-weight: 600;
+            color: #333;
+            background-color: rgba(129, 199, 132, 0.1);
+            border-radius: 8px !important;
+            margin-bottom: 10px;
+            border: none;
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #2e7d32;
+            background-color: rgba(129, 199, 132, 0.2);
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+        .accordion-body {
+            background-color: #f8f9fa;
+            border-radius: 0 0 8px 8px;
+            padding: 20px;
+        }
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+        }
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232e7d32'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: scale(1.2);
+        }
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232e7d32'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .healthy-tip {
+            background-color: #e8f5e9;
+            border-left: 4px solid #81c784;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .healthy-tip i {
+            color: #2e7d32;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container-custom">
+            <div class="row">
+                <!-- Left Side - Cartoon Image -->
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="cartoon-container">
+                        <img src="Img/transperant_bg_cartoon.png" alt="Healthy Food Cartoon" class="cartoon-img">
+                    </div>
+                </div>
+                <!-- Right Side - FAQ Accordion -->
+                <div class="col-lg-7">
+                    <div class="faq-container">
+                        <h2 class="faq-header">Healthy Food FAQs</h2>
+                        
+                        <div class="accordion" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <i class="fas fa-carrot me-2"></i> What are the healthiest vegetables to eat?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>The healthiest vegetables include leafy greens like spinach and kale, cruciferous vegetables like broccoli and Brussels sprouts, and colorful options like carrots, bell peppers, and sweet potatoes. These are packed with vitamins, minerals, fiber, and antioxidants.</p>
+                                        
+                                        <div class="healthy-tip">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <strong>Tip:</strong> Try to "eat the rainbow" by including vegetables of different colors in your meals for a wide range of nutrients.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="fas fa-apple-alt me-2"></i> How much fruit should I eat daily?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>The general recommendation is 2-3 servings of fruit per day. One serving equals:</p>
+                                        <ul>
+                                            <li>1 medium piece of fruit (apple, banana, orange)</li>
+                                            <li>1/2 cup of chopped fruit</li>
+                                            <li>1/4 cup of dried fruit</li>
+                                            <li>1/2 cup of 100% fruit juice</li>
+                                        </ul>
+                                        <p>Focus on whole fruits rather than juices to get the benefit of fiber.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-seedling me-2"></i> Are plant-based proteins as good as animal proteins?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Plant-based proteins from sources like beans, lentils, tofu, tempeh, nuts, and seeds can be excellent alternatives to animal proteins. While most plant proteins are "incomplete" (lacking some essential amino acids), eating a variety throughout the day ensures you get all necessary amino acids.</p>
+                                        <p>Benefits of plant proteins include:</p>
+                                        <ul>
+                                            <li>Higher fiber content</li>
+                                            <li>Lower saturated fat</li>
+                                            <li>Additional vitamins and minerals</li>
+                                            <li>Associated with lower risk of chronic diseases</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <i class="fas fa-bread-slice me-2"></i> Are whole grains really better than refined grains?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, whole grains are significantly more nutritious than refined grains. Whole grains contain all parts of the grain kernel - the bran, germ, and endosperm - while refined grains have been processed to remove the bran and germ, stripping away much of the fiber and nutrients.</p>
+                                        <p>Benefits of whole grains include:</p>
+                                        <ul>
+                                            <li>Higher fiber content (aids digestion and promotes fullness)</li>
+                                            <li>More B vitamins, iron, and other minerals</li>
+                                            <li>Higher levels of antioxidants</li>
+                                            <li>Lower glycemic index (better blood sugar control)</li>
+                                            <li>Associated with reduced risk of heart disease, diabetes, and certain cancers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <i class="fas fa-fish me-2"></i> How often should I eat fish for optimal health?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>The American Heart Association recommends eating fish (particularly fatty fish) at least two times per week. Fatty fish like salmon, mackerel, herring, lake trout, sardines, and albacore tuna are high in omega-3 fatty acids, which are beneficial for heart and brain health.</p>
+                                        <p>Benefits of regular fish consumption:</p>
+                                        <ul>
+                                            <li>Reduced risk of cardiovascular disease</li>
+                                            <li>Improved brain function and development</li>
+                                            <li>Potential mood regulation benefits</li>
+                                            <li>High-quality protein source</li>
+                                        </ul>
+                                        
+                                        <div class="healthy-tip">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <strong>Tip:</strong> When possible, choose wild-caught fish over farmed, and be mindful of mercury content in certain fish (especially for pregnant women and children).
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

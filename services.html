@@ -28,20 +28,18 @@
                         <li class="nav-item"><a class="main-nav__link nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="main-nav__link nav-link" href="#">About Us</a></li>
                         <!-- Recipes Dropdown -->
+                        <!---->
                         <li class="nav-item dropdown">
-                            <a class="main-nav__link nav-link "
-                                href="#"
-                                id="recipesDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown">
-                            Services<i class="fa-solid fa-caret-down"></i>
+                            <a class="main-nav__link nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                            Services <i class="fa-solid fa-caret-down"></i>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="recipesDropdown">
-                                <li><a class="dropdown-item" href="#">Breakfast Plan</a></li>
-                                <li><a class="dropdown-item" href="#">Lunch Plan</a></li>
-                                <li><a class="dropdown-item" href="#">Dinner Plan</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-sun me-2"></i>Breakfast Plan</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-utensils me-2"></i>Lunch Plan</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-moon me-2"></i>Dinner Plan</a></li>
                             </ul>
                         </li>
+                        <!---->
                         <li class="nav-item"><a class="main-nav__link nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="main-nav__link nav-link" href="#">Explore</a></li>
                     </ul>
@@ -65,7 +63,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <span class="badge badge-custom px-3 py-2 mb-3">Healthy Food Advantage 🔥</span>
+                    <span class="badge badge-custom px-3 py-2 mb-3 text-muted">Healthy Food Advantage 🔥</span>
                     <h2 class="fw-bold mb-3"> Eat Right, Feel Bright<br>A Tasty Guide to Healthy Delight</h2>
                     <p class="text-muted mb-4">
                         A Complete Guide to Nourishing Your Body, Mind, and Lifestyle
@@ -117,83 +115,140 @@
                 </div>
             </div>
         </div>
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <!-- Book 1 -->
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="book">
-                        <div class="book-inner">
-                            <div class="cover">
-                                <img src="Img/cards/apple_1.png" alt="apple" class="book_front_img">
-                                <div class="element">
-                                    <div class="element">
-                                    <h5>Nutrition Facts</h5>
-                                    <h6>Apple</h6>
-                                    <p>120 g</p>
-                                </div>
-                                </div>
+        <div class="calorie-container">
+            <div class="calorie-header">
+                <h1>Daily Calorie Calculation Guide</h1>
+                <p>Understand your body's energy needs with these simple visual formulas and examples</p>
+            </div>
+            <div class="calorie-grid">
+                <!-- Card 1: BMR Estimation -->
+                <div class="calorie-card">
+                    <div class="calorie-step-badge">1</div>
+                    <div class="calorie-card-head">
+                        <h2 class="calorie-card-title">Basal Metabolic Rate</h2>
+                        <p>Your body's calorie needs at complete rest</p>
+                    </div>
+                    <div class="calorie-card-body">
+                        <div class="calorie-steps">
+                            <div class="calorie-step">
+                                <div class="step-indicator">1</div>
+                                <div class="step-info">For <span class="calorie-highlight">men</span>: 1 calorie per kg per hour</div>
                             </div>
-                            <div class="inside">
-                                <!-- Inside content -->
-                                <h6>Nutrition Facts</h6>
-                                <ul class="inside_element">
-                                    <li>Calories: 80 kcal</li>
-                                    <li>Carbs: 21 g</li>
-                                    <li>Fiber: 4 g</li>
-                                    <li>Sugars: 16 g</li>
-                                </ul>
+                            <div class="calorie-step">
+                                <div class="step-indicator">2</div>
+                                <div class="step-info">For <span class="calorie-highlight">women</span>: 0.9 calories per kg per hour</div>
+                            </div>
+                        </div>
+                        <div class="calorie-formula">
+                            <div class="formula-heading">Formula</div>
+                            <p class="formula-equation">BMR = (Weight in kg) × 24 × (1 or 0.9)</p>
+                        </div>
+                        <div class="calorie-example">
+                            <div class="example-heading">Example Calculation</div>
+                            <div class="example-content">
+                                <p><strong>70kg man:</strong><br>
+                                    70 × 24 × 1 = <span class="calorie-highlight">1,680 calories/day</span>
+                                </p>
+                                <p><strong>60kg woman:</strong><br>
+                                    60 × 24 × 0.9 = <span class="calorie-highlight">1,296 calories/day</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="calorie-note">
+                            To convert pounds to kg: weight in lbs ÷ 2.2 = weight in kg
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Activity Level -->
+                <div class="calorie-card">
+                    <div class="calorie-step-badge">2</div>
+                    <div class="calorie-card-head">
+                        <h2 class="calorie-card-title">Activity Level</h2>
+                        <p>Adjust for your daily movement and exercise</p>
+                    </div>
+                    <div class="calorie-card-body">
+                        <div class="calorie-steps">
+                            <div class="calorie-step">
+                                <div class="step-indicator">1</div>
+                                <div class="step-info"><span class="calorie-highlight">Sedentary</span> (little/no exercise): × 1.2</div>
+                            </div>
+                            <div class="calorie-step">
+                                <div class="step-indicator">2</div>
+                                <div class="step-info"><span class="calorie-highlight">Light activity</span> (1-3 days/week): × 1.375</div>
+                            </div>
+                            <div class="calorie-step">
+                                <div class="step-indicator">3</div>
+                                <div class="step-info"><span class="calorie-highlight">Moderate activity</span> (3-5 days/week): × 1.55</div>
+                            </div>
+                            <div class="calorie-step">
+                                <div class="step-indicator">4</div>
+                                <div class="step-info"><span class="calorie-highlight">Very active</span> (6-7 days/week): × 1.725</div>
+                            </div>
+                            <div class="calorie-step">
+                                <div class="step-indicator">5</div>
+                                <div class="step-info"><span class="calorie-highlight">Extreme activity</span> (physical job + training): × 1.9</div>
+                            </div>
+                        </div>
+                        <div class="calorie-formula">
+                            <div class="formula-heading">Formula</div>
+                            <p class="formula-equation">Total Calories = BMR × Activity Factor</p>
+                        </div>
+                        <div class="calorie-example">
+                            <div class="example-heading">Example Calculation</div>
+                            <div class="example-content">
+                                <p><strong>1,680 BMR (70kg man) with moderate activity:</strong><br>
+                                    1,680 × 1.55 = <span class="calorie-highlight">2,604 calories/day</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Book 2 -->
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="book">
-                        <div class="book-inner">
-                            <div class="cover">
-                                <img src="Img/cards/banana.png" alt="banana" class="book_front_img">
-                                <div class="element">
-                                    <h5>Nutrition Facts</h5>
-                                    <h6>Banana</h6>
-                                    <p>120 g</p>
-                                </div>
+                <!-- Card 3: Goal Adjustment -->
+                <div class="calorie-card">
+                    <div class="calorie-step-badge">3</div>
+                    <div class="calorie-card-head">
+                        <h2 class="calorie-card-title">Weight Goals</h2>
+                        <p>Adjust calories based on your objectives</p>
+                    </div>
+                    <div class="calorie-card-body">
+                        <div class="calorie-steps">
+                            <div class="calorie-step">
+                                <div class="step-indicator">1</div>
+                                <div class="step-info"><span class="calorie-highlight">Maintain weight</span>: Keep at calculated amount</div>
                             </div>
-                            <div class="inside">
-                                <h6>Nutrition Facts</h6>
-                                <ul class="inside_element">
-                                    <li>Calories: 105 kcal</li>
-                                    <li>Carbs: 27 g</li>
-                                    <li>Fiber: 3 g</li>
-                                    <li>Potassium: 422 mg</li>
-                                </ul>
+                            <div class="calorie-step">
+                                <div class="step-indicator">2</div>
+                                <div class="step-info"><span class="calorie-highlight">Mild loss</span> (0.25kg/week): Subtract 200 calories</div>
                             </div>
+                            <div class="calorie-step">
+                                <div class="step-indicator">3</div>
+                                <div class="step-info"><span class="calorie-highlight">Weight loss</span> (0.5kg/week): Subtract 500 calories</div>
+                            </div>
+                            <div class="calorie-step">
+                                <div class="step-indicator">4</div>
+                                <div class="step-info"><span class="calorie-highlight">Weight gain</span> (0.5kg/week): Add 500 calories</div>
+                            </div>
+                        </div>
+                        <div class="calorie-formula">
+                            <div class="formula-heading">Formula</div>
+                            <p class="formula-equation">Final Calories = Total Calories ± Adjustment</p>
+                        </div>
+                        <div class="calorie-example">
+                            <div class="example-heading">Example Calculation</div>
+                            <div class="example-content">
+                                <p><strong>2,604 calories for weight loss (0.5kg/week):</strong><br>
+                                    2,604 - 500 = <span class="calorie-highlight">2,104 calories/day</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="calorie-note">
+                            Note: 1kg of body fat ≈ 7,700 calories. A 500 calorie daily deficit = 3,500 weekly = ~0.5kg loss.
                         </div>
                     </div>
                 </div>
-                <!-- Book 3 -->
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="book">
-                        <div class="book-inner">
-                            <div class="cover">
-                                <img src="Img/cards/orange.png" alt="banana" class="book_front_img">
-                                <div class="element">
-                                    <h5>Nutrition Facts</h5>
-                                    <h6>Orange</h6>
-                                    <p>120 g</p>
-                                </div>
-                            </div>
-                            <div class="inside">
-                                <h6>Nutrition Facts</h6>
-                                <ul class="inside_element">
-                                    <li>Calories: 62 kcal</li>
-                                    <li>Vitamin C: 70 mg</li>
-                                    <li>Carbs: 15 g</li>
-                                    <li>Fiber: 3 g</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="calorie-footer">
+                <p>These calculations provide estimates. Individual needs may vary based on metabolism and body composition.</p>
             </div>
         </div>
         <footer class="text-dark py-5">

@@ -10,12 +10,18 @@
 	--Forest_Canopy: #076d0c;
 	--Dark_Forest: #0b5c10;
 	--Midnight_Pine: #003406;
+	--primary-green: #2e7d32;
+	--Soft_Black: #282c32;
+	--text-light: #6B7280;
+	--card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-:root {
-	--Dewdrop: #E4F5E3;
-	--Fresh_Herb: #6BBF69;
-	--Mossy_Stone: #368835;
-	--Deep_Forest_Night : #0E250E;
+body {
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	background-image: radial-gradient(circle at 25% 50%, rgba(202, 255, 196, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
 }
 /*First Section*/
 .feature-list i {
@@ -139,3 +145,242 @@
 	height: auto;
 }
 /*Section 2*/
+/*Calories Calculations Cards*/
+.calorie-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 60px 30px;
+}
+
+.calorie-header {
+	text-align: center;
+	margin-bottom: 60px;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.calorie-header h1 {
+	color: var(--Dark_Forest);
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 2.75rem;
+	font-weight: 600;
+	margin-bottom: 16px;
+	letter-spacing: -0.025em;
+	line-height: 1.2;
+}
+
+.calorie-header p {
+	color: var(--text-light);
+	font-size: 1.125rem;
+	margin: 0 auto;
+}
+
+.calorie-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	gap: 32px;
+}
+
+.calorie-card {
+	background: white;
+	border-radius: 16px;
+	box-shadow: var(--card-shadow);
+	overflow: hidden;
+	transition: var(--transition);
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	position: relative;
+}
+
+.calorie-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, var(--Deep_Emerald), var(--primary-green));
+}
+
+.calorie-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--card-shadow-hover);
+}
+
+.calorie-card-head {
+	padding: 28px 28px 20px;
+	position: relative;
+}
+
+.calorie-step-badge {
+	position: absolute;
+	top: 20px;
+	right: 28px;
+	background-color: var(--Deep_Emerald);
+	color: white;
+	width: 44px;
+	height: 44px;
+	border-radius: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 600;
+	font-size: 1.25rem;
+	box-shadow: 0 4px 6px -1px rgba(0, 230, 3, 0.3);
+}
+
+.calorie-card-title {
+	color: var(--Dark_Forest);
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 12px;
+	letter-spacing: -0.01em;
+}
+
+.calorie-card-body {
+	padding: 0 28px 28px;
+}
+
+.calorie-card p {
+	color: var(--text-light);
+	margin-bottom: 20px;
+	font-size: 1rem;
+}
+
+.calorie-formula {
+	background-color: var(--Mint_Whisper);
+	border-radius: 12px;
+	padding: 20px;
+	margin: 24px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.calorie-formula::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 100%;
+	background: linear-gradient(to bottom, var(--Deep_Emerald), var(--primary-green));
+}
+
+.formula-heading {
+	color: var(--Dark_Forest);
+	font-weight: 600;
+	margin-bottom: 8px;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.formula-equation {
+	font-family: 'Space Grotesk', monospace;
+	font-size: 1.125rem;
+	color: var(--Soft_Black);
+	font-weight: 500;
+	margin: 0;
+	line-height: 1.4;
+}
+
+.calorie-example {
+	background-color: #F3F4F6;
+	border-radius: 12px;
+	padding: 20px;
+	margin: 24px 0;
+}
+
+.example-heading {
+	color: var(--Dark_Forest);
+	font-weight: 600;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.example-heading::before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: var(--Deep_Emerald);
+	border-radius: 4px;
+}
+
+.example-content {
+	color: var(--Soft_Black);
+	font-size: 0.9375rem;
+}
+
+.calorie-highlight {
+	color: var(--Dark_Forest);
+	font-weight: 600;
+	background-color: rgba(0, 230, 3, 0.1);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.calorie-steps {
+	margin: 24px 0;
+}
+
+.calorie-step {
+	display: flex;
+	margin-bottom: 16px;
+	align-items: flex-start;
+}
+
+.step-indicator {
+	background-color: white;
+	color: var(--Deep_Emerald);
+	width: 24px;
+	height: 24px;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 12px;
+	flex-shrink: 0;
+	font-weight: 600;
+	font-size: 0.75rem;
+	border: 1px solid var(--Mint_Whisper);
+}
+
+.step-info {
+	color: var(--Soft_Black);
+	font-size: 0.9375rem;
+}
+
+.calorie-note {
+	font-size: 0.875rem;
+	color: var(--text-light);
+	margin-top: 24px;
+	padding-top: 16px;
+	border-top: 1px dashed #E5E7EB;
+	font-style: italic;
+}
+
+.calorie-footer {
+	text-align: center;
+	margin-top: 80px;
+	color: var(--text-light);
+	font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+	.calorie-container {
+		padding: 40px 20px;
+	}
+
+	.calorie-header h1 {
+		font-size: 2rem;
+	}
+
+	.calorie-grid {
+		grid-template-columns: 1fr;
+	}
+}

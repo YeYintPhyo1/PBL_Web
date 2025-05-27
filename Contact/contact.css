@@ -3,21 +3,23 @@
 	--Mint_Whisper: #e8ffe4;
 	--Frosted_Lime: #caffc4;
 	--Fresh_Spring: #9aff90;
-	--Bright_Meadow : #59ff50;
+	--Bright_Meadow: #59ff50;
 	--Neon_Leaf: #25ff22;
 	--Pure_Green: #00e603;
-	--Vivid_Emerald : #00b807;
+	--Vivid_Emerald: #00b807;
 	--Deep_Emerald: #008b05;
 	--Forest_Canopy: #076d0c;
 	--Dark_Forest: #0b5c10;
 	--Midnight_Pine: #003406;
 }
+
 :root {
 	--Dewdrop: #E4F5E3;
 	--Fresh_Herb: #6BBF69;
 	--Mossy_Stone: #368835;
-	--Deep_Forest_Night : #0E250E;
+	--Deep_Forest_Night: #0E250E;
 }
+
 .feature-list i {
 	color: var(--Neon_Leaf);
 	margin-right: 8px;
@@ -60,40 +62,80 @@
 }
 
 /**/
-.contact-box {
-	background-color: #fbf8fe;
-	border: 1px solid #f2ebfc;
-	border-radius: 12px;
-	padding: 15px;
-	box-shadow: 0 0 6px rgba(136, 72, 255, 0.06);
-	height: 230px;
-	width: 265px;
-	margin: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.contact-box img {
-	width: 40px;
-	height: 40px;
-	margin-bottom: 15px;
+.contact-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.contact-box {
+	margin-top: 50px;
+	background-color: #ffffff;
+	border-radius: 15px;
+	padding: 30px 25px;
+	margin-right: 30px;
+	width: 300px;
+	text-align: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 15px rgba(46, 125, 50, 0.1);
+	border-top: 4px solid #4CAF50;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact-box:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(46, 125, 50, 0.2);
+}
+
+.contact-box i {
+	font-size: 2.5rem;
+	color: #4CAF50;
+	margin-bottom: 20px;
+	background-color: #e8f5e9;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 50%;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+.contact-box:hover i {
+	background-color: #4CAF50;
+	color: white !important;
+	transform: rotate(5deg) scale(1.1);
 }
 
 .contact-box h4 {
-	font-size: 16px;
+	color: #2E7D32;
+	margin-bottom: 15px;
+	font-size: 1.2rem;
 	font-weight: 600;
-	color: #333;
-	margin-bottom: 10px;
 }
 
 .contact-box p {
-	font-size: 14px;
-	color: #666;
-	line-height: 1.4;
-	margin: 0;
+	color: #555;
+	line-height: 1.6;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+	.contact-grid {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-box {
+		width: 100%;
+		max-width: 350px;
+	}
 }
 
 /**/
@@ -123,12 +165,14 @@
 	margin-bottom: 12px;
 	color: var(--Neon_Leaf);
 }
-.contact-header span{
+
+.contact-header span {
 	font-size: 48px;
 	font-weight: 800;
 	color: var(--Deep_Emerald);
 	margin-bottom: 12px;
 }
+
 .contact-header p {
 	font-size: 18px;
 	color: #555;
@@ -160,7 +204,7 @@ textarea {
 
 .form-row {
 	display: flex;
-	gap: 20px;	
+	gap: 20px;
 }
 
 .form-row>div {

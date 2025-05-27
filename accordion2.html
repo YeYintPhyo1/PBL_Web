@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nutrient | Modern Healthy Food Guide</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+            --primary-green: #27ae60;
+            --secondary-green: #9aff90;
+            --light-green: #e8ffe4;
+            --dark-green: #16a085;
+            --accent-green: #1abc9c;
+            --text-dark: #2c3e50;
+            --text-light: #ecf0f1;
+            --card-shadow: 0 10px 30px -15px rgba(0,0,0,0.1);
+            }
+            
+            html {
+            overflow-y: scroll;
+            }
+            body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f9f9f9;
+            color: var(--text-dark);
+            line-height: 1.7;
+            }
+            .nutrient-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--text-light);
+            padding: 4rem 0 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            }
+            .nutrient-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #f1c40f, #e67e22, #e74c3c, #9b59b6, #3498db, #2ecc71);
+            }
+            .nutrient-header h1 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            }
+            .nutrient-header p {
+            font-weight: 400;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            }
+            .container {
+            max-width: 800px;
+            }
+            /* Accordion Styles */
+            .accordion {
+            --bs-accordion-border-radius: 16px;
+            --bs-accordion-inner-border-radius: 14px;
+            --bs-accordion-btn-padding-x: 1.75rem;
+            --bs-accordion-btn-padding-y: 1.25rem;
+            --bs-accordion-body-padding-x: 1.75rem;
+            --bs-accordion-body-padding-y: 1.5rem;
+            --bs-accordion-active-color: white;
+            --bs-accordion-active-bg: var(--primary-green);
+            }
+            .accordion-item {
+            margin-bottom: 1.25rem;
+            border: none;
+            box-shadow: var(--card-shadow);
+            border-radius: 16px !important;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .accordion-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.15);
+            }
+            .accordion-button {
+            background-color: white;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border-radius: 16px 16px 0 0 !important;
+            }
+            .accordion-button:not(.collapsed) {
+            background-color: var(--primary-green);
+            color: white;
+            box-shadow: none;
+            }
+            .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+            }
+            .accordion-body {
+            background-color: white;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-radius: 0 0 16px 16px;
+            }
+            /* Custom arrow icon */
+            .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232c3e50' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            width: 1.25rem;
+            height: 1.25rem;
+            background-size: 1.25rem;
+            transition: all 0.3s ease;
+            }
+            .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            transform: rotate(180deg);
+            }
+            /* Food category styling */
+            .food-category {
+            margin-bottom: 1.5rem;
+            }
+            .food-category h3 {
+            color: var(--dark-green);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            }
+            .food-category h3::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--accent-green), transparent);
+            margin-left: 1rem;
+            }
+            .food-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            }
+            .food-item:hover {
+            background-color: var(--light-green);
+            }
+            .food-item i {
+            color: var(--accent-green);
+            margin-right: 12px;
+            margin-top: 3px;
+            font-size: 0.9rem;
+            }
+            .food-item-content {
+            flex: 1;
+            }
+            .food-name {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            }
+            .food-desc {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            line-height: 1.5;
+            }
+            /* Custom icons */
+            .food-icon {
+            margin-right: 15px;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            min-width: 24px;
+            text-align: center;
+            }
+            .accordion-button:not(.collapsed) .food-icon {
+            color: white;
+            }
+            /*First Accordion Body*/
+            .accordion-body {
+            background-color: white;
+            padding: 1.5rem;
+            }
+            .section-title {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-green);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            }
+            .health-tip {
+            background-color: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
+            }
+            .health-tip h5 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            }
+            .nutrient-list {
+            list-style-type: none;
+            padding-left: 0;
+            }
+            .nutrient-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            }
+            .nutrient-list li:last-child {
+            border-bottom: none;
+            }
+            .nutrient-value {
+            font-weight: 600;
+            color: var(--text-color);
+            }
+            .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            }
+            .benefit-icon {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            }
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+            .nutrient-header {
+            padding: 3rem 0 2rem;
+            }
+            .nutrient-header h1 {
+            font-size: 2rem;
+            }
+            .accordion-button {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nutrient-header">
+            <div class="container">
+                <h1>Nutrient</h1>
+                <p class="lead">Discover the power of whole foods for optimal health and vitality</p>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="accordion" id="healthyFoodAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#leafyGreens" aria-expanded="true" aria-controls="leafyGreens">
+                        <i class="fas fa-leaf food-icon"></i>Daily Nutritional Requirements
+                        </button>
+                    </h2>
+                    <div id="leafyGreens" class="accordion-collapse collapse show" data-bs-parent="#healthyFoodAccordion">
+                        <div class="accordion-body">
+                            <h4 class="section-title">Daily Nutritional Requirements</h4>
+                            <div class="health-tip">
+                                <h5><i class="fas fa-lightbulb me-2"></i> Expert Tip</h5>
+                                <p>A balanced diet should include a variety of foods from all food groups: fruits, vegetables, grains, protein foods, and dairy.</p>
+                            </div>
+                            <ul class="nutrient-list">
+                                <li><span>Calories</span> <span class="nutrient-value">15,00-2,500 kcal</span></li>
+                                <li><span>Protein</span> <span class="nutrient-value">50-100g</span></li>
+                                <li><span>Carbohydrates</span> <span class="nutrient-value">225-325g</span></li>
+                                <li><span>Dietary Fiber</span> <span class="nutrient-value">25-30g</span></li>
+                                <li><span>Total Fat</span> <span class="nutrient-value">65-80g</span></li>
+                                <li><span>Saturated Fat</span> <span class="nutrient-value">Less than 20g</span></li>
+                                <li><span>Sodium</span> <span class="nutrient-value">Less than 2,300mg</span></li>
+                            </ul>
+                            <h4 class="section-title mt-4">Superfoods to Include</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-seedling"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Leafy Greens</h6>
+                                            <p class="mb-0">Rich in vitamins A, C, K and minerals</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ...other superfood items... -->
+                                <div class="col-md-6">
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-fish"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Fatty Fish</h6>
+                                            <p class="mb-0">Excellent source of omega-3 fatty acids</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-apple-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Berries</h6>
+                                            <p class="mb-0">Packed with antioxidants and fiber</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-mortar-pestle"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Nuts & Seeds</h6>
+                                            <p class="mb-0">Healthy fats, protein, and micronutrients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Colorful Vegetables -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colorfulVeggies" aria-expanded="false" aria-controls="colorfulVeggies">
+                        <i class="fas fa-carrot food-icon"></i> Colorful Vegetables
+                        </button>
+                    </h2>
+                    <div id="colorfulVeggies" class="accordion-collapse collapse" data-bs-parent="#healthyFoodAccordion">
+                        <div class="accordion-body">
+                            <div class="food-category">
+                                <h3>Vibrant Choices</h3>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Bell Peppers</div>
+                                        <div class="food-desc">Excellent source of vitamin C and antioxidants. Red peppers have the highest nutrient content.</div>
+                                    </div>
+                                </div>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Sweet Potatoes</div>
+                                        <div class="food-desc">Rich in beta-carotene, fiber, and vitamin A. The orange color indicates high antioxidant content.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Healthy Fats -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#healthyFats" aria-expanded="false" aria-controls="healthyFats">
+                        <i class="fas fa-seedling food-icon"></i> Healthy Fats
+                        </button>
+                    </h2>
+                    <div id="healthyFats" class="accordion-collapse collapse" data-bs-parent="#healthyFoodAccordion">
+                        <div class="accordion-body">
+                            <div class="food-category">
+                                <h3>Plant-Based Sources</h3>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Avocados</div>
+                                        <div class="food-desc">Packed with monounsaturated fats, fiber, and potassium. Helps with nutrient absorption from other foods.</div>
+                                    </div>
+                                </div>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Nuts & Seeds</div>
+                                        <div class="food-desc">Almonds, walnuts, chia seeds, and flaxseeds provide healthy fats, protein, and micronutrients.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Whole Grains -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wholeGrains" aria-expanded="false" aria-controls="wholeGrains">
+                        <i class="fas fa-bread-slice food-icon"></i> Whole Grains
+                        </button>
+                    </h2>
+                    <div id="wholeGrains" class="accordion-collapse collapse" data-bs-parent="#healthyFoodAccordion">
+                        <div class="accordion-body">
+                            <div class="food-category">
+                                <h3>Fiber-Rich Options</h3>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Quinoa</div>
+                                        <div class="food-desc">Complete protein source with all essential amino acids. High in fiber, magnesium, and iron.</div>
+                                    </div>
+                                </div>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Oats</div>
+                                        <div class="food-desc">Rich in beta-glucan fiber which helps lower cholesterol and improve gut health.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Superfoods -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#superfoods" aria-expanded="false" aria-controls="superfoods">
+                        <i class="fas fa-star food-icon"></i> Superfoods
+                        </button>
+                    </h2>
+                    <div id="superfoods" class="accordion-collapse collapse" data-bs-parent="#healthyFoodAccordion">
+                        <div class="accordion-body">
+                            <div class="food-category">
+                                <h3>Nutrient-Dense Choices</h3>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Blueberries</div>
+                                        <div class="food-desc">Packed with antioxidants called flavonoids. May improve memory and cognitive function.</div>
+                                    </div>
+                                </div>
+                                <div class="food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="food-item-content">
+                                        <div class="food-name">Turmeric</div>
+                                        <div class="food-desc">Contains curcumin, a powerful anti-inflammatory compound. Best absorbed with black pepper.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
