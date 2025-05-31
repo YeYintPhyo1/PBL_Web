@@ -17,6 +17,77 @@
 	--Mossy_Stone: #368835;
 	--Deep_Forest_Night : #0E250E;
 }
+/**/
+.homepage-carousel .carousel-control-prev,
+.homepage-carousel .carousel-control-next {
+    background: rgba(255,255,255,0.9);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Deep_Emerald);
+    font-size: 1.5rem;
+    transition: background 0.3s, color 0.3s;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
+}
+.homepage-carousel .carousel-control-prev { left: 18px; }
+.homepage-carousel .carousel-control-next { right: 18px; }
+.homepage-carousel .carousel-control-prev:hover,
+.homepage-carousel .carousel-control-next:hover {
+    background: rgba(255,255,255, 1);
+    color: var(--Vivid_Emerald);
+}
+.homepage-carousel .carousel-control-prev-icon,
+.homepage-carousel .carousel-control-next-icon {
+    display: none !important;
+}
+.homepage-carousel .fa-chevron-left,
+.homepage-carousel .fa-chevron-right {
+    pointer-events: none;
+    font-size: 1.35rem;
+}
+.homepage-carousel .carousel-indicators {
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.homepage-carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    margin: 0 5px;
+    opacity: 1;
+    transition: background 0.2s, transform 0.2s;
+}
+.homepage-carousel .carousel-indicators [data-bs-target].active,
+.homepage-carousel .carousel-indicators [data-bs-target]:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+.homepage-carousel .carousel-control-prev:hover,
+.homepage-carousel .carousel-control-next:hover,
+.homepage-carousel .carousel-control-prev:focus,
+.homepage-carousel .carousel-control-next:focus,
+.homepage-carousel .carousel-control-prev:active,
+.homepage-carousel .carousel-control-next:active {
+    background: rgba(255,255,255, 1);
+    color: var(--Vivid_Emerald);
+}
+/**/
 .homepage-carousel {
 	/* translucent white backdrop */
 	background-color: rgba(255, 255, 255, 0.1);
@@ -120,6 +191,7 @@
 .cover_image{
     width: 600px;
     overflow: hidden;
+    margin-right: 10px;
 }
 @media only screen and (min-width: 1401px){
     .container_cover_image{
@@ -154,7 +226,7 @@
         overflow: hidden;
     }
 }
-@media only screen and (max-width: 1150px){
+@media only screen and (max-width: 1200px){
     .cover_image{
         display: none;
     }
@@ -164,4 +236,12 @@
         width: 200px;
         overflow: hidden;
     }
+}
+@media only screen and (max-width: 992px){
+    .homepage-carousel{
+        display: none;
+    }
+    .banner-section {
+        opacity: 20;
+}
 }

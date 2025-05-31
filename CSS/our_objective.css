@@ -10,85 +10,214 @@
 	--Forest_Canopy: #076d0c;
 	--Dark_Forest: #0b5c10;
 	--Midnight_Pine: #003406;
-}
-
-:root {
 	--Dewdrop: #E4F5E3;
 	--Fresh_Herb: #6BBF69;
 	--Mossy_Stone: #368835;
 	--Deep_Forest_Night: #0E250E;
 }
 
+body {
+	background-color: #f8fdf8;
+	color: #0b7023;
+	font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+h2 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: #0b5c10;
+	letter-spacing: 1px;
+}
+
+p {
+	font-size: 1.06rem;
+	color: #25532c;
+}
+
 .feature-card {
 	position: relative;
-	padding: 35px;
+	padding: 2rem 1.5rem;
 	background: whitesmoke;
-	overflow: hidden;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 	margin-bottom: 1.5rem;
 	clip-path: polygon(0% 0%,
-			calc(100% - 2.5rem) 0%,
-			100% 2.5rem,
-			100% 100%,
-			0% 100%);
-	color: #ffffff;
+		calc(100% - 2.5rem) 0%,
+		100% 2.5rem,
+		100% 100%,
+		0% 100%);
 	color: #0b7023;
-}
-
-.info-card {
-	background-color: #ffffff;
-	border-radius: 0.5rem;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.info-icon {
-	width: 3.5rem;
-	height: 3.5rem;
-	border: 2px solid #0d6efd;
-	/* Bootstrap primary */
-	border-radius: 50%;
+	box-shadow: 0 2px 14px rgba(45,80,60,0.07);
+	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	border: none;
+	min-height: 215px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #0d6efd;
-	background-color: rgba(13, 110, 253, 0.05);
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
-.feature-card.active {
-	background: #d8ffd7;
-	color: #0b7023;
-}
-
+.feature-card.active,
 .feature-card:hover {
 	background: #d8ffd7;
 	color: #0b7023;
-	transition: .5s ease-in-out;
+	box-shadow: 0 4px 24px rgba(45,80,60,0.12);
 }
 
 .feature-card .icon {
-	font-size: 2rem;
-	margin-bottom: 0.75rem;
-}
-
-/* RIGHT‑COLUMN CARD */
-.story-card {
-	padding: 1rem;
-	background: white;
-}
-
-.story-card-text {
-	text-decoration: none;
-	color: #0b7023;
-}
-
-.card-body img {
-	width: 380px;
-	height: 215px;
-	border-radius: 0.5rem;
-	object-fit: cover;
+	font-size: 2.1rem;
 	margin-bottom: 1rem;
 }
 
-.story-card .btn {
-	margin-top: 1rem;
+.feature-card h5 {
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+	color: #0b7023;
+}
+
+.feature-card p {
+	color: #24662f;
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+.info-card {
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	padding: 2rem 1.5rem 1.5rem 1.5rem;
+	margin-top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	min-height: 520px;
+}
+
+.card-title {
+	font-weight: 700 !important;
+	font-size: 1.4rem !important;
+	color: #0b5c10 !important;
+	letter-spacing: 1px !important;
+}
+
+.card-body img {
+	width: 100%;
+	max-width: 360px;
+	height: auto;
+	border-radius: 1rem;
+	object-fit: cover;
+	margin-bottom: 1.25rem;
+	display: block;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.title_purpose{
+	color: var(--Deep_Emerald) !important;
+}
+.info-card ul {
+	margin: 1.25rem 0 1.5rem 0;
+	padding: 0;
+	list-style: none;
+}
+
+.info-card li {
+	font-size: 1rem;
+	line-height: 1.7;
+	margin-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.info-card .bi-check2-circle {
+	font-size: 1.25rem;
+	margin-right: 0.5rem;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
+}
+
+.col-lg-8, .col-lg-4, .col-sm-6 {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.col-lg-8 {
+	flex: 0 0 66.6667%;
+	max-width: 66.6667%;
+}
+
+.col-lg-4 {
+	flex: 0 0 33.3333%;
+	max-width: 33.3333%;
+}
+
+.col-sm-6 {
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+@media (max-width: 992px) {
+	.col-lg-8, .col-lg-4 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.info-card {
+		min-height: unset;
+		margin-top: 2rem;
+	}
+	.row {
+		gap: 0.5rem 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	.feature-card, .info-card {
+		padding: 1rem;
+	}
+	.card-body img {
+		max-width: 100%;
+		aspect-ratio: 16 / 9;
+	}
+	.row {
+		flex-direction: column;
+	}
+	.col-sm-6 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	h2 {
+		font-size: 1.35rem;
+	}
+	.card-title {
+		font-size: 1.1rem;
+	}
+	.card-body img {
+		aspect-ratio: 16/10;
+	}
+	.feature-card {
+		padding: 1rem 0.5rem;
+		font-size: 0.95rem;
+	}
+	.info-card {
+		padding: 1rem 0.5rem;
+	}
 }
