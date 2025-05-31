@@ -9,78 +9,309 @@
         <link rel="stylesheet" href="About_Us/aboutus.css">
         <link rel="stylesheet" href="Services/services.css">
         <link rel="stylesheet" href="Services/card.css">
+        <link rel="stylesheet" href="Services/nav_pane.css">
+        <link rel="stylesheet" href="Services/accordion.css">
+        <link rel="stylesheet" href="About_Us/timeline.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
     </head>
     <body>
         <!-- Navigation -->
         <header class="main-header navbar navbar-expand-lg navbar-light py-3">
             <div class="container">
-                <a class="navbar-brand" href="#">Chillout</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Img/logo_remove_bg-nutri.png" alt="Logo" class="logo">
+                    <p><span>Nutri</span>Nest</p>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainOffcanvas" aria-controls="mainOffcanvas">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <nav class="collapse navbar-collapse" id="mainNavigation">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">About Us</a></li>
-                        <!-- Recipes Dropdown -->
-                        <!---->
-                        <li class="nav-item dropdown">
-                            <a class="main-nav__link nav-link" href="#" role="button" data-bs-toggle="dropdown">
-                            Services <i class="fa-solid fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><i class="fas fa-sun me-2"></i>Breakfast Plan</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fas fa-utensils me-2"></i>Lunch Plan</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fas fa-moon me-2"></i>Dinner Plan</a></li>
-                            </ul>
-                        </li>
-                        <!---->
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Explore</a></li>
-                    </ul>
-                    <button class="button type1">
-                    <span class="btn-txt">Hello</span>
-                    </button>
-                </nav>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="mainOffcanvasLabel">NutriNest Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto my-1">
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="aboutus.html">About Us</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="main-nav__link nav-link"
+                                    href="services.html"
+                                    id="servicesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    tabindex="0">
+                                Meal Plan <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="services.html"><i class="bi bi-fork-knife me-2"></i>Meal Plan</a></li>
+                                    <li><a class="dropdown-item" href="breakfast_plan.html"><i class="bi bi-sun me-2"></i>Breakfast Plan</a></li>
+                                    <li><a class="dropdown-item" href="lunch_plan_first_view.html"><i class="bi bi-egg-fried me-2"></i>Lunch Plan</a></li>
+                                    <li><a class="dropdown-item" href="dinner_plan_first_view.html"><i class="bi bi-moon me-2"></i>Dinner Plan</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <form class="search-form d-flex mt-1 mb-2">
+                            <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="search-btn" type="submit">
+                            <i class="bi bi-search search-glass"></i>
+                            </button>
+                        </form>
+                        <button class="button type1 mt-1 mb-2">
+                        <a href="sign_in.html" class="btn-txt">Sign In</a>
+                        </button>
+                    </div>
+                </div>
             </div>
         </header>
         <section class="hero-section d-flex flex-column justify-content-center">
             <div class="container">
-                <h1 class="display-5 fw-bold">Services</h1>
+                <h1 class="display-5 fw-bold">Meals Plan</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                        <li class="breadcrumb-item active" aria-current="page">Meal Plans</li>
                     </ol>
                 </nav>
             </div>
         </section>
+        <div class="container">
+            <div class="MealNavPane-container">
+                <ul class="nav MealNavPane-tabs" id="meal-tabs" role="tablist">
+                    <li class="nav-item">
+                        <button class="MealNavPane-tab-link nav-link active text-success" id="breakfast-tab" data-bs-toggle="pill" data-bs-target="#breakfast" type="button" role="tab">
+                        <img src="Img/bg_fruit.jpg" alt="Breakfast" class="MealNavPane-meal-image">
+                        Breakfast
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="MealNavPane-tab-link nav-link text-success" id="lunch-tab" data-bs-toggle="pill" data-bs-target="#lunch" type="button" role="tab">
+                        <img src="Img/bg_fruit.jpg" alt="Lunch" class="MealNavPane-meal-image">
+                        Lunch
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="MealNavPane-tab-link nav-link text-success" id="dinner-tab" data-bs-toggle="pill" data-bs-target="#dinner" type="button" role="tab">
+                        <img src="Img/bg_fruit.jpg" alt="Dinner" class="MealNavPane-meal-image">
+                        Dinner
+                        </button>
+                    </li>
+                </ul>
+                <div class="MealNavPane-tab-content tab-content" id="meal-tabs-content">
+                    <div class="MealNavPane-tab-pane tab-pane fade show active" id="breakfast" role="tabpanel">
+                        <h3 class="MealNavPane-meal-title">Breakfast Options</h3>
+                        <p class="MealNavPane-meal-description">
+                            Start your day with our nutritious breakfast selections featuring fresh fruits, whole grain cereals, yogurt parfaits, and protein-rich egg dishes. Our breakfast menu is designed to provide sustained energy throughout your morning.
+                        </p>
+                        <div class="MealNavPane-meal-items">
+                            <div class="MealNavPane-meal-card">
+                                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150" alt="Avocado Toast" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Avocado Toast</h5>
+                                    <p class="MealNavPane-meal-card-text">Sourdough bread with smashed avocado, cherry tomatoes, and poached eggs.</p>
+                                </div>
+                            </div>
+                            <div class="MealNavPane-meal-card">
+                                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Yogurt Bowl" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Yogurt Bowl</h5>
+                                    <p class="MealNavPane-meal-card-text">Greek yogurt with homemade granola, fresh berries, and honey drizzle.</p>
+                                </div>
+                            </div>
+                            <div class="MealNavPane-meal-card">
+                                <img src="https://images.unsplash.com/photo-1490648139968-336864baf9c7" alt="Omelette" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Vegetable Omelette</h5>
+                                    <p class="MealNavPane-meal-card-text">Fluffy eggs with bell peppers, spinach, mushrooms, and feta cheese.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MealNavPane-tab-pane tab-pane fade" id="lunch" role="tabpanel">
+                        <h3 class="MealNavPane-meal-title">Lunch Specials</h3>
+                        <p class="MealNavPane-meal-description">
+                            Our lunch menu offers balanced meals with lean proteins, fresh seasonal vegetables, and complex carbohydrates. Choose from salads, grain bowls, sandwiches, and hot entrees prepared with high-quality ingredients.
+                        </p>
+                        <div class="MealNavPane-meal-items">
+                            <div class="MealNavPane-meal-card">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Quinoa Salad" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Quinoa Salad</h5>
+                                    <p class="MealNavPane-meal-card-text">Protein-packed quinoa with grilled chicken, avocado, and lemon-tahini dressing.</p>
+                                </div>
+                            </div>
+                            <div class="MealNavPane-meal-card">
+                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Vegetable Stir Fry" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Vegetable Stir Fry</h5>
+                                    <p class="MealNavPane-meal-card-text">Seasonal vegetables with tofu in a ginger-garlic sauce over brown rice.</p>
+                                </div>
+                            </div>
+                            <div class="MealNavPane-meal-card">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Turkey Wrap" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Turkey Wrap</h5>
+                                    <p class="MealNavPane-meal-card-text">Whole wheat wrap with roasted turkey, avocado, spinach, and sun-dried tomato spread.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MealNavPane-tab-pane tab-pane fade" id="dinner" role="tabpanel">
+                        <h3 class="MealNavPane-meal-title">Dinner Selections</h3>
+                        <p class="MealNavPane-meal-description">
+                            End your day with our wholesome dinner options featuring international cuisines and comfort foods. Our menu includes vegetarian, vegan, and protein-rich dishes to suit all dietary preferences.
+                        </p>
+                        <div class="MealNavPane-meal-items">
+                            <div class="MealNavPane-meal-card">
+                                <img src="Img/bg_fruit.jpg" alt="Grilled Salmon" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Grilled Salmon</h5>
+                                    <p class="MealNavPane-meal-card-text">Atlantic salmon with lemon-dill sauce, roasted asparagus, and quinoa pilaf.</p>
+                                </div>
+                            </div>
+                            <div class="MealNavPane-meal-card">
+                                <img src="Img/bg_stats1.png" alt="Mushroom Risotto" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Mushroom Risotto</h5>
+                                    <p class="MealNavPane-meal-card-text">Creamy arborio rice with wild mushrooms, white wine, and parmesan.</p>
+                                </div>
+                            </div>
+                            <div class="MealNavPane-meal-card">
+                                <img src="Img/bg_stats3.jpg" alt="Chicken Tikka" class="MealNavPane-meal-card-img">
+                                <div class="MealNavPane-meal-card-body">
+                                    <h5 class="MealNavPane-meal-card-title">Chicken Tikka Masala</h5>
+                                    <p class="MealNavPane-meal-card-text">Tender chicken in spiced tomato cream sauce with basmati rice and naan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <!-- Text Section -->
+                <div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-start">
                     <span class="badge badge-custom px-3 py-2 mb-3 text-muted">Healthy Food Advantage 🔥</span>
                     <h2 class="fw-bold mb-3"> Eat Right, Feel Bright<br>A Tasty Guide to Healthy Delight</h2>
                     <p class="text-muted mb-4">
                         A Complete Guide to Nourishing Your Body, Mind, and Lifestyle
                     </p>
-                    <div class="row feature-list mb-4">
-                        <div class="col-6 mb-2"><i class="bi bi-check-circle-fill"></i>  Healthy Food Boosts Energy</div>
-                        <div class="col-6 mb-2"><i class="bi bi-check-circle-fill"></i> Good Nutrition = Stronger Body</div>
-                        <div class="col-6 mb-2"><i class="bi bi-check-circle-fill"></i>  Healthy Can Be Tasty</div>
-                        <div class="col-6 mb-2"><i class="bi bi-check-circle-fill"></i> Healthy Doesnt Mean Boring</div>
+                    <div class="row feature-list mb-4 gx-2">
+                        <div class="col-12 col-sm-6 mb-2">
+                            <i class="bi bi-check-circle-fill"></i> Healthy Food Boosts Energy
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            <i class="bi bi-check-circle-fill"></i> Good Nutrition = Stronger Body
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            <i class="bi bi-check-circle-fill"></i> Healthy Can Be Tasty
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            <i class="bi bi-check-circle-fill"></i> Healthy Doesn't Mean Boring
+                        </div>
                     </div>
-                    <button class="homepage-button mb-4">Learn More</button>
+                    <button class="homepage-button mb-4" data-bs-toggle="modal" data-bs-target="#infoModal1">Learn More</button>
                 </div>
-                <div class="col-md-6 mt-5 mt-md-0">
-                    <img src="Img/healthy food.jpg" alt="Healthy" class="healthy_food">
+                <!-- Image Section -->
+                <div class="col-12 col-md-6 order-1 order-md-2 text-center mb-4 mb-md-0">
+                    <img src="Img/healthy_food.jpg" alt="Healthy" class="healthy_food img-fluid rounded shadow-sm">
                 </div>
             </div>
         </div>
+        <!-- Modal with ScrollSpy -->
+        <div class="modal fade" id="infoModal1" tabindex="-1" aria-labelledby="infoModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModal1Label">The Ultimate Healthy Food Guide</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex">
+                        <nav id="modalScrollspy1" class="modal-scrollspy-nav flex-column nav me-4 border-end pe-3">
+                            <a class="nav-link active" href="#modal1-section1">Why Eat Healthy?</a>
+                            <a class="nav-link" href="#modal1-section2">Essential Nutrients</a>
+                            <a class="nav-link" href="#modal1-section3">Meal Planning</a>
+                            <a class="nav-link" href="#modal1-section4">Overcoming Challenges</a>
+                            <a class="nav-link" href="#modal1-section5">Myth-Busting</a>
+                            <a class="nav-link" href="#modal1-section6">Quick Healthy Recipes</a>
+                        </nav>
+                        <div data-bs-spy="scroll"
+                            data-bs-target="#modalScrollspy1"
+                            data-bs-offset="20"
+                            tabindex="0"
+                            class="modal-scrollspy-content flex-grow-1">
+                            <h4 id="modal1-section1">Why Eat Healthy?</h4>
+                            <p>Eating healthy food provides essential nutrients for your body, supports mental clarity, and boosts your energy levels. A balanced diet can help prevent chronic diseases and improve overall well-being.</p>
+                            <ul>
+                                <li>Improved mood and concentration</li>
+                                <li>Better digestion and gut health</li>
+                                <li>Stronger immunity</li>
+                                <li>Healthy weight management</li>
+                            </ul>
+                            <h4 id="modal1-section2" class="mt-5">Essential Nutrients</h4>
+                            <h6>Carbohydrates</h6>
+                            <p>Carbohydrates are the body's main source of energy. Choose whole grains, fruits, and vegetables for sustained energy.</p>
+                            <h6>Proteins</h6>
+                            <p>Proteins are vital for muscle repair and immune function. Include lean meats, dairy, legumes, and nuts.</p>
+                            <h6>Healthy Fats</h6>
+                            <p>Fats support brain health and vitamin absorption. Focus on unsaturated fats from olive oil, fish, nuts, and seeds.</p>
+                            <h6>Vitamins & Minerals</h6>
+                            <p>Vitamins and minerals are needed for all body processes. Eat a variety of colorful produce to cover your needs.</p>
+                            <h4 id="modal1-section3" class="mt-5">Meal Planning</h4>
+                            <ol>
+                                <li>Start with a protein base for each meal.</li>
+                                <li>Add a serving of whole grains or starchy vegetables.</li>
+                                <li>Include a variety of non-starchy vegetables.</li>
+                                <li>Top with healthy fats and a portion of fruit.</li>
+                            </ol>
+                            <p>Example Day:
+                            <ul>
+                                <li><b>Breakfast:</b> Oatmeal, berries, nuts, and yogurt</li>
+                                <li><b>Lunch:</b> Grilled chicken salad with olive oil dressing</li>
+                                <li><b>Dinner:</b> Salmon, quinoa, roasted vegetables</li>
+                            </ul>
+                            </p>
+                            <h4 id="modal1-section4" class="mt-5">Overcoming Challenges</h4>
+                            <p>Common obstacles include busy schedules, cravings, and eating out. Plan ahead, keep healthy snacks, and don't be afraid to ask for substitutions at restaurants.</p>
+                            <h4 id="modal1-section5" class="mt-5">Myth-Busting</h4>
+                            <ul>
+                                <li><b>Myth:</b> Healthy food is always expensive.<br><b>Fact:</b> Staple foods like beans, rice, and frozen veggies are affordable and nutritious.</li>
+                                <li><b>Myth:</b> You have to give up your favorite foods.<br><b>Fact:</b> Balance and moderation are key. Enjoy treats mindfully.</li>
+                                <li><b>Myth:</b> Only fresh produce is healthy.<br><b>Fact:</b> Frozen and canned options (low-sodium, no-sugar) are nutritious too!</li>
+                            </ul>
+                            <h4 id="modal1-section6" class="mt-5">Quick Healthy Recipes</h4>
+                            <h6>Berry Yogurt Parfait</h6>
+                            <p>Layer low-fat yogurt with berries and granola for a quick breakfast or snack.</p>
+                            <h6>Avocado Toast</h6>
+                            <p>Top whole-grain toast with mashed avocado, tomato, and a sprinkle of seeds.</p>
+                            <h6>One-Pan Veggie Stir-Fry</h6>
+                            <p>Sauté mixed vegetables in olive oil, add tofu or chicken, and serve over brown rice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Re-initialize scrollspy when modal is shown
+            document.querySelector('#infoModal1').addEventListener('shown.bs.modal', function () {
+                var scrollspyContent = this.querySelector('.modal-scrollspy-content');
+                var scrollspyNav = this.querySelector('.modal-scrollspy-nav');
+                bootstrap.ScrollSpy.getOrCreateInstance(scrollspyContent, {
+                target: '#' + scrollspyNav.id,
+                offset: 20
+                });
+            });
+        </script>
         <div class="container py-5">
             <div class="row align-center">
                 <div class="col-md-6 image-col text-center">
@@ -111,10 +342,86 @@
                             <p class="subtext">Welcome to our StrawHats website!<br>We provide fresh ideas, and tips to support your healthy living journey.</p>
                         </div>
                     </div>
-                    <button class="homepage-button mb-4 my-4">More About Us</button>
+                    <!-- Updated Button with modal trigger -->
+                    <button class="homepage-button mb-4 my-4" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                    Learn More
+                    </button>
                 </div>
             </div>
         </div>
+        <!-- Modal for "Learn More" -->
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="aboutModalLabel">About Our Healthy World</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex">
+                        <nav id="aboutModalScrollspy" class="modal-scrollspy-nav flex-column nav me-4 border-end pe-3">
+                            <a class="nav-link active" href="#about-section1">Our Mission</a>
+                            <a class="nav-link" href="#about-section2">What Makes Us Unique</a>
+                            <a class="nav-link" href="#about-section3">Weight Loss Approach</a>
+                            <a class="nav-link" href="#about-section4">Balanced Diet Philosophy</a>
+                            <a class="nav-link" href="#about-section5">Healthy Weight Gain</a>
+                            <a class="nav-link" href="#about-section6">Join Our Community</a>
+                        </nav>
+                        <div data-bs-spy="scroll"
+                            data-bs-target="#aboutModalScrollspy"
+                            data-bs-offset="20"
+                            tabindex="0"
+                            class="modal-scrollspy-content flex-grow-1">
+                            <h4 id="about-section1">Our Mission</h4>
+                            <p>
+                                Our mission is simple: to make healthy living accessible, enjoyable, and sustainable for everyone. 
+                                We believe nutrition is more than just food—it's about community, support, and real-world results.
+                            </p>
+                            <h4 id="about-section2" class="mt-5">What Makes Us Unique</h4>
+                            <ul>
+                                <li><b>Personalized Guidance:</b> Resources for all dietary needs and body goals.</li>
+                                <li><b>Evidence-Based Tips:</b> Advice rooted in science, not trends.</li>
+                                <li><b>Supportive Community:</b> Share your journey and be inspired by others.</li>
+                                <li><b>Delicious Recipes:</b> Healthy food that tastes amazing and fits your lifestyle.</li>
+                            </ul>
+                            <h4 id="about-section3" class="mt-5">Weight Loss Approach</h4>
+                            <p>
+                                We focus on gradual, sustainable weight loss—no crash diets or gimmicks. Discover smart swaps, portion guidance, and meal ideas to help you feel your best.
+                            </p>
+                            <h4 id="about-section4" class="mt-5">Balanced Diet Philosophy</h4>
+                            <p>
+                                Balance is at the core of what we do. Our plans include a mix of whole grains, lean proteins, healthy fats, and plenty of colorful fruits and veggies, making every meal both nourishing and enjoyable.
+                            </p>
+                            <h4 id="about-section5" class="mt-5">Healthy Weight Gain</h4>
+                            <p>
+                                Gaining weight can be just as challenging as losing it. We offer safe, nutritious, and tasty options to help you build muscle or restore balance, all while prioritizing overall wellness.
+                            </p>
+                            <h4 id="about-section6" class="mt-5">Join Our Community</h4>
+                            <p>
+                                Whether you want to lose weight, gain muscle, or simply eat better, our community is here to support you. Share your progress, find motivation, and let’s grow healthier together!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Script for ScrollSpy in About Modal -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var aboutModal = document.querySelector('#aboutModal');
+                if (aboutModal) {
+                    aboutModal.addEventListener('shown.bs.modal', function () {
+                    var scrollspyContent = aboutModal.querySelector('.modal-scrollspy-content');
+                    var scrollspyNav = aboutModal.querySelector('.modal-scrollspy-nav');
+                    if (scrollspyContent && scrollspyNav) {
+                        bootstrap.ScrollSpy.getOrCreateInstance(scrollspyContent, {
+                        target: '#' + scrollspyNav.id,
+                        offset: 20
+                    });
+                    }
+                });
+                }
+            });
+        </script>
         <div class="calorie-container">
             <div class="calorie-header">
                 <h1>Daily Calorie Calculation Guide</h1>
@@ -251,79 +558,308 @@
                 <p>These calculations provide estimates. Individual needs may vary based on metabolism and body composition.</p>
             </div>
         </div>
+        <div class="nhg-container container mb-5">
+            <div class="nhg-accordion accordion" id="nhgHealthyFoodAccordion">
+                <div class="nhg-accordion-item accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="nhg-accordion-button accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nhgLeafyGreens" aria-expanded="true" aria-controls="nhgLeafyGreens">
+                            <i class="fas fa-leaf nhg-food-icon"></i>Daily Nutritional Requirements
+                        </button>
+                    </h2>
+                    <div id="nhgLeafyGreens" class="accordion-collapse collapse show" data-bs-parent="#nhgHealthyFoodAccordion">
+                        <div class="nhg-accordion-body accordion-body">
+                            <h4 class="nhg-section-title">Daily Nutritional Requirements</h4>
+                            <div class="nhg-health-tip health-tip">
+                                <h5><i class="fas fa-lightbulb me-2"></i> Expert Tip</h5>
+                                <p>A balanced diet should include a variety of foods from all food groups: fruits, vegetables, grains, protein foods, and dairy.</p>
+                            </div>
+                            <ul class="nhg-nutrient-list nutrient-list">
+                                <li><span>Calories</span> <span class="nhg-nutrient-value nutrient-value">1,500-2,500 kcal</span></li>
+                                <li><span>Protein</span> <span class="nhg-nutrient-value nutrient-value">50-100g</span></li>
+                                <li><span>Carbohydrates</span> <span class="nhg-nutrient-value nutrient-value">225-325g</span></li>
+                                <li><span>Dietary Fiber</span> <span class="nhg-nutrient-value nutrient-value">25-30g</span></li>
+                                <li><span>Total Fat</span> <span class="nhg-nutrient-value nutrient-value">65-80g</span></li>
+                                <li><span>Saturated Fat</span> <span class="nhg-nutrient-value nutrient-value">Less than 20g</span></li>
+                                <li><span>Sodium</span> <span class="nhg-nutrient-value nutrient-value">Less than 2,300mg</span></li>
+                            </ul>
+                            <h4 class="nhg-section-title mt-4">Superfoods to Include</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="nhg-benefit-item benefit-item">
+                                        <div class="nhg-benefit-icon benefit-icon">
+                                            <i class="fas fa-seedling"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Leafy Greens</h6>
+                                            <p class="mb-0">Rich in vitamins A, C, K and minerals</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="nhg-benefit-item benefit-item">
+                                        <div class="nhg-benefit-icon benefit-icon">
+                                            <i class="fas fa-fish"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Fatty Fish</h6>
+                                            <p class="mb-0">Excellent source of omega-3 fatty acids</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="nhg-benefit-item benefit-item">
+                                        <div class="nhg-benefit-icon benefit-icon">
+                                            <i class="fas fa-apple-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Berries</h6>
+                                            <p class="mb-0">Packed with antioxidants and fiber</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="nhg-benefit-item benefit-item">
+                                        <div class="nhg-benefit-icon benefit-icon">
+                                            <i class="fas fa-mortar-pestle"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Nuts & Seeds</h6>
+                                            <p class="mb-0">Healthy fats, protein, and micronutrients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Colorful Vegetables -->
+                <div class="nhg-accordion-item accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="nhg-accordion-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nhgColorfulVeggies" aria-expanded="false" aria-controls="nhgColorfulVeggies">
+                        <i class="fas fa-carrot nhg-food-icon"></i> Colorful Vegetables
+                        </button>
+                    </h2>
+                    <div id="nhgColorfulVeggies" class="accordion-collapse collapse" data-bs-parent="#nhgHealthyFoodAccordion">
+                        <div class="nhg-accordion-body accordion-body">
+                            <div class="nhg-food-category food-category">
+                                <h3>Vibrant Choices</h3>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Bell Peppers</div>
+                                        <div class="nhg-food-desc food-desc">Excellent source of vitamin C and antioxidants. Red peppers have the highest nutrient content.</div>
+                                    </div>
+                                </div>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Sweet Potatoes</div>
+                                        <div class="nhg-food-desc food-desc">Rich in beta-carotene, fiber, and vitamin A. The orange color indicates high antioxidant content.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Healthy Fats -->
+                <div class="nhg-accordion-item accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="nhg-accordion-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nhgHealthyFats" aria-expanded="false" aria-controls="nhgHealthyFats">
+                        <i class="fas fa-seedling nhg-food-icon"></i> Healthy Fats
+                        </button>
+                    </h2>
+                    <div id="nhgHealthyFats" class="accordion-collapse collapse" data-bs-parent="#nhgHealthyFoodAccordion">
+                        <div class="nhg-accordion-body accordion-body">
+                            <div class="nhg-food-category food-category">
+                                <h3>Plant-Based Sources</h3>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Avocados</div>
+                                        <div class="nhg-food-desc food-desc">Packed with monounsaturated fats, fiber, and potassium. Helps with nutrient absorption from other foods.</div>
+                                    </div>
+                                </div>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Nuts & Seeds</div>
+                                        <div class="nhg-food-desc food-desc">Almonds, walnuts, chia seeds, and flaxseeds provide healthy fats, protein, and micronutrients.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Whole Grains -->
+                <div class="nhg-accordion-item accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="nhg-accordion-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nhgWholeGrains" aria-expanded="false" aria-controls="nhgWholeGrains">
+                        <i class="fas fa-bread-slice nhg-food-icon"></i> Whole Grains
+                        </button>
+                    </h2>
+                    <div id="nhgWholeGrains" class="accordion-collapse collapse" data-bs-parent="#nhgHealthyFoodAccordion">
+                        <div class="nhg-accordion-body accordion-body">
+                            <div class="nhg-food-category food-category">
+                                <h3>Fiber-Rich Options</h3>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Quinoa</div>
+                                        <div class="nhg-food-desc food-desc">Complete protein source with all essential amino acids. High in fiber, magnesium, and iron.</div>
+                                    </div>
+                                </div>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Oats</div>
+                                        <div class="nhg-food-desc food-desc">Rich in beta-glucan fiber which helps lower cholesterol and improve gut health.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Superfoods -->
+                <div class="nhg-accordion-item accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="nhg-accordion-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nhgSuperfoods" aria-expanded="false" aria-controls="nhgSuperfoods">
+                        <i class="fas fa-star nhg-food-icon"></i> Superfoods
+                        </button>
+                    </h2>
+                    <div id="nhgSuperfoods" class="accordion-collapse collapse" data-bs-parent="#nhgHealthyFoodAccordion">
+                        <div class="nhg-accordion-body accordion-body">
+                            <div class="nhg-food-category food-category">
+                                <h3>Nutrient-Dense Choices</h3>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Blueberries</div>
+                                        <div class="nhg-food-desc food-desc">Packed with antioxidants called flavonoids. May improve memory and cognitive function.</div>
+                                    </div>
+                                </div>
+                                <div class="nhg-food-item food-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="nhg-food-item-content food-item-content">
+                                        <div class="nhg-food-name food-name">Turmeric</div>
+                                        <div class="nhg-food-desc food-desc">Contains curcumin, a powerful anti-inflammatory compound. Best absorbed with black pepper.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-timeline">
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-year">1 Month</div>
+                                    <h3 class="title">Web Designing</h3>
+                                    <p class="description">
+                                        In the first month of dieting, working out, and tracking calories, your body undergoes rapid changes. Initial weight loss is often due to reduced water retention and glycogen depletion, leading to a noticeable drop on the scale. Energy levels may fluctuate as your body adjusts to fewer calories, and hunger or cravings can be intense. However, workouts start boosting endorphins, improving mood and motivation. Discipline is key, as consistency now sets the foundation for long-term success.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-year">3 Months</div>
+                                    <h3 class="title">Progress</h3>
+                                    <p class="description">
+                                        By the third month, fat loss becomes more apparent as your body adapts to the calorie deficit. Workouts feel easier, and you may notice improved strength, endurance, and muscle definition. The scale may slow down as your metabolism adjusts, but measurements and clothing fit better. Cravings lessen as eating habits stabilize, though mental fatigue or plateaus can test motivation. This is when many people either push through or risk falling off track.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-year">6 months</div>
+                                    <h3 class="title">Progress</h3>
+                                    <p class="description">
+                                        At six months, significant physical and mental transformations are visible. Fat loss is substantial, and muscle tone is more defined if strength training is included. Your metabolism may have adapted, requiring adjustments in calories or workout intensity to keep progressing. Energy levels stabilize, and the routine feels more natural, but boredom with meals or exercises can creep in. This phase demands variety to stay engaged and avoid regression.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-year">1 Year</div>
+                                    <h3 class="title">Progress</h3>
+                                    <p class="description">
+                                        After a full year of consistent dieting, exercise, and calorie tracking, you’ll likely reach your goal weight or fitness level. Healthy eating and workouts become ingrained habits rather than temporary fixes. However, long-term success depends on flexibility—strict calorie counting may not be necessary if intuitive eating is mastered. Some people maintain effortlessly, while others must stay vigilant to avoid regain. The key is balance, allowing occasional indulgences while keeping active to sustain results for life.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer class="text-dark py-5">
             <div class="container">
                 <div class="row gy-5">
-                    <!-- Brand & Download -->
                     <div class="col-md-4">
                         <a href="#" class="d-inline-block mb-4">
-                        <img src="/assets/logo-niotech.svg" alt="Niotech Logo" height="50">
+                        <img src="Img/logo_remove_bg-nutri.png" alt="Logo" height="80">
                         </a>
                         <p class="fs-5 text-muted mb-4">
                             It is a long established fact that a reader will be<br>
                             distracted by the readable content when looking.
                         </p>
                         <div class="d-flex gap-3">
-                            <a href="#" class="btn btn-dark btn-lg rounded-5">
-                            <i class="bi bi-apple me-2"></i> App Store
-                            </a>
-                            <a href="#" class="btn btn-outline-secondary btn-lg rounded-5">
-                            <i class="bi bi-android2 me-2"></i> Play Store
-                            </a>
+                            <a href="#" class="btn btn-dark btn-lg"><i class="bi bi-apple"></i> App Store</a>
+                            <a href="#" class="btn btn-outline-secondary btn-lg"><i class="bi bi-android2"></i> Play Store</a>
                         </div>
                     </div>
-                    <!-- Links -->
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-6">
-                                <h5 class="fw-bold mb-3">Pages</h5>
+                                <h5 class="fw-bold mb-4 section-title">Pages</h5>
                                 <ul class="list-unstyled fs-6">
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Home</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About Us</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Integrations</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Features</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
-                                    <li><a href="#" class="text-muted text-decoration-none">Contact Us</a></li>
+                                    <li class="mb-3"><a href="index.html" class="text-decoration-none footer_links">Home</a></li>
+                                    <li class="mb-3"><a href="aboutus.html" class="text-decoration-none footer_links">About Us</a></li>
+                                    <li class="mb-3"><a href="services.html" class="text-decoration-none footer_links">Meal Plan</a></li>
+                                    <li class="mb-3"><a href="faq.html" class="text-decoration-none footer_links">FAQ</a></li>
+                                    <li><a href="contact.html" class="text-decoration-none footer_links">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-6">
-                                <h5 class="fw-bold mb-3">Utility Pages</h5>
+                                <h5 class="fw-bold mb-4 section-title">Utility Pages</h5>
                                 <ul class="list-unstyled fs-6">
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Project</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Project Details</a></li>
-                                    <li><a href="#" class="text-muted text-decoration-none">Our Team</a></li>
+                                    <li class="mb-3"><a href="sign_in.html" class="text-decoration-none footer_links">Sign_In</a></li>
+                                    <li class="mb-3"><a href="sign_up.html" class="text-decoration-none footer_links">Sign_Up</a></li>
+                                    <li class="mb-3"><a href="privacy_policy.html" class="text-decoration-none footer_links">Privacy Policy</a></li>
+                                    <li class="mb-3"><a href="term of services.html" class="text-decoration-none footer_links">Term of Services</a></li>
+                                    <li><a href="refrences.html" class="text-decoration-none footer_links">Refrences</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!-- Contact Card -->
                     <div class="col-md-4">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body py-4 px-4">
-                                <small class="text-primary text-uppercase fs-6">Address</small>
+                                <small class="color_change text-uppercase fs-6">Address</small>
                                 <h4 class="card-title mt-2 mb-3">Ready To Get Started?</h4>
                                 <p class="fs-6 text-muted mb-2">
-                                    It is a long established fact that a reader will be distracted by the readable layout.
+                                    No.483, Aye Yeik Thar Condo 9C, Aye Yeik Thar 2nd Street, Sayarsan Quarter, Bahan Township
                                 </p>
                                 <ul class="list-unstyled fs-6">
                                     <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-envelope-fill text-primary me-3 fs-4"></i>
-                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">contact.tech@gmail.com</a>
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">info@edusn.co.uk</a>
                                     </li>
                                     <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-envelope-fill text-primary me-3 fs-4"></i>
-                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted">info@niotech.com</a>
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted">office@edusn.co.uk</a>
                                     </li>
                                     <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-telephone-fill text-primary me-3 fs-4"></i>
-                                        <span class="text-muted">+880 123 654 789 00</span>
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">+95 (09) 79 3333 550</span>
                                     </li>
                                     <li class="d-flex align-items-center">
-                                        <i class="bi bi-telephone-fill text-primary me-3 fs-4"></i>
-                                        <span class="text-muted">+001 6520 698 00</span>
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">(7:30 A.M to 9:00 A.M and 4:00 P.M to 8:00 P.M)</span>
                                     </li>
                                 </ul>
                             </div>
@@ -336,10 +872,10 @@
                         © 2025 Fuchsia Fantastic Four. All Rights Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end fs-5">
-                        <a href="#" class="text-muted me-4"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-muted me-4"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-muted me-4"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-facebook bottom_icons"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-twitter bottom_icons"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-linkedin bottom_icons"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-instagram bottom_icons"></i></a>
                     </div>
                 </div>
             </div>

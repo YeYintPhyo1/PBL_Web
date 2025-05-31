@@ -1,3 +1,86 @@
-.pigination_bar{
-    padding: 5px 0px 5px 30px;
-} 
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow: #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald: #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+	--primary-green: #2e7d32;
+	--Soft_Black: #282c32;
+	--text-light: #6B7280;
+	--card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pigination_bar .pagination {
+    background: var(--light-green, #e8f5e9);
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    box-shadow: none;
+    border: 1px solid var(--Frosted_Lime, #caffc4);
+    gap: 0.25rem;
+}
+
+.pigination_bar .page-item {
+    margin: 0 0.05rem;
+}
+
+.pigination_bar .page-link {
+    border: 1px solid var(--Frosted_Lime, #caffc4);
+    border-radius: 6px;
+    min-width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green, #2e7d32);
+    font-weight: 500;
+    font-size: 1rem;
+    background: #fff;
+    transition: 
+        background 0.18s,
+        color 0.18s,
+        border-color 0.18s;
+    outline: none;
+}
+
+.pigination_bar .page-link:hover,
+.pigination_bar .page-link:focus {
+    background: var(--Mint_Whisper, #e8ffe4);
+    color: var(--Vivid_Emerald, #00b807);
+    border-color: var(--Vivid_Emerald, #00b807);
+    text-decoration: none;
+}
+
+.pigination_bar .page-item.active .page-link {
+    background: var(--primary-green, #2e7d32);
+    color: #fff;
+    border-color: var(--primary-green, #2e7d32);
+    font-weight: 700;
+    z-index: 2;
+}
+
+.pigination_bar .page-link[aria-label="Previous"],
+.pigination_bar .page-link[aria-label="Next"] {
+    border-radius: 6px;
+    background: #fff;
+    color: var(--primary-green, #2e7d32);
+    font-size: 1.1rem;
+}
+
+.pigination_bar .page-link[aria-label="Previous"]:hover,
+.pigination_bar .page-link[aria-label="Next"]:hover {
+    background: var(--Mint_Whisper, #e8ffe4);
+    color: var(--Deep_Emerald, #008b05);
+    border-color: var(--Deep_Emerald, #008b05);
+}
+
+.pigination_bar .pagination .sr-only {
+    display: none !important;
+}

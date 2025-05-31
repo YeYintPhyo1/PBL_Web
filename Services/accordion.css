@@ -1,0 +1,227 @@
+:root {
+--nhg-primary-green: #27ae60;
+--nhg-secondary-green: #9aff90;
+--nhg-light-green: #e8ffe4;
+--nhg-dark-green: #16a085;
+--nhg-accent-green: #1abc9c;
+--nhg-text-dark: #2c3e50;
+--nhg-text-light: #ecf0f1;
+--nhg-card-shadow: 0 10px 30px -15px rgba(0,0,0,0.1);
+}
+html {
+overflow-y: scroll;
+}
+.nhg-header {
+background: linear-gradient(135deg, var(--nhg-primary-green), var(--nhg-dark-green));
+color: var(--nhg-text-light);
+padding: 4rem 0 3rem;
+margin-bottom: 3rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.nhg-header::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 8px;
+background: linear-gradient(90deg, #f1c40f, #e67e22, #e74c3c, #9b59b6, #3498db, #2ecc71);
+}
+.nhg-header h1 {
+font-weight: 700;
+letter-spacing: -0.5px;
+margin-bottom: 0.5rem;
+font-size: 2.5rem;
+}
+.nhg-header p {
+font-weight: 400;
+opacity: 0.9;
+max-width: 600px;
+margin: 0 auto;
+}
+.nhg-container {
+max-width: 800px;
+}
+/* Accordion Styles */
+.nhg-accordion {
+--bs-accordion-border-radius: 16px;
+--bs-accordion-inner-border-radius: 14px;
+--bs-accordion-btn-padding-x: 1.75rem;
+--bs-accordion-btn-padding-y: 1.25rem;
+--bs-accordion-body-padding-x: 1.75rem;
+--bs-accordion-body-padding-y: 1.5rem;
+--bs-accordion-active-color: white;
+--bs-accordion-active-bg: var(--nhg-primary-green);
+}
+.nhg-accordion-item {
+margin-bottom: 1.25rem;
+border: none;
+box-shadow: var(--nhg-card-shadow);
+border-radius: 16px !important;
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nhg-accordion-item:hover {
+transform: translateY(-3px);
+box-shadow: 0 15px 35px -10px rgba(0,0,0,0.15);
+}
+.nhg-accordion-button {
+background-color: white;
+color: var(--nhg-text-dark);
+font-weight: 600;
+font-size: 1.1rem;
+transition: all 0.3s ease;
+border-radius: 16px 16px 0 0 !important;
+}
+.accordion-button.nhg-accordion-button:not(.collapsed) {
+    background-color: var(--nhg-primary-green) !important;
+    color: #fff !important;
+    box-shadow: none;
+    border-color: transparent;
+}
+.nhg-accordion-button:focus {
+box-shadow: none;
+border-color: transparent;
+}
+.nhg-accordion-body {
+background-color: white;
+border-top: 1px solid rgba(0,0,0,0.05);
+border-radius: 0 0 16px 16px;
+background-color: white;
+padding: 1.5rem;
+}
+/* Custom arrow icon */
+.nhg-accordion-button::after {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232c3e50' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+width: 1.25rem;
+height: 1.25rem;
+background-size: 1.25rem;
+transition: all 0.3s ease;
+}
+.nhg-accordion-button:not(.collapsed)::after {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+transform: rotate(180deg);
+}
+/* Food category styling */
+.nhg-food-category {
+margin-bottom: 1.5rem;
+}
+.nhg-food-category h3 {
+color: var(--nhg-dark-green);
+font-weight: 600;
+margin-bottom: 0.75rem;
+font-size: 1.05rem;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+display: flex;
+align-items: center;
+}
+.nhg-food-item {
+display: flex;
+align-items: flex-start;
+margin-bottom: 0.75rem;
+padding: 0.5rem;
+border-radius: 8px;
+transition: all 0.2s ease;
+}
+.nhg-food-item:hover {
+background-color: var(--nhg-light-green);
+}
+.nhg-food-item i {
+color: var(--nhg-accent-green);
+margin-right: 12px;
+margin-top: 3px;
+font-size: 0.9rem;
+}
+.nhg-food-item-content {
+flex: 1;
+}
+.nhg-food-name {
+font-weight: 500;
+margin-bottom: 0.25rem;
+}
+.nhg-food-desc {
+font-size: 0.85rem;
+color: #7f8c8d;
+line-height: 1.5;
+}
+/* Custom icons */
+.nhg-food-icon {
+margin-right: 15px;
+color: var(--nhg-primary-green);
+font-size: 1.2rem;
+transition: all 0.3s ease;
+min-width: 24px;
+text-align: center;
+}
+.nhg-accordion-button:not(.collapsed) .nhg-food-icon {
+color: white;
+}
+/* Section Titles */
+.nhg-section-title {
+color: var(--nhg-text-color);
+border-bottom: 2px solid var(--nhg-accent-green);
+padding-bottom: 0.5rem;
+margin-bottom: 1.5rem;
+font-weight: 600;
+}
+.nhg-health-tip {
+background-color: var(--nhg-light-green);
+border-left: 4px solid var(--nhg-primary-green);
+padding: 1rem;
+margin: 1rem 0;
+border-radius: 0 5px 5px 0;
+}
+.nhg-health-tip h5 {
+color: var(--nhg-text-color);
+margin-bottom: 0.5rem;
+}
+.nhg-nutrient-list {
+list-style-type: none;
+padding-left: 0;
+}
+.nhg-nutrient-list li {
+padding: 0.5rem 0;
+border-bottom: 1px dashed #e0e0e0;
+display: flex;
+justify-content: space-between;
+}
+.nhg-nutrient-list li:last-child {
+border-bottom: none;
+}
+.nhg-nutrient-value {
+font-weight: 600;
+color: var(--nhg-text-color);
+}
+.nhg-benefit-item {
+display: flex;
+align-items: center;
+margin-bottom: 1rem;
+}
+.nhg-benefit-icon {
+background-color: var(--nhg-light-green);
+color: var(--nhg-primary-green);
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 1rem;
+flex-shrink: 0;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.nhg-header {
+padding: 3rem 0 2rem;
+}
+.nhg-header h1 {
+font-size: 2rem;
+}
+.nhg-accordion-button {
+padding: 1rem 1.25rem;
+font-size: 1rem;
+}
+}

@@ -2,10 +2,10 @@
 	--Mint_Whisper: #e8ffe4;
 	--Frosted_Lime: #caffc4;
 	--Fresh_Spring: #9aff90;
-	--Bright_Meadow : #59ff50;
+	--Bright_Meadow: #59ff50;
 	--Neon_Leaf: #25ff22;
 	--Pure_Green: #00e603;
-	--Vivid_Emerald : #00b807;
+	--Vivid_Emerald: #00b807;
 	--Deep_Emerald: #008b05;
 	--Forest_Canopy: #076d0c;
 	--Dark_Forest: #0b5c10;
@@ -17,12 +17,14 @@
 	--card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 body {
 	padding: 0;
 	margin: 0;
 	min-height: 100vh;
 	background-image: radial-gradient(circle at 25% 50%, rgba(202, 255, 196, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
 }
+
 /*First Section*/
 .feature-list i {
 	color: var(--Neon_Leaf);
@@ -38,8 +40,8 @@ body {
 }
 
 .badge-custom {
-	background-color: #ebe4ff;
-	color: #6f42c1;
+	background-color: var(--Mint_Whisper);
+	color: var(--Deep_Emerald);
 	font-weight: 500;
 }
 
@@ -54,9 +56,28 @@ body {
 .button-download:hover {
 	background-color: #5a35a0;
 }
+
+/*Scroll Spy 1st Ctn*/
+.modal-scrollspy-content {
+	max-height: 60vh;
+	overflow-y: auto;
+	padding-right: 2rem;
+}
+
+.modal-scrollspy-nav {
+	min-width: 200px;
+}
+
+@media (max-width: 767.98px) {
+	.modal-scrollspy-nav {
+		display: none;
+	}
+}
+
+/*Scroll Spy 1st Ctn*/
 /*First Section*/
 /* CSS */
-.homepage-button{
+.homepage-button {
 	padding: 10px 30px;
 	border: unset;
 	border-radius: 35px;
@@ -66,10 +87,11 @@ body {
 	position: relative;
 	font-weight: 700;
 	font-size: 17px;
-	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
 	transition: all 250ms;
 	overflow: hidden;
 }
+
 .homepage-button::before {
 	content: "";
 	position: absolute;
@@ -80,24 +102,134 @@ body {
 	border-radius: 15px;
 	background-color: var(--Forest_Canopy);
 	z-index: -1;
-	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
 	transition: all 450ms
 }
+
 .homepage-button:hover {
 	color: var(--Mint_Whisper);
 }
+
 .homepage-button:hover::before {
 	width: 100%;
 }
+
 /*Button*/
-/*Img*/
-.healthy_food{
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-    background-position: center;
-    border-radius: 50px;
+/*Customize Modal*/
+
+/*Img 1st Ctn*/
+.healthy_food {
+	width: 700px;
+	height: 700px;
+	display: block;
+	border-radius: 1.5rem;
+	box-shadow: 0 6px 20px rgba(80, 200, 120, 0.10);
 }
+
+
+/*Img 1st Ctn*/
+/*1st Ctn Modal Design*/
+.modal-title {
+	font-weight: 800;
+	color: var(--Deep_Emerald, #2e7d32);
+	letter-spacing: -0.5px;
+	font-size: 2rem;
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 0 2px 8px rgba(46, 125, 50, 0.08);
+	background: linear-gradient(90deg, #45b36b 50%, #caffc4 100%);
+	background-clip: text;
+}
+
+/* Modal Body: Remove background, set text color */
+.modal-body,
+.modal-body p,
+.modal-body h4,
+.modal-body h6,
+.modal-body ul,
+.modal-body li,
+.modal-body ol {
+	color: #20372c !important;
+	/* A deep green-gray for readability and healthy vibe */
+}
+
+.modal-scrollspy-nav {
+	--Deep_Emerald: #2e8b57;
+	--Emerald_Light: rgba(46, 139, 87, 0.08);
+	/* More subtle background */
+	--Charcoal: #333333;
+	--transition-speed: 0.4s;
+	/* Slower transition */
+	--easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	/* More natural easing */
+}
+
+.modal-scrollspy-nav .nav-link {
+	color: var(--Charcoal);
+	background: transparent;
+	padding: 12px 20px;
+	margin: 4px 0;
+	position: relative;
+	transition: all var(--transition-speed) var(--easing);
+	font-weight: 500;
+	overflow: hidden;
+	/* For the underline effect */
+}
+
+/* Underline animation */
+.modal-scrollspy-nav .nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: 8px;
+	left: 20px;
+	width: 0;
+	height: 2px;
+	background: var(--Deep_Emerald);
+	transition: width 0.6s var(--easing);
+	/* Slower underline animation */
+	transform-origin: left center;
+}
+
+/* Hover effects */
+.modal-scrollspy-nav .nav-link:hover {
+	color: var(--Deep_Emerald);
+	background-color: var(--Emerald_Light);
+	border-radius: 10px;
+	padding-left: 24px;
+	transition: all 0.3s var(--easing);
+	/* Faster for hover state */
+}
+
+/* Slower underline growth on hover */
+.modal-scrollspy-nav .nav-link:hover::after {
+	width: calc(100% - 40px);
+	transition: width 0.8s var(--easing);
+	/* Even slower underline */
+}
+
+/* Active state */
+.modal-scrollspy-nav .nav-link.active {
+	color: var(--Deep_Emerald);
+	font-weight: 600;
+}
+
+.modal-scrollspy-nav .nav-link.active::after {
+	width: calc(100% - 40px);
+	background: var(--Deep_Emerald);
+	transition: width 0.8s var(--easing);
+	/* Slow appearance for active state */
+}
+
+/* Dropdown items */
+.modal-scrollspy-nav .dropdown-item:hover {
+	background-color: var(--Emerald_Light);
+	color: var(--Deep_Emerald);
+	padding-left: 24px;
+	transition: all 0.3s var(--easing);
+}
+
+/*1st Ctn modal Design*/
+/*Responsive For 2 Ctn*/
+/*Responsive For 2 Ctn*/
 /*Section 2*/
 .main-title {
 	font-size: 2.8rem;
@@ -144,6 +276,7 @@ body {
 	max-width: 80%;
 	height: auto;
 }
+
 /*Section 2*/
 /*Calories Calculations Cards*/
 .calorie-container {
@@ -370,16 +503,13 @@ body {
 	color: var(--text-light);
 	font-size: 0.875rem;
 }
-
 @media (max-width: 768px) {
 	.calorie-container {
 		padding: 40px 20px;
 	}
-
 	.calorie-header h1 {
 		font-size: 2rem;
 	}
-
 	.calorie-grid {
 		grid-template-columns: 1fr;
 	}

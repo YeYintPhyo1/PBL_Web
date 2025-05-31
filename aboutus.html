@@ -9,46 +9,65 @@
         <link rel="stylesheet" href="About_Us/timeline.css">
         <link rel="stylesheet" href="CSS/footer.css">
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
         <!-- Navigation -->
         <header class="main-header navbar navbar-expand-lg navbar-light py-3">
             <div class="container">
-                <a class="navbar-brand" href="#">Chillout</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Img/logo_remove_bg-nutri.png" alt="Logo" class="logo">
+                    <p><span>Nutri</span>Nest</p>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainOffcanvas" aria-controls="mainOffcanvas">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <nav class="collapse navbar-collapse nav_cth" id="mainNavigation">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">About Us</a></li>
-                        <!-- Recipes Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="main-nav__link nav-link "
-                                href="#"
-                                id="recipesDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown">
-                            Diets <i class="fa-solid fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="recipesDropdown">
-                                <li><a class="dropdown-item" href="#">Breakfast Plan</a></li>
-                                <li><a class="dropdown-item" href="#">Lunch Plan</a></li>
-                                <li><a class="dropdown-item" href="#">Dinner Plan</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="main-nav__link nav-link" href="#">Explore</a></li>
-                    </ul>
-                    <button class="button type1">
-                    <span class="btn-txt">Hello</span>
-                    </button>
-                </nav>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="mainOffcanvasLabel">NutriNest Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto my-1">
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="aboutus.html">About Us</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="main-nav__link nav-link"
+                                    href="services.html"
+                                    id="servicesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    tabindex="0">
+                                Meal Plan <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="services.html"><i class="bi bi-fork-knife me-2"></i>Meal Plan</a></li>
+                                    <li><a class="dropdown-item" href="breakfast_plan.html"><i class="bi bi-sun me-2"></i>Breakfast Plan</a></li>
+                                    <li><a class="dropdown-item" href="lunch_plan_first_view.html"><i class="bi bi-egg-fried me-2"></i>Lunch Plan</a></li>
+                                    <li><a class="dropdown-item" href="dinner_plan_first_view.html"><i class="bi bi-moon me-2"></i>Dinner Plan</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <form class="search-form d-flex mt-1 mb-2">
+                            <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="search-btn" type="submit">
+                            <i class="bi bi-search search-glass"></i>
+                            </button>
+                        </form>
+                        <button class="button type1 mt-1 mb-2">
+                            <a href="sign_in.html" class="btn-txt">Sign In</a>
+                        </button>
+                    </div>
+                </div>
             </div>
         </header>
         <section class="hero-section d-flex flex-column justify-content-center">
@@ -67,7 +86,7 @@
                 <div class="col-md-3">
                     <div class="team-card">
                         <div class="image-container">
-                            <img src="https://64.media.tumblr.com/266e5fea693106d1d852791fff82cc4b/tumblr_inline_p7lvm5zAWT1so1xk1_250.png" alt="member1" class="team-img">
+                            <img src="Img/yyp_pfp.png" alt="member1" class="team-img">
                         </div>
                         <h5 class="fw-bold mt-3">Ye Yint Phyo</h5>
                         <p class="text">Year-8</p>
@@ -82,7 +101,7 @@
                 <div class="col-md-3">
                     <div class="team-card">
                         <div class="image-container">
-                            <img src="https://i.pinimg.com/736x/7b/78/ff/7b78ff7b38ef9a3bc95479275cb26272.jpg" alt="member2" class="team-img">
+                            <img src="Img/mth_pic.png" alt="member2" class="team-img">
                         </div>
                         <h5 class="fw-bold mt-3">Min Thant Htoo</h5>
                         <p class="text">Year-8</p>
@@ -97,7 +116,7 @@
                 <div class="col-md-3">
                     <div class="team-card">
                         <div class="image-container">
-                            <img src="https://i.pinimg.com/474x/5e/17/49/5e17497a26282b5b5a098c642a41f1da.jpg" alt="member3" class="team-img">
+                            <img src="Img/ckp.jpg" alt="member3" class="team-img">
                         </div>
                         <h5 class="fw-bold mt-3">Chit Kyi Phyu</h5>
                         <p class="text">Year-8</p>
@@ -112,7 +131,7 @@
                 <div class="col-md-3">
                     <div class="team-card">
                         <div class="image-container">
-                            <img src="https://decider.com/wp-content/uploads/2014/09/jack-shepard-matthew-fox.png?w=642" alt="member4" class="team-img">
+                            <img src="Img/psto.jpg" alt="member4" class="team-img">
                         </div>
                         <h5 class="fw-bold mt-3">Pyae Shin Thant Oo</h5>
                         <p class="text">Year-8</p>
@@ -130,17 +149,16 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-5">
-                        <img src="Img/granny_holding_Broccoli.jpg" alt="img" class="doctor_img">
+                        <img src="Img/team_pic_final.png" alt="img" class="doctor_img">
                     </div>
                     <div class="col-md-7">
                         <h1 class="lead-headline">
-                            Simple Reports &<br>
-                            <span class="accent-highlight">Analytics Backdown</span> As It
+                            Nutrinest<br>
+                            <span class="accent-highlight">Who We Are</span> 
                         </h1>
                         <p class="lead-paragraph mb-4">
-                            There are many evidence of passages of Lorem Ipsum readable, but the mystery
-                            have suffered alteration in normal form. by special human or randomized words
-                            which don't take word tightly tolerable if you are going to use.
+                            At Nutrinest, we care deeply about good food, healthy living, and the future of our planet.
+                            Our team is made up of people who believe that everyone—young or old—should be able to enjoy meals that are both nourishing and sustainable.
                         </p>
                         <div class="value-proposition mb-4">
                             <h3 class="h4">
@@ -156,125 +174,70 @@
                 </div>
             </div>
         </section>
-        <div class="timeline">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="main-timeline">
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-year">2023</div>
-                                    <h3 class="title">Web Designing</h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-year">2022</div>
-                                    <h3 class="title">Web Development</h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-year">2023</div>
-                                    <h3 class="title">Web Designing</h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-year">2022</div>
-                                    <h3 class="title">Web Development</h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <footer class="text-dark py-5">
             <div class="container">
                 <div class="row gy-5">
-                    <!-- Brand & Download -->
                     <div class="col-md-4">
                         <a href="#" class="d-inline-block mb-4">
-                        <img src="/assets/logo-niotech.svg" alt="Niotech Logo" height="50">
+                        <img src="Img/logo_remove_bg-nutri.png" alt="Logo" height="80">
                         </a>
                         <p class="fs-5 text-muted mb-4">
                             It is a long established fact that a reader will be<br>
                             distracted by the readable content when looking.
                         </p>
                         <div class="d-flex gap-3">
-                            <a href="#" class="btn btn-dark btn-lg rounded-5">
-                            <i class="bi bi-apple me-2"></i> App Store
-                            </a>
-                            <a href="#" class="btn btn-outline-secondary btn-lg rounded-5">
-                            <i class="bi bi-android2 me-2"></i> Play Store
-                            </a>
+                            <a href="#" class="btn btn-dark btn-lg"><i class="bi bi-apple"></i> App Store</a>
+                            <a href="#" class="btn btn-outline-secondary btn-lg"><i class="bi bi-android2"></i> Play Store</a>
                         </div>
                     </div>
-                    <!-- Links -->
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-6">
-                                <h5 class="fw-bold mb-3">Pages</h5>
+                                <h5 class="fw-bold mb-4 section-title">Pages</h5>
                                 <ul class="list-unstyled fs-6">
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Home</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About Us</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Integrations</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Features</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
-                                    <li><a href="#" class="text-muted text-decoration-none">Contact Us</a></li>
+                                    <li class="mb-3"><a href="index.html" class="text-decoration-none footer_links">Home</a></li>
+                                    <li class="mb-3"><a href="aboutus.html" class="text-decoration-none footer_links">About Us</a></li>
+                                    <li class="mb-3"><a href="services.html" class="text-decoration-none footer_links">Meal Plan</a></li>
+                                    <li class="mb-3"><a href="faq.html" class="text-decoration-none footer_links">FAQ</a></li>
+                                    <li><a href="contact.html" class="text-decoration-none footer_links">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-6">
-                                <h5 class="fw-bold mb-3">Utility Pages</h5>
+                                <h5 class="fw-bold mb-4 section-title">Utility Pages</h5>
                                 <ul class="list-unstyled fs-6">
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Project</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
-                                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Project Details</a></li>
-                                    <li><a href="#" class="text-muted text-decoration-none">Our Team</a></li>
+                                    <li class="mb-3"><a href="sign_in.html" class="text-decoration-none footer_links">Sign_In</a></li>
+                                    <li class="mb-3"><a href="sign_up.html" class="text-decoration-none footer_links">Sign_Up</a></li>
+                                    <li class="mb-3"><a href="privacy_policy.html" class="text-decoration-none footer_links">Privacy Policy</a></li>
+                                    <li class="mb-3"><a href="term of services.html" class="text-decoration-none footer_links">Term of Services</a></li>
+                                    <li><a href="refrences.html" class="text-decoration-none footer_links">Refrences</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!-- Contact Card -->
                     <div class="col-md-4">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body py-4 px-4">
-                                <small class="text-primary text-uppercase fs-6">Address</small>
+                                <small class="color_change text-uppercase fs-6">Address</small>
                                 <h4 class="card-title mt-2 mb-3">Ready To Get Started?</h4>
                                 <p class="fs-6 text-muted mb-2">
-                                    It is a long established fact that a reader will be distracted by the readable layout.
+                                    No.483, Aye Yeik Thar Condo 9C, Aye Yeik Thar 2nd Street, Sayarsan Quarter, Bahan Township
                                 </p>
                                 <ul class="list-unstyled fs-6">
                                     <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-envelope-fill text-primary me-3 fs-4"></i>
-                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">contact.tech@gmail.com</a>
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">info@edusn.co.uk</a>
                                     </li>
                                     <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-envelope-fill text-primary me-3 fs-4"></i>
-                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted">info@niotech.com</a>
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted">office@edusn.co.uk</a>
                                     </li>
                                     <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-telephone-fill text-primary me-3 fs-4"></i>
-                                        <span class="text-muted">+880 123 654 789 00</span>
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">+95 (09) 79 3333 550</span>
                                     </li>
                                     <li class="d-flex align-items-center">
-                                        <i class="bi bi-telephone-fill text-primary me-3 fs-4"></i>
-                                        <span class="text-muted">+001 6520 698 00</span>
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">(7:30 A.M to 9:00 A.M and 4:00 P.M to 8:00 P.M)</span>
                                     </li>
                                 </ul>
                             </div>
@@ -287,10 +250,10 @@
                         © 2025 Fuchsia Fantastic Four. All Rights Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end fs-5">
-                        <a href="#" class="text-muted me-4"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-muted me-4"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-muted me-4"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-facebook bottom_icons"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-twitter bottom_icons"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-linkedin bottom_icons"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-instagram bottom_icons"></i></a>
                     </div>
                 </div>
             </div>

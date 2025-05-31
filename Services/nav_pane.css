@@ -1,0 +1,158 @@
+        :root {
+            --MealNavPane-Mint_Whisper: #e8ffe4;
+            --MealNavPane-Frosted_Lime: #caffc4;
+            --MealNavPane-Fresh_Spring: #9aff90;
+            --MealNavPane-Bright_Meadow: #59ff50;
+            --MealNavPane-Neon_Leaf: #25ff22;
+            --MealNavPane-Pure_Green: #00e603;
+            --MealNavPane-Vivid_Emerald: #00b807;
+            --MealNavPane-Deep_Emerald: #008b05;
+            --MealNavPane-Forest_Canopy: #076d0c;
+            --MealNavPane-Dark_Forest: #0b5c10;
+            --MealNavPane-Midnight_Pine: #003406;
+            --MealNavPane-Soft_Black: #282c32;
+            --MealNavPane-hover-green: #1b5e20;
+            --MealNavPane-primary-green: #2e7d32;
+            --MealNavPane-light-green: #e8f5e9;
+        }
+        
+        body {
+            background-color: var(--MealNavPane-Mint_Whisper);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .MealNavPane-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-top: 100px !important;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        .MealNavPane-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--MealNavPane-light-green);
+            padding-bottom: 1rem;
+        }
+        
+        .MealNavPane-tabs .MealNavPane-tab-link {
+            color: var(--MealNavPane-Soft_Black);
+            font-weight: 500;
+            padding: 0.75rem 0;
+            margin-right: 0;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background: transparent !important;
+            border: none;
+        }
+        
+        .MealNavPane-tabs .MealNavPane-tab-link::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--MealNavPane-primary-green);
+            transition: width 0.3s ease;
+        }
+        
+        .MealNavPane-tabs .MealNavPane-tab-link:hover::after {
+            width: 100%;
+        }
+        
+        .MealNavPane-tabs .MealNavPane-tab-link.active {
+            color: var(--MealNavPane-primary-green);
+        }
+        
+        .MealNavPane-tabs .MealNavPane-tab-link.active::after {
+            width: 100%;
+            background-color: var(--MealNavPane-Deep_Emerald);
+        }
+        
+        .MealNavPane-meal-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+            border: 3px solid var(--MealNavPane-light-green);
+            transition: all 0.3s ease;
+        }
+        .MealNavPane-tabs .MealNavPane-tab-link:hover .MealNavPane-meal-image {
+            border-color: var(--MealNavPane-primary-green);
+            transform: scale(1.05);
+        }
+        
+        .MealNavPane-tabs .MealNavPane-tab-link.active .MealNavPane-meal-image {
+            border-color: var(--MealNavPane-Deep_Emerald);
+            box-shadow: 0 0 0 3px var(--MealNavPane-Frosted_Lime);
+        }
+        
+        .MealNavPane-tab-content {
+            padding: 1.5rem 0;
+        }
+        
+        .MealNavPane-tab-pane {
+            animation: MealNavPane-fadeIn 0.5s ease;
+        }
+        
+        @keyframes MealNavPane-fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .MealNavPane-meal-title {
+            color: var(--MealNavPane-Dark_Forest);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+        
+        .MealNavPane-meal-description {
+            color: var(--MealNavPane-Soft_Black);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .MealNavPane-meal-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .MealNavPane-meal-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .MealNavPane-meal-card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        
+        .MealNavPane-meal-card-body {
+            padding: 1rem;
+        }
+        
+        .MealNavPane-meal-card-title {
+            color: var(--MealNavPane-primary-green);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .MealNavPane-meal-card-text {
+            color: var(--MealNavPane-Soft_Black);
+            font-size: 0.9rem;
+        }

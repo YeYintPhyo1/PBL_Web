@@ -1,297 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthyLife - Sign Up</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HealthyLife - Sign Up</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/carousel.css">
+        <link rel="stylesheet" href="CSS/our_objective.css">
+        <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/user.css">
+        <link rel="stylesheet" href="CSS/comment.css">
+        <link rel="stylesheet" href="CSS/honest_review.css">
+        <link rel="stylesheet" href="CSS/footer.css">
+        <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <style>
+            :root {
             --healthy-green: #4CAF50;
             --healthy-green-light: #81C784;
             --healthy-green-dark: #388E3C;
             --healthy-green-extra-light: #E8F5E9;
-        }
-        :root {
-	--Mint_Whisper: #e8ffe4;
-	--Frosted_Lime: #caffc4;
-	--Fresh_Spring: #9aff90;
-	--Bright_Meadow : #59ff50;
-	--Neon_Leaf: #25ff22;
-	--Pure_Green: #00e603;
-	--Vivid_Emerald : #00b807;
-	--Deep_Emerald: #008b05;
-	--Forest_Canopy: #076d0c;
-	--Dark_Forest: #0b5c10;
-	--Midnight_Pine: #003406;
-	--Soft_Black: #282c32;
-	--hover-green: #1b5e20;
-	--primary-green: #2e7d32;
-	--light-green: #e8f5e9;
-}
-        
-        body {
+            }
+            :root {
+            --Mint_Whisper: #e8ffe4;
+            --Frosted_Lime: #caffc4;
+            --Fresh_Spring: #9aff90;
+            --Bright_Meadow : #59ff50;
+            --Neon_Leaf: #25ff22;
+            --Pure_Green: #00e603;
+            --Vivid_Emerald : #00b807;
+            --Deep_Emerald: #008b05;
+            --Forest_Canopy: #076d0c;
+            --Dark_Forest: #0b5c10;
+            --Midnight_Pine: #003406;
+            --Soft_Black: #282c32;
+            --hover-green: #1b5e20;
+            --primary-green: #2e7d32;
+            --light-green: #e8f5e9;
+            }
+            body {
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .main-container {
+            }
+            .main-container {
             background-color: white;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-        }
-        
-        .left-side {
+            }
+            .left-side {
             background: linear-gradient(135deg, var(--healthy-green), var(--healthy-green-light));
             color: white;
             padding: 40px;
             height: 100%;
-        }
-        
-        .right-side {
+            }
+            .right-side {
             padding: 40px;
-        }
-        
-        .form-control {
+            }
+            .form-control {
             border-radius: 50px;
             padding: 12px 20px;
             border: 1px solid #ddd;
-        }
-        
-        .form-control:focus {
+            }
+            .form-control:focus {
             border-color: var(--healthy-green);
             box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
-        }
-        
-        .btn-primary {
+            }
+            .btn-primary {
             background-color: var(--healthy-green);
             border-color: var(--healthy-green);
             border-radius: 50px;
             padding: 12px 30px;
             font-weight: 600;
-        }
-        
-        .btn-primary:hover {
+            }
+            .btn-primary:hover {
             background-color: var(--healthy-green-dark);
             border-color: var(--healthy-green-dark);
-        }
-        
-        .btn-outline-primary {
+            }
+            .btn-outline-primary {
             color: var(--healthy-green);
             border-color: var(--healthy-green);
             border-radius: 50px;
             padding: 12px 30px;
             font-weight: 600;
-        }
-        
-        .btn-outline-primary:hover {
+            }
+            .btn-outline-primary:hover {
             background-color: var(--healthy-green);
             border-color: var(--healthy-green);
             color: white;
-        }
-        
-        .feature-icon {
+            }
+            .feature-icon {
             font-size: 24px;
             margin-right: 10px;
             color: var(--healthy-green);
-        }
-        
-        .divider {
+            }
+            .divider {
             display: flex;
             align-items: center;
             text-align: center;
             color: #777;
             margin: 20px 0;
-        }
-        
-        .divider::before, .divider::after {
+            }
+            .divider::before, .divider::after {
             content: "";
             flex: 1;
             border-bottom: 1px solid #ddd;
-        }
-        
-        .divider:not(:empty)::before {
+            }
+            .divider:not(:empty)::before {
             margin-right: 1em;
-        }
-        
-        .divider:not(:empty)::after {
+            }
+            .divider:not(:empty)::after {
             margin-left: 1em;
-        }
-        
-        .health-tip {
+            }
+            .health-tip {
             background-color: var(--healthy-green-extra-light);
             color: var(--healthy-green);
             border-left: 4px solid var(--Deep_Emerald);
             padding: 15px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 20px;
-        }
-        
-        .logo {
+            }
+            .nutri_logo {
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 30px;
             display: inline-block;
-        }
-        
-        .logo i {
+            }
+            .nutri_logo i {
             margin-right: 10px;
-        }
-        
-        .password-strength {
+            }
+            .password-strength {
             height: 5px;
             background-color: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
-        }
-        
-        .password-strength-bar {
+            }
+            .password-strength-bar {
             height: 100%;
             border-radius: 5px;
             width: 0%;
             transition: width 0.3s ease;
-        }
-        
-        @media (max-width: 991.98px) {
+            }
+            @media (max-width: 991.98px) {
             .left-side {
-                padding: 30px;
+            padding: 30px;
             }
             .right-side {
-                padding: 30px;
+            padding: 30px;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="container my-5">
-        <div class="row main-container">
-            <!-- Left Side Content -->
-            <div class="col-lg-6 left-side d-flex flex-column">
-                <div class="logo">
-                    <i class="fas fa-leaf"></i>NutriNest
-                </div>
-                <div class="mt-auto my-4">
-                    <h4 class="mb-3">Quick Links</h4>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="breakfast_plan.html" class="btn btn-outline-light rounded-pill">
-                            <i class="fas fa-utensils"></i> Breakfast Plan
-                        </a>
-                        <a href="lunch_plan_first_view.html" class="btn btn-outline-light rounded-pill">
-                            <i class="fas fa-running"></i> Lunch Plan
-                        </a>
-                        <a href="dinner_plan_first_view.html" class="btn btn-outline-light rounded-pill">
-                            <i class="fas fa-heartbeat"></i> Dinner Plan
-                        </a>
+            }
+        </style>
+    </head>
+    <body>
+        <header class="main-header navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Img/logo_remove_bg-nutri.png" alt="Logo" class="logo">
+                    <p><span>Nutri</span>Nest</p>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainOffcanvas" aria-controls="mainOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="mainOffcanvasLabel">NutriNest Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                </div>
-                <h2 class="mb-4">Start Your Wellness Journey!</h2>
-                <p class="mb-5">Join our community of health-conscious individuals and take control of your wellbeing.</p>
-                
-                <div class="health-tip">
-                    <h5><i class="fas fa-lightbulb"></i> Health Tip</h5>
-                    <p>Choose whole grains like brown rice, oats, and whole wheat bread. They help digestion and keep you full longer.</p>
-                </div>
-                <div class="health-tip">
-                    <h5><i class="fas fa-lightbulb"></i> Health Tip</h5>
-                    <p>Add healthy proteins like fish, eggs, beans, tofu, and lean meat. Protein builds muscles and helps repair your body.</p>
-                </div>
-                <div class="mt-auto my-4">
-                    <h4 class="mb-3">What You'll Get</h4>
-                    <div class="d-flex flex-wrap gap-2">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-chart-line text-success"></i>
-                            </div>
-                            <span>Healthy Food Knowledge</span>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-utensils text-success"></i>
-                            </div>
-                            <span>Meal plans</span>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-dumbbell text-success"></i>
-                            </div>
-                            <span>Daily Calories</span>
-                        </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user-md text-success"></i>
-                            </div>
-                            <span>Expert advice</span>
-                        </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto my-1">
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="aboutus.html">About Us</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="main-nav__link nav-link"
+                                    href="services.html"
+                                    id="servicesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    tabindex="0">
+                                Meal Plan <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="services.html"><i class="bi bi-fork-knife me-2"></i>Meal Plan</a></li>
+                                    <li><a class="dropdown-item" href="breakfast_plan.html"><i class="bi bi-sun me-2"></i>Breakfast Plan</a></li>
+                                    <li><a class="dropdown-item" href="lunch_plan_first_view.html"><i class="bi bi-egg-fried me-2"></i>Lunch Plan</a></li>
+                                    <li><a class="dropdown-item" href="dinner_plan_first_view.html"><i class="bi bi-moon me-2"></i>Dinner Plan</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <form class="search-form d-flex mt-1 mb-2">
+                            <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="search-btn" type="submit">
+                            <i class="bi bi-search search-glass"></i>
+                            </button>
+                        </form>
+                        <button class="button type1 mt-1 mb-2">
+                        <a href="sign_in.html" class="btn-txt">Sign In</a>
+                        </button>
                     </div>
                 </div>
             </div>
-            
-            <!-- Right Side Form -->
-            <div class="col-lg-6 right-side">
-                <h2 class="mb-4">Create Account</h2>
-                <p class="mb-4">Already have an account? <a href="sign_in.html" class="text-success">Sign in</a></p>
-                
-                <form>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+        </header>
+        <div class="container my-5">
+            <div class="row main-container">
+                <!-- Left Side Content -->
+                <div class="col-lg-6 left-side ">
+                    <div class="nutri_logo d-flex align-items-center gap-2" style="font-size: 28px; font-weight: 700;">
+                        <i class="fas fa-leaf"></i>
+                        <span>NutriNest</span>
+                    </div>
+                    <div class="mt-auto my-4">
+                        <h4 class="my-3">Quick Links</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="breakfast_plan.html" class="btn btn-outline-light rounded-pill">
+                            <i class="fas fa-utensils"></i> Breakfast Plan
+                            </a>
+                            <a href="lunch_plan_first_view.html" class="btn btn-outline-light rounded-pill">
+                            <i class="fas fa-running"></i> Lunch Plan
+                            </a>
+                            <a href="dinner_plan_first_view.html" class="btn btn-outline-light rounded-pill">
+                            <i class="fas fa-heartbeat"></i> Dinner Plan
+                            </a>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                    </div>
+                    <h2 class="mb-4">Start Your Wellness Journey!</h2>
+                    <p class="mb-2 text-light">Join our community of health-conscious individuals and take control of your wellbeing.</p>
+                    <p class="mb-5 text-light">
+                        Discover expert tips, wellness resources, and daily inspiration to help you build lasting healthy habits.
+                    </p>
+                    <div class="health-tip">
+                        <h5><i class="fas fa-lightbulb"></i> Health Tip</h5>
+                        <p>Choose whole grains like brown rice, oats, and whole wheat bread. They help digestion and keep you full longer.</p>
+                    </div>
+                    <div class="health-tip">
+                        <h5><i class="fas fa-lightbulb"></i> Health Tip</h5>
+                        <p>Add healthy proteins like fish, eggs, beans, tofu, and lean meat. Protein builds muscles and helps repair your body.</p>
+                    </div>
+                    <div class="mt-auto my-5">
+                        <h4 class="mb-3">What You'll Get</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-chart-line text-success"></i>
+                                </div>
+                                <span>Healthy Food Knowledge</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-utensils text-success"></i>
+                                </div>
+                                <span>Meal plans</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-dumbbell text-success"></i>
+                                </div>
+                                <span>Daily Calories</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-white rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-user-md text-success"></i>
+                                </div>
+                                <span>Expert advice</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                    </div>
-                    
-                    
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Enter your password">
-                    </div>
-                    
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="terms">
-                        <label class="form-check-label" for="terms">I agree to the <a href="#" class="text-success">Terms of Service</a> and <a href="#" class="text-success">Privacy Policy</a></label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary w-100 mb-3">Create Account</button>
-                    
-                    <div class="divider">or sign up with</div>
-                    
-                    <div class="d-flex gap-3 mb-4">
-                        <button type="button" class="btn btn-outline-primary flex-grow-1">
+                </div>
+                <!-- Right Side Form -->
+                <div class="col-lg-6 right-side">
+                    <h2 class="mb-4">Create Account</h2>
+                    <p class="mb-4">Already have an account? <a href="sign_in.html" class="text-success">Sign in</a></p>
+                    <form id="signupForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="alert alert-success d-flex align-items-center" role="alert" style="background: var(--healthy-green-extra-light); color: var(--primary-green); border-left: 5px solid var(--Deep_Emerald); border-radius: 0 8px 8px 0;">
+                            <i class="fas fa-lock fa-lg me-3" style="color: var(--Deep_Emerald);"></i>
+                            <div>
+                                For your security: Please include at least <strong>8 characters long and one special character</strong> in your password.
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terms">
+                            <label class="form-check-label" for="terms">I agree to the <a href="term of services.html" class="text-success">Terms of Service</a> and <a href="privacy_policy.html" class="text-success">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Create Account</button>
+                        <div class="divider">or sign up with</div>
+                        <div class="d-flex gap-3 mb-4">
+                            <button type="button" class="btn btn-outline-primary flex-grow-1">
                             <i class="fab fa-google"></i> Google
-                        </button>
-                        <button type="button" class="btn btn-outline-primary flex-grow-1">
+                            </button>
+                            <button type="button" class="btn btn-outline-primary flex-grow-1">
                             <i class="fab fa-apple"></i> Apple
-                        </button>
-                    </div>
-                </form>
-                
-                <div class="mt-4">
-                    <h5 class="mb-3">What our members say</h5>
-                    <div class="d-flex align-items-start mb-3">
-                        <img src="Img/Honest Revie PFP/pfp_1.jpg" class="rounded-circle me-3" width="50" alt="User">
-                        <div>
-                            <p class="mb-1"><strong>Theodore</strong></p>
-                            <p class="text-muted">"HealthyLife helped me lose 15kg and maintain my ideal weight for over a year now!"</p>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <h5 class="mb-3">What our members say</h5>
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="Img/Honest Revie PFP/hein_thit.jpg" class="rounded-circle me-3" width="50" alt="User">
+                            <div>
+                                <p class="mb-1"><strong>HeinnThit</strong></p>
+                                <p class="text-muted">"HealthyLife helped me lose 15kg and maintain my ideal weight for over a year now!"</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0" style="background: linear-gradient(135deg, var(--healthy-green), var(--healthy-green-light)); color: white;">
+                        <h5 class="modal-title w-100 text-center" id="thankYouModalLabel">
+                            <i class="fas fa-leaf me-2"></i>Thank You!
+                        </h5>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p class="fs-4 mb-2">Thanks for creating an account</p>
+                        <p class="mb-0">from <span class="fw-bold text-success">NutriNest</span> Website.</p>
+                        <i class="fas fa-check-circle fa-3x mt-3 text-success"></i>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-success px-4 rounded-pill" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Show modal on form submit
+            document.getElementById('signupForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+                thankYouModal.show();
+                // Optionally, you can reset the form here:
+                // this.reset();
+            });
+        </script>
+        <footer class="text-dark py-5">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-md-4">
+                        <a href="#" class="d-inline-block mb-4">
+                        <img src="Img/logo_remove_bg-nutri.png" alt="Logo" height="80">
+                        </a>
+                        <p class="fs-5 text-muted mb-4">
+                            It is a long established fact that a reader will be<br>
+                            distracted by the readable content when looking.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-dark btn-lg"><i class="bi bi-apple"></i> App Store</a>
+                            <a href="#" class="btn btn-outline-secondary btn-lg"><i class="bi bi-android2"></i> Play Store</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="fw-bold mb-4 section-title">Pages</h5>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="mb-3"><a href="index.html" class="text-decoration-none footer_links">Home</a></li>
+                                    <li class="mb-3"><a href="aboutus.html" class="text-decoration-none footer_links">About Us</a></li>
+                                    <li class="mb-3"><a href="services.html" class="text-decoration-none footer_links">Meal Plan</a></li>
+                                    <li class="mb-3"><a href="faq.html" class="text-decoration-none footer_links">FAQ</a></li>
+                                    <li><a href="contact.html" class="text-decoration-none footer_links">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="fw-bold mb-4 section-title">Utility Pages</h5>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="mb-3"><a href="sign_in.html" class="text-decoration-none footer_links">Sign_In</a></li>
+                                    <li class="mb-3"><a href="sign_up.html" class="text-decoration-none footer_links">Sign_Up</a></li>
+                                    <li class="mb-3"><a href="privacy_policy.html" class="text-decoration-none footer_links">Privacy Policy</a></li>
+                                    <li class="mb-3"><a href="term of services.html" class="text-decoration-none footer_links">Term of Services</a></li>
+                                    <li><a href="refrences.html" class="text-decoration-none footer_links">Refrences</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body py-4 px-4">
+                                <small class="color_change text-uppercase fs-6">Address</small>
+                                <h4 class="card-title mt-2 mb-3">Ready To Get Started?</h4>
+                                <p class="fs-6 text-muted mb-2">
+                                    No.483, Aye Yeik Thar Condo 9C, Aye Yeik Thar 2nd Street, Sayarsan Quarter, Bahan Township
+                                </p>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">info@edusn.co.uk</a>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted">office@edusn.co.uk</a>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">+95 (09) 79 3333 550</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">(7:30 A.M to 9:00 A.M and 4:00 P.M to 8:00 P.M)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Bar -->
+                <div class="row mt-5 pt-4 border-top">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 fs-6">
+                        © 2025 Fuchsia Fantastic Four. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end fs-5">
+                        <a href="#" class="text-muted me-4"><i class="bi bi-facebook bottom_icons"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-twitter bottom_icons"></i></a>
+                        <a href="#" class="text-muted me-4"><i class="bi bi-linkedin bottom_icons"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-instagram bottom_icons"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
