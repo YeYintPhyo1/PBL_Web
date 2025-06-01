@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriNest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
+    <style>
+        :root {
+            --Mint_Whisper: #e8ffe4;
+            --Frosted_Lime: #caffc4;
+            --Fresh_Spring: #9aff90;
+            --Bright_Meadow: #59ff50;
+            --Neon_Leaf: #25ff22;
+            --Pure_Green: #00e603;
+            --Vivid_Emerald: #00b807;
+            --Deep_Emerald: #008b05;
+            --Forest_Canopy: #076d0c;
+            --Dark_Forest: #0b5c10;
+            --Midnight_Pine: #003406;
+            --primary-green: #2e7d32;
+            --Soft_Black: #282c32;
+            --text-light: #6B7280;
+        }
+
+        body {
+            background-color: var(--Mint_Whisper);
+            color: var(--Soft_Black);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .he-terms-main-content {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin: 2rem auto;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .he-terms-section-title {
+            color: var(--primary-green);
+            border-bottom: 2px solid var(--Frosted_Lime);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .he-terms-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-green);
+        }
+
+        .he-terms-section-content {
+            margin-bottom: 2rem;
+        }
+
+        .he-terms-section-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .he-terms-footer {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-radius: 12px;
+        }
+
+        .he-terms-footer a {
+            color: var(--Frosted_Lime);
+            text-decoration: none;
+        }
+
+        .he-terms-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .he-terms-navbar {
+            background-color: var(--primary-green);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .he-terms-navbar-brand {
+            color: white !important;
+        }
+
+        .he-terms-navbar-brand:hover {
+            color: var(--Frosted_Lime) !important;
+        }
+
+        .he-terms-nav-link {
+            color: white !important;
+        }
+
+        .he-terms-nav-link:hover {
+            color: var(--Frosted_Lime) !important;
+        }
+
+        .he-terms-icon {
+            color: var(--primary-green);
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="he-terms-main-content">
+            <h1 class="mb-4">Terms of Service</h1>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">1. Introduction</h2>
+                <p>Welcome to Healthy Eats! By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using our services.</p>
+            </div>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">2. Eligibility</h2>
+                <p>You must be at least 18 years old to use this website. By using our services, you represent and warrant that you are of legal age to form a binding contract with us and comply with all applicable laws and regulations.</p>
+            </div>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">3. Use of Content</h2>
+                <p>All content on this website, including recipes, nutritional information, and articles, is protected by copyright laws. You may not reproduce, distribute, or modify any content without our prior written permission.</p>
+            </div>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">4. Health Information</h2>
+                <p>The information provided on this website is for educational purposes only and is not intended as medical advice. Always consult with a qualified healthcare professional before making any changes to your diet or health regimen.</p>
+            </div>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">5. User Conduct</h2>
+                <p>You agree not to use the website for any unlawful purpose or to violate any laws in your jurisdiction. This includes but is not limited to:</p>
+                <ul class="mt-3">
+                    <li>Posting harmful or inappropriate content</li>
+                    <li>Interfering with other users' experience</li>
+                    <li>Attempting to gain unauthorized access to our systems</li>
+                </ul>
+            </div>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">6. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, Healthy Eats shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our website or services.</p>
+            </div>
+            <div class="he-terms-section-content">
+                <h2 class="he-terms-section-title">7. Changes to Terms</h2>
+                <p>We reserve the right to update or modify these terms of service at any time without prior notice. Continued use of the website after any changes constitutes acceptance of the new terms.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (required for navbar toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
