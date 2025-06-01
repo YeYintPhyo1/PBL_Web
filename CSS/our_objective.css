@@ -16,20 +16,14 @@
 	--Deep_Forest_Night: #0E250E;
 }
 
-body {
-	background-color: #f8fdf8;
-	color: #0b7023;
-	font-family: 'Segoe UI', 'Arial', sans-serif;
-}
-
-.container {
+.nutrine-container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
 
-h2 {
+.nutrine-title {
 	font-size: 2.2rem;
 	font-weight: 700;
 	margin-bottom: 1rem;
@@ -37,22 +31,46 @@ h2 {
 	letter-spacing: 1px;
 }
 
-p {
+.nutrine-desc {
 	font-size: 1.06rem;
 	color: #25532c;
+	margin-bottom: 2rem;
 }
 
-.feature-card {
+.nutrine-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
+}
+
+.nutrine-col-main {
+	flex: 0 0 66.6667%;
+	max-width: 66.6667%;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.nutrine-col-side {
+	flex: 0 0 33.3333%;
+	max-width: 33.3333%;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.nutrine-feature-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 0.5rem;
+}
+
+.nutrine-feature-card {
 	position: relative;
 	padding: 2rem 1.5rem;
 	background: whitesmoke;
 	border-radius: 1rem;
 	margin-bottom: 1.5rem;
-	clip-path: polygon(0% 0%,
-		calc(100% - 2.5rem) 0%,
-		100% 2.5rem,
-		100% 100%,
-		0% 100%);
+	clip-path: polygon(0% 0%, calc(100% - 2.5rem) 0%, 100% 2.5rem, 100% 100%, 0% 100%);
 	color: #0b7023;
 	box-shadow: 0 2px 14px rgba(45,80,60,0.07);
 	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
@@ -61,34 +79,35 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	width: 100%;
 }
 
-.feature-card.active,
-.feature-card:hover {
+.nutrine-feature-card.nutrine-active,
+.nutrine-feature-card:hover {
 	background: #d8ffd7;
 	color: #0b7023;
 	box-shadow: 0 4px 24px rgba(45,80,60,0.12);
 }
 
-.feature-card .icon {
+.nutrine-feature-icon {
 	font-size: 2.1rem;
 	margin-bottom: 1rem;
 }
 
-.feature-card h5 {
+.nutrine-feature-title {
 	font-weight: 700;
 	font-size: 1.25rem;
 	margin-bottom: 0.5rem;
 	color: #0b7023;
 }
 
-.feature-card p {
+.nutrine-feature-desc {
 	color: #24662f;
 	font-size: 1rem;
 	margin-bottom: 0;
 }
 
-.info-card {
+.nutrine-card-info {
 	background-color: #fff;
 	border-radius: 1rem;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -100,14 +119,15 @@ p {
 	min-height: 520px;
 }
 
-.card-title {
-	font-weight: 700 !important;
-	font-size: 1.4rem !important;
-	color: #0b5c10 !important;
-	letter-spacing: 1px !important;
+.nutrine-card-title {
+	font-weight: 700;
+	font-size: 1.4rem;
+	color: #0b5c10;
+	letter-spacing: 1px;
+	margin-bottom: 1rem;
 }
 
-.card-body img {
+.nutrine-card-image {
 	width: 100%;
 	max-width: 360px;
 	height: auto;
@@ -119,16 +139,14 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 }
-.title_purpose{
-	color: var(--Deep_Emerald) !important;
-}
-.info-card ul {
+
+.nutrine-card-list {
 	margin: 1.25rem 0 1.5rem 0;
 	padding: 0;
 	list-style: none;
 }
 
-.info-card li {
+.nutrine-card-list-item {
 	font-size: 1rem;
 	line-height: 1.7;
 	margin-bottom: 0.5rem;
@@ -136,88 +154,58 @@ p {
 	align-items: center;
 }
 
-.info-card .bi-check2-circle {
+.nutrine-check-icon {
 	font-size: 1.25rem;
 	margin-right: 0.5rem;
+	color: #25ff22;
 }
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -0.75rem;
-	margin-right: -0.75rem;
-}
-
-.col-lg-8, .col-lg-4, .col-sm-6 {
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
-}
-
-.col-lg-8 {
-	flex: 0 0 66.6667%;
-	max-width: 66.6667%;
-}
-
-.col-lg-4 {
-	flex: 0 0 33.3333%;
-	max-width: 33.3333%;
-}
-
-.col-sm-6 {
-	flex: 0 0 50%;
-	max-width: 50%;
-}
-
 @media (max-width: 992px) {
-	.col-lg-8, .col-lg-4 {
+	.nutrine-col-main, .nutrine-col-side {
 		flex: 0 0 100%;
 		max-width: 100%;
+		padding: 10px;
 	}
-	.info-card {
+	.nutrine-card-info {
 		min-height: unset;
 		margin-top: 2rem;
 	}
-	.row {
+	.nutrine-row {
 		gap: 0.5rem 0;
 	}
 }
 
 @media (max-width: 768px) {
-	.container {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
+	.nutrine-container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
 	}
-	.feature-card, .info-card {
+	.nutrine-feature-card, .nutrine-card-info {
 		padding: 1rem;
 	}
-	.card-body img {
+	.nutrine-card-image {
 		max-width: 100%;
 		aspect-ratio: 16 / 9;
 	}
-	.row {
+	.nutrine-row {
 		flex-direction: column;
-	}
-	.col-sm-6 {
-		flex: 0 0 100%;
-		max-width: 100%;
 	}
 }
 
 @media (max-width: 480px) {
-	h2 {
+	.nutrine-title {
 		font-size: 1.35rem;
 	}
-	.card-title {
+	.nutrine-card-title {
 		font-size: 1.1rem;
 	}
-	.card-body img {
+	.nutrine-card-image {
 		aspect-ratio: 16/10;
 	}
-	.feature-card {
+	.nutrine-feature-card {
 		padding: 1rem 0.5rem;
 		font-size: 0.95rem;
 	}
-	.info-card {
+	.nutrine-card-info {
 		padding: 1rem 0.5rem;
 	}
 }
