@@ -1,0 +1,247 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+}
+/**/
+.homepage-carousel .carousel-control-prev,
+.homepage-carousel .carousel-control-next {
+    background: rgba(255,255,255,0.9);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Deep_Emerald);
+    font-size: 1.5rem;
+    transition: background 0.3s, color 0.3s;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
+}
+.homepage-carousel .carousel-control-prev { left: 18px; }
+.homepage-carousel .carousel-control-next { right: 18px; }
+.homepage-carousel .carousel-control-prev:hover,
+.homepage-carousel .carousel-control-next:hover {
+    background: rgba(255,255,255, 1);
+    color: var(--Vivid_Emerald);
+}
+.homepage-carousel .carousel-control-prev-icon,
+.homepage-carousel .carousel-control-next-icon {
+    display: none !important;
+}
+.homepage-carousel .fa-chevron-left,
+.homepage-carousel .fa-chevron-right {
+    pointer-events: none;
+    font-size: 1.35rem;
+}
+.homepage-carousel .carousel-indicators {
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.homepage-carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    margin: 0 5px;
+    opacity: 1;
+    transition: background 0.2s, transform 0.2s;
+}
+.homepage-carousel .carousel-indicators [data-bs-target].active,
+.homepage-carousel .carousel-indicators [data-bs-target]:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+.homepage-carousel .carousel-control-prev:hover,
+.homepage-carousel .carousel-control-next:hover,
+.homepage-carousel .carousel-control-prev:focus,
+.homepage-carousel .carousel-control-next:focus,
+.homepage-carousel .carousel-control-prev:active,
+.homepage-carousel .carousel-control-next:active {
+    background: rgba(255,255,255, 1);
+    color: var(--Vivid_Emerald);
+}
+/**/
+.homepage-carousel {
+	/* translucent white backdrop */
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	/* drop-shadow */
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+	/* solid borders: overall + lighter on right & bottom */
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-right: 2px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+	/* spacing & sizing */
+	padding: 1rem 2px 15px;
+	width: 1000px;
+	position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.carousel-navigation {
+    position: relative;
+    z-index: 2;
+}
+.carousel-slide {
+    
+    overflow: hidden;
+}
+
+.carousel-image {
+    border-radius: 15px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.carousel-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-description {
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.carousel-button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgba(255, 107, 107, 0.8);
+    margin: 0 1rem;
+}
+.image_ctn{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.image_ctn p{
+    margin-top: 5px;
+    color: var(--Deep_Emerald);
+    font-weight: 500;
+}
+.image-ctn-text{
+    background-color: var(--Mint_Whisper);
+    padding: 8px 12px 8px 12px;
+    border-radius: 20px;
+}
+.carousel-img-logo{
+    width: 80px;
+    padding-bottom: 10px;
+}
+/* fix the carousel height once and for all */
+#mainCarousel .carousel-inner,
+#mainCarousel .carousel-item {
+    height: 500px;        /* same height as your images */
+}
+
+/* make each image cover its slide exactly */
+#mainCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container_cover_image{
+    position: absolute;
+    right: 27rem;
+    top: 17.4rem;
+}
+.cover_image{
+    width: 600px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+@media only screen and (min-width: 1401px){
+    .container_cover_image{
+        position: absolute;
+        right: 27rem;
+        top: 17.4rem;
+    }
+    .cover_image{
+        width: 600px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1400px){
+    .container_cover_image{
+        position: absolute;
+        right: 22rem;
+        top: 17.4rem;
+    }
+    .cover_image{
+        width: 600px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .container_cover_image{
+        position: absolute;
+        right: 20rem;
+        top: 17.4rem;
+    }
+    .cover_image{
+        width: 600px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .cover_image{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .cover_image{
+        width: 200px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 992px){
+    .homepage-carousel{
+        display: none;
+    }
+    .banner-section {
+        opacity: 20;
+}
+}

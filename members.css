@@ -1,0 +1,175 @@
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow: #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald: #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+	--Soft_Black: #282c32;
+	--hover-green: #1b5e20;
+	--primary-green: #2e7d32;
+	--light-green: #e8f5e9;
+}
+.container_member {
+    padding-top: 150px;
+}
+
+.team-card {
+    background-color: #f7f6fa;
+    border-radius: 20px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-container {
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 4px solid #fff;
+    background: #fff;
+}
+
+.fb-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fb-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--Forest_Canopy, #228B22);
+    background: #e9f0ff;
+    border-radius: 50%;
+    padding: 8px 12px 8px 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.fb-icons a:hover {
+    background: var(--Deep_Emerald);
+    color: var(--light-green);
+}
+
+/* Responsive Grid: 4/2/1 cards per row */
+@media (min-width: 992px) {
+    .container_member .row > div {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+@media (max-width: 991.98px) {
+    .container_member {
+        padding-top: 80px;
+    }
+    .container_member .row > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+	.team-card {
+        max-width: 95vw;
+        padding-top: 150px;
+    }
+	.image-container {
+        top: 20px;
+        width: 120px;
+        height: 120px;
+    }
+    .team-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (max-width: 767.98px) {
+    .container_member {
+        padding-top: 40px;
+    }
+    .container_member .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .team-card {
+        max-width: 95vw;
+        padding-top: 150px;
+    }
+    .image-container {
+        top: 20px;
+        width: 120px;
+        height: 120px;
+    }
+    .team-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container_member {
+        padding-top: 15px;
+    }
+    .team-card {
+        max-width: 98vw;
+        padding-top: 55px;
+    }
+    .image-container {
+        top: -45px;
+        width: 80px;
+        height: 80px;
+    }
+    .team-img {
+        width: 80px;
+        height: 80px;
+    }
+    .fb-icons a {
+        padding: 6px 10px 7px 10px;
+        font-size: 16px;
+    }
+    .fb-icons {
+        gap: 6px;
+    }
+    .fw-bold, .team-card h5 {
+        font-size: 1.1rem;
+    }
+    .team-card .text {
+        font-size: 0.95rem;
+    }
+}
