@@ -136,7 +136,7 @@
             transition: transform 0.3s ease;
         }
         
-        .MealNavPane-meal-card-img {
+        .MealNavPane-meal-card-video {
             width: 100%;
             height: 160px;
             object-fit: cover;
