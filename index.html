@@ -19,6 +19,56 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <style>
+            .button_and_review_container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                margin-top: 2.5rem;
+            }
+            .nutrinest-btn {
+                text-decoration: none;
+                padding: 10px 30px;
+                border: unset;
+                border-radius: 35px;
+                color: var(--Dark_Forest);
+                background: var(--Mint_Whisper);
+                position: relative;
+                font-weight: 700;
+                font-size: 17px;
+                box-shadow: 0 5px 20px 0 rgba(0,0,0,0.10);
+                transition: color 250ms, box-shadow 0.3s;
+                overflow: hidden;
+                margin-bottom: 0; /* remove huge margin */
+                margin-top: 0;    /* remove top margin */
+            }
+            .nutrinest-btn::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0;
+                border-radius: 35px;
+                background-color: var(--Forest_Canopy);
+                z-index: 0;
+                transition: width 450ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .nutrinest-btn:hover,
+            .nutrinest-btn:focus {
+                color: var(--Mint_Whisper);
+                box-shadow: 0 8px 28px 0 rgba(0,0,0,0.13);
+            }
+            .nutrinest-btn:hover::before,
+            .nutrinest-btn:focus::before {
+                width: 100%;
+            }
+            .nutrinest-btn-text {
+                position: relative;
+                z-index: 1;
+            }
+        </style>
     </head>
     <body>
         <!-- Responsive Navigation -->
@@ -80,7 +130,7 @@
                 <h1 class="primary-title display-4 fw-bold mb-3">Flourish with Flavor<br>without the Waiver!</h1>
                 <p class="organic-heading lead">Wide range of advice and knowledge to become healthier</p>
                 <div class="button_and_review_container">
-                    <button class="homepage-button mb-4">Learn More</button>
+                    <a href="#purpose" class="nutrinest-btn mb-3"><span class="nutrinest-btn-text">Learn More</span></a>
                     <h6>Honest Review</h6>
                     <div class="honest_review">
                         <!-- Reviewer Images -->
@@ -135,7 +185,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="berries.jpg" class="d-block w-100 carousel-image" alt="Summer Special Smoothie">
+                                <img src="Img/berries.jpg" class="d-block w-100 carousel-image" alt="Summer Special Smoothie">
                                 <div class="carousel-content">
                                     <h3 class="carousel-title">Summer Berry Blast</h3>
                                     <p class="carousel-description">Fresh organic berries rich in antioxidants</p>
@@ -172,7 +222,7 @@
             </section>
         </section>
         <!-- Testimonials -->
-        <section class="nutrine-container" style="padding-top:3rem; padding-bottom:3rem;">
+        <section class="nutrine-container" style="padding-top:3rem; padding-bottom:3rem;" id="purpose">
             <div class="nutrine-row">
                 <div class="nutrine-col-main" style="padding-top:1.5rem; padding-bottom:1.5rem;">
                     <h2 class="nutrine-title">PURPOSE</h2>
