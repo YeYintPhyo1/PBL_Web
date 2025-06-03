@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
     <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="footer.css">
         <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="About_Us/aboutus.css">
     <style>
@@ -115,6 +116,57 @@
     </style>
 </head>
 <body>
+    <header class="main-header navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Img/logo_remove_bg-nutri.png" alt="Logo" class="logo">
+                    <p><span>Nutri</span>Nest</p>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainOffcanvas" aria-controls="mainOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="mainOffcanvasLabel">NutriNest Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto my-1">
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="aboutus.html">About Us</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="main-nav__link nav-link"
+                                    href="services.html"
+                                    id="servicesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    tabindex="0">
+                                Meal Plan <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="services.html"><i class="bi bi-fork-knife me-2"></i>Meal Plan</a></li>
+                                    <li><a class="dropdown-item" href="breakfast_plan.html"><i class="bi bi-sun me-2"></i>Breakfast Plan</a></li>
+                                    <li><a class="dropdown-item" href="lunch_plan_first_view.html"><i class="bi bi-egg-fried me-2"></i>Lunch Plan</a></li>
+                                    <li><a class="dropdown-item" href="dinner_plan_first_view.html"><i class="bi bi-moon me-2"></i>Dinner Plan</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <form class="search-form d-flex mt-1 mb-2">
+                            <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="search-btn" type="submit">
+                            <i class="bi bi-search search-glass"></i>
+                            </button>
+                        </form>
+                        <button class="button type1 mt-1 mb-2">
+                        <a href="sign_in.html" class="btn-txt">Sign In</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
     <!-- Main Content -->
     <section class="hero-section d-flex flex-column justify-content-center">
         <div class="container">
