@@ -40,6 +40,7 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.07); /* subtle shadow for separation */
     font-size: 20px;
     transition: background 0.3s;
+	padding-bottom: 500px !important;
 }
 .main-header {
 	font-size: 20px;
@@ -307,6 +308,7 @@
 /*Nav*/
 /*Banner Section*/
 .banner-section {
+	margin-top: 95px !important;
 	background:
 		radial-gradient(circle at left bottom,
 			/* center the gradient at bottom-left */
