@@ -367,7 +367,6 @@ footer::after {
 .footer-bottom-bar .footer-social a:hover {
     color: #008b05;
 }
-
 /* 7. Responsive adjustments */
 @media (max-width: 1020px) {
 	.card-body{

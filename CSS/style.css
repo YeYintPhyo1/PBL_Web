@@ -31,11 +31,24 @@
 }
 /**/
 .main-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* high value to sit above page content and offcanvas */
+    background: #fff; /* or your preferred background */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); /* subtle shadow for separation */
+    font-size: 20px;
+    transition: background 0.3s;
+	padding-bottom: 500px !important;
+}
+.main-header {
 	font-size: 20px;
-	background: transparent;
+	position: fixed !important;
 }
 
 .main-nav__link {
+	
 	position: relative;
 	color: #333;
 	font-weight: 500;
@@ -295,6 +308,7 @@
 /*Nav*/
 /*Banner Section*/
 .banner-section {
+	margin-top: 95px !important;
 	background:
 		radial-gradient(circle at left bottom,
 			/* center the gradient at bottom-left */
