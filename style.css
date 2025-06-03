@@ -1,0 +1,507 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow: #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald: #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+	--Soft_Black: #282c32;
+	--hover-green: #1b5e20;
+	--primary-green: #2e7d32;
+	--light-green: #e8f5e9;
+}
+
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night: #0E250E;
+}
+/**/
+.main-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* high value to sit above page content and offcanvas */
+    background: #fff; /* or your preferred background */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); /* subtle shadow for separation */
+    font-size: 20px;
+    transition: background 0.3s;
+}
+.main-header {
+	font-size: 20px;
+	position: fixed !important;
+}
+
+.main-nav__link {
+	
+	position: relative;
+	color: #333;
+	font-weight: 500;
+	text-decoration: none;
+	margin-right: 20px !important;
+	display: inline-block;
+}
+
+.main-nav__link::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* sit right under the text */
+	height: 2px;
+	width: 100%;
+	/* full width, but hidden by transform */
+	background: green;
+	transform: scaleX(0);
+	/* start collapsed */
+	transform-origin: left;
+	/* grow from left to right */
+	transition: transform 0.3s ease;
+}
+
+.main-nav__link:hover::after {
+	transform: scaleX(1);
+	/* expand fully */
+}
+.search-form {
+	position: relative;
+	margin-right: 1rem;
+}
+
+.search-input {
+	padding: 0.5rem 1rem;
+	padding-right: 2.5rem;
+	border-radius: 50px;
+	border: 1px solid #ddd;
+	background-color: #f8f9fa;
+	color: #333;
+	width: 150px;
+	transition: all 0.3s ease;
+}
+
+.search-input:focus {
+	background-color: white;
+	box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+	outline: none;
+	width: 250px;
+}
+.search-btn {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+	color: #666;
+}
+.main-header .navbar-toggler,
+.main-header .navbar-toggler:focus,
+.main-header .navbar-toggler:active,
+.main-header .navbar-toggler:hover {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* If you’re still seeing a focus ring, also reset focus-visible */
+.main-header .navbar-toggler:focus-visible {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+@media (max-width: 992px) {
+	.search-form {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		width: 100%;
+	}
+	.search-input:focus {
+		background-color: white;
+		box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+		outline: none;
+		width: 100%;
+	}
+	.search-input {
+		width: 100%;
+	}
+}
+/*Nav*/
+.navbar-brand{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navbar-brand p{
+	padding-left: 5px;
+	padding-top: 10px;
+}
+.navbar-brand span{
+	font-weight: bold;
+}
+.logo {
+	width: 52.5px;
+	height: 50px;
+}
+
+.button {
+	height: 48px;
+	width: 130px;
+	position: relative;
+	background-color: transparent;
+	cursor: pointer;
+	border: 2px solid #252525;
+	overflow: hidden;
+	border-radius: 30px;
+	color: #333;
+	transition: all 0.5s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button .btn-txt {
+	z-index: 1;
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 2px;
+}
+
+.button::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.5s ease-in-out;
+	background-color: #333;
+	border-radius: 30px;
+	visibility: hidden;
+	height: 10px;
+	width: 10px;
+	z-index: 0;
+}
+.button:hover {
+	color: #fff;
+	border: none;
+}
+.button:hover::after {
+	visibility: visible;
+	transform: scale(50);
+}
+@media (max-width: 992px){
+	.button {
+		width: 100%;
+	}
+	.button::after {
+		width: 100%;
+	}
+}
+/*Dropdown*/
+.dropdown-menu {
+	border: none;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 0px 0 !important;
+	margin-top: 10px;
+	background-color: var(--Fresh_Spring);
+}
+
+.dropdown-item {
+	position: relative;
+	padding: 8px 20px !important;
+	font-weight: 500;
+	color: #555;
+	transition: all 0.2s ease;
+}
+.button_and_review_container{
+	margin: 0;
+}
+.dropdown-item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 0;
+	background-color: var(--Deep_Emerald);
+	transition: height 0.2s ease;
+}
+.dropdown-item:hover {
+	background-color: var(--light-green) !important;
+	padding-left: 25px !important;
+}
+.dropdown-item:hover::before {
+	height: 100%;
+}
+@media (max-width: 1400px){
+	.main-header {
+		font-size: 20px;
+		background: transparent;
+	}
+	.main-nav__link {
+		color: #333;
+		font-weight: 500;
+		text-decoration: none;
+		padding: 0.5em 10px;
+		margin-right: 30px;
+	}
+	.search-form {
+		position: relative;
+		margin-right: 10px;
+	}
+	.search-input {
+	padding: 0.5rem 1rem;
+	padding-right: 2.5rem;
+	border-radius: 50px;
+	border: 1px solid #ddd;
+	background-color: #f8f9fa;
+	color: #333;
+	width: 150px;
+	transition: all 0.3s ease;
+	}
+	.search-input:focus {
+		background-color: white;
+		box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+		outline: none;
+		width: 150px;
+	}
+}
+/*DropDown*/
+@media (max-width: 1200px){
+	.main-header {
+		font-size: 20px;
+		background: transparent;
+	}
+	.main-nav__link {
+		color: #333;
+		font-weight: 500;
+		text-decoration: none;
+		margin: 0;
+	}
+	.search-input {
+		display: none !important;
+	}
+	.search-glass{
+		display: none !important;
+	}
+}
+/*Nav*/
+/*Banner Section*/
+.banner-section {
+	background:
+		radial-gradient(circle at left bottom,
+			/* center the gradient at bottom-left */
+			rgba(154, 255, 144, 0.1) 90%,
+			/* strong tint at the very corner */
+			rgba(154, 255, 144, 0) 70%
+			/* fade out to transparent by 70% of the radius */
+		),
+		/* second layer: your fruit image */
+		url("../Img/bg_fruit.jpg") no-repeat center/cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+	color: var(--Soft_Black);
+	text-align: left;
+	padding: 2rem;
+	padding-left: 10%;
+	overflow: hidden;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.seasonal-tagline {
+	font-weight: bold;
+	text-shadow: #fff 1px 0 1.5px;
+}
+.primary-title {
+	text-shadow: #fff 0.5px 0 1.5px;
+}
+.organic-heading {
+	font-weight: bold;
+	text-shadow: #fff 1px 0 1.5px;
+	margin-bottom: 0;
+}
+/* CSS Button */
+.homepage-button {
+	padding: 10px 30px;
+	border: unset;
+	border-radius: 35px;
+	color: var(--Dark_Forest);
+	z-index: 1;
+	background: var(--Mint_Whisper);
+	position: relative;
+	font-weight: 700;
+	font-size: 17px;
+	box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+	transition: all 250ms;
+	overflow: hidden;
+}
+.homepage-button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: var(--Forest_Canopy);
+	z-index: -1;
+	box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+	transition: all 450ms
+}
+.homepage-button:hover {
+	color: var(--Mint_Whisper);
+}
+.homepage-button:hover::before {
+	width: 100%;
+}
+/*Button End*/
+/*Tip*/
+.feature_ctn {
+    text-align: center;
+    background-color: #e7ffe4;
+    margin: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.badge_ctn {
+    background-color: #F0FFF4;
+    background-image: linear-gradient(90deg, #c9ffc4 0%, #BBF7D0 80%);
+    color: #0b5c10;
+	font-size: 15px;
+	font-weight: bold;
+}
+.feature-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding-right: 10px;
+}
+.feature-box_first, .feature-box_middle, .feature-box_third {
+    flex-direction: row-reverse;
+    text-align: right;
+    padding-right: 0;
+    padding-left: 10px;
+}
+.right_column_feature-box_forth,
+.right_column_feature-box_fifth,
+.right_column_feature-box_sixth {
+    flex-direction: row;
+    text-align: left;
+    padding-left: 35px;
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.feature-text h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+.feature-text p {
+    margin-top: .25rem;
+    font-size: .9rem;
+    line-height: 1.4;
+}
+.middle-image {
+    max-width: 100%;
+    width: 300px;
+    border-radius: 20px;
+}
+/* ===================== RESPONSIVE STYLES ===================== */
+@media (max-width: 1000px){
+	.banner-section {
+	background:
+		radial-gradient(circle at left bottom,
+			/* center the gradient at bottom-left */
+			rgba(0, 0, 0, 0.4) 0%,
+			/* strong tint at the very corner */
+			rgba(0, 0, 0, 0.4) 70%
+			/* fade out to transparent by 70% of the radius */
+		),
+		/* second layer: your fruit image */
+		url("../Img/bg_fruit.jpg") no-repeat center/cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+	color: var(--Soft_Black);
+	text-align: left;
+	padding: 2rem;
+	padding-left: 10%;
+	overflow: hidden;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	color: #fff;
+}
+}
+@media (max-width: 992px) {
+	.middle-image{
+		margin-bottom: 50px;
+	}
+    .feature-box,
+    .feature-box_first,
+    .feature-box_middle,
+    .feature-box_third,
+    .right_column_feature-box_forth,
+    .right_column_feature-box_fifth,
+    .right_column_feature-box_sixth {
+        flex-direction: row !important;
+        text-align: left !important;
+        padding-left: 50px !important;
+        padding-right: 10px !important;
+    }
+    .feature-text h5 {
+        white-space: normal;
+    }
+}
+@media (max-width: 576px) {
+    .feature_ctn {
+        margin: 30px 10px;
+        border-radius: 25px;
+        padding: 1rem;
+    }
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .feature-text h5 {
+        font-size: 0.95rem;
+    }
+    .feature-text p {
+        font-size: 0.85rem;
+    }
+    .middle-image {
+        width: 220px;
+    }
+}
+/* Optional: Responsive handling */
