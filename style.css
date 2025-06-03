@@ -318,7 +318,7 @@
 			/* fade out to transparent by 70% of the radius */
 		),
 		/* second layer: your fruit image */
-		url("../Img/bg_fruit.jpg") no-repeat center/cover;
+		url("bg_fruit.jpg") no-repeat center/cover;
 	background-size: cover;
 	background-position: center;
 	min-height: 80vh;
