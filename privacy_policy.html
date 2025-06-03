@@ -34,7 +34,18 @@
             color: var(--Soft_Black);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        .main-header {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+	        height: 100px;
+            z-index: 1050; /* high value to sit above page content and offcanvas */
+            background: #fff; /* or your preferred background */
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); /* subtle shadow for separation */
+            font-size: 20px;
+            transition: background 0.3s;
+        }
         .he-privacy-main-content {
             background-color: white;
             border-radius: 12px;
