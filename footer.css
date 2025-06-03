@@ -1,0 +1,433 @@
+/* overall footer */
+:root {
+	--Mint_Whisper: #e8ffe4;
+	--Frosted_Lime: #caffc4;
+	--Fresh_Spring: #9aff90;
+	--Bright_Meadow : #59ff50;
+	--Neon_Leaf: #25ff22;
+	--Pure_Green: #00e603;
+	--Vivid_Emerald : #00b807;
+	--Deep_Emerald: #008b05;
+	--Forest_Canopy: #076d0c;
+	--Dark_Forest: #0b5c10;
+	--Midnight_Pine: #003406;
+}
+:root {
+	--Dewdrop: #E4F5E3;
+	--Fresh_Herb: #6BBF69;
+	--Mossy_Stone: #368835;
+	--Deep_Forest_Night : #0E250E;
+	--underline-grey: #ccc;
+	--black: #000000;
+	--soft_black: #282c32;
+	--whitesmoke: #f5f5f5;
+}
+footer {
+	position: relative;
+	background-color: #f5f5fa;
+	color: #343a40;
+	overflow: hidden;
+}
+
+footer::before,
+footer::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	z-index: 0;
+	background: rgba(0, 184, 7, 0.15);
+}
+
+/* larger, shifted blobs so they still overlap gracefully */
+footer::before {
+	width: 800px;
+	height: 800px;
+	top: -250px;
+	left: -250px;
+}
+
+footer::after {
+	width: 1000px;
+	height: 1000px;
+	bottom: -350px;
+	right: -350px;
+}
+
+footer .container {
+	position: relative;
+	z-index: 1;
+}
+
+/* rest of your rules unchanged… */
+footer .small.text-muted {
+	line-height: 1.6;
+}
+
+footer h6,
+footer .card-title {
+	color: #212529;
+}
+
+footer h6 {
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+	letter-spacing: 0.05em;
+}
+/* Buttons under brand */
+footer .btn-dark.btn-lg {
+	background-color: var(--soft_black);
+	border-color: #1e1d4c;
+	border-radius: 30px;
+}
+/* First-button override */
+footer .btn-dark.btn-lg.first_footer_app_button {
+	border-radius: 20px;
+	background-color: var(--Midnight_Pine);
+}
+
+/* Outline-secondary button styles */
+footer .btn-outline-secondary.btn-lg {
+	border-radius: 30px;
+	border-color: var(--black) !important;
+	background-color: var(--whitesmoke);
+	color: var(--soft_black) !important;
+}
+
+footer .btn-outline-secondary.btn-lg:hover {
+	background-color: var(--Dark_Forest) !important;
+	transition: 1s;
+	color: var(--whitesmoke) !important;
+	border: none;
+}
+/* Links in lists */
+footer ul a {
+	color: #6c757d;
+	transition: color 0.2s;
+}
+
+footer ul a:hover {
+	text-decoration: none;
+}
+
+/* Contact card */
+footer .card {
+	border-radius: 1rem;
+}
+
+footer .card-body small.text-primary {
+	font-weight: 700;
+}
+
+footer .card-body h5 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Social icons */
+footer .bottom_icons {
+	font-size: 1.2rem;
+	transition: color 0.2s;
+}
+
+footer .bottom_icons:hover {
+	color: var(--Dark_Forest) !important;
+}
+
+/* Bottom bar */
+footer .border-top {
+	border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+footer .small {
+	color: #6c757d;
+}
+/*Underline*/
+.section-title {
+	position: relative;
+	display: inline-block;
+	/* shrink-wrap to text width */
+	padding-bottom: 15px;
+	/* space for the lines */
+}
+
+/* the green line */
+.section-title::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	/* length of the green underline */
+	height: 2px;
+	/* thickness */
+	background-color: var(--Forest_Canopy);
+}
+
+/* the grey line */
+.section-title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 36px;
+	/* spacing after the green line */
+	width: 60px;
+	/* length of the grey underline */
+	height: 2px;
+	background-color: var(--underline-grey);
+}
+
+/*Underline*/
+.footer_links {
+	/* Apply transition on padding-left with ease-in-out */
+	transition: padding-left 0.5s ease-in-out;
+	font-size: large;
+	/* Optional: set a small starting padding so it “slides in” nicely */
+	padding-left: 5px;
+}
+
+.footer_links:hover {
+	/* Slide out to 15px */
+	color: var(--Forest_Canopy);
+	padding-left: 15px;
+}
+
+/*Changes for Icon & Text*/
+.color_change {
+	color: var(--Forest_Canopy);
+	font-weight: bold;
+}
+
+/*Changes for Icon & Text*/
+@media (max-width: 1200px) {
+	footer::before {
+	width: 650px;
+	height: 650px;
+	top: -250px;
+	left: -250px;
+}
+footer::after {
+	width: 850px;
+	height: 850px;
+	bottom: -350px;
+	right: -350px;
+}
+}
+/* Responsive and alignment fixes for your footer */
+
+/* 1. Fix parent container to use flex for horizontal alignment */
+.footer-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center everything horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 2rem; /* Spacing between columns */
+    padding: 2.5rem 1rem 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Column base styling */
+.footer-col {
+    flex: 1 1 270px; /* Grow, shrink, and set min width */
+    min-width: 220px;
+    max-width: 350px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left align content within columns */
+}
+
+/* 3. Logo, text, and buttons column */
+.footer-brand {
+    align-items: flex-start;
+}
+.footer-logo {
+    margin-bottom: 1.5rem;
+    max-width: 90px;
+}
+.footer-brand-text {
+    margin-bottom: 1.2rem;
+    color: #295325;
+    font-size: 1.1rem;
+}
+.footer-app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+}
+.footer-app-buttons .btn {
+    width: 80%;
+    min-width: 170px;
+    max-width: 250px;
+}
+
+/* 4. Navigation column */
+.footer-nav {
+    align-items: flex-start;
+}
+.footer-nav-lists {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+.footer-nav-list {
+    min-width: 100px;
+}
+.footer-nav-list h5 {
+    margin-bottom: 0.7rem;
+    font-size: 1.13rem;
+    font-weight: 700;
+    color: #1d371b;
+}
+.footer-nav-list ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer-nav-list ul li {
+    margin-bottom: 0.3rem;
+}
+.footer-nav-list ul li a {
+    color: #295325;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-nav-list ul li a:hover {
+    color: #1d371b;
+    text-decoration: underline;
+}
+
+/* 5. Address card */
+.footer-contact-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(110,180,110,0.11);
+    padding: 1.8rem 1.4rem;
+    min-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-contact-card small {
+    color: #008b05;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+}
+.footer-contact-card h4 {
+    color: #183d13;
+    margin: 0.5rem 0 0.8rem 0;
+    font-size: 1.17rem;
+}
+.footer-contact-card p,
+.footer-contact-card a,
+.footer-contact-card span {
+    color: #295325;
+    font-size: 0.99rem;
+    margin-bottom: 0.3rem;
+}
+.footer-contact-card a {
+    text-decoration: none;
+}
+.footer-contact-card a:hover {
+    text-decoration: underline;
+}
+.footer-contact-card .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    gap: 0.6rem;
+}
+.footer-contact-card .contact-info i {
+    color: #008b05;
+    font-size: 1.13rem;
+}
+
+/* 6. Bottom bar */
+.footer-bottom-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d8ecd6;
+    margin-top: 2rem;
+    padding: 1.1rem 0 0.2rem 0;
+    font-size: 1rem;
+    color: #183d13;
+}
+.footer-bottom-bar .footer-social {
+    display: flex;
+    gap: 1.4rem;
+}
+.footer-bottom-bar .footer-social a {
+    color: #295325;
+    font-size: 1.23rem;
+    transition: color 0.2s;
+}
+.footer-bottom-bar .footer-social a:hover {
+    color: #008b05;
+}
+/* 7. Responsive adjustments */
+@media (max-width: 1020px) {
+	.card-body{
+		overflow: hidden;
+		font-size: 1rem;
+	}
+	.email{
+		width: 100px;
+	}
+    .footer-main-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .footer-col {
+        width: 90%;
+        max-width: 500px;
+        align-items: center;
+        margin: 0 auto 2rem auto;
+    }
+    .footer-nav-lists {
+        flex-direction: column;
+        gap: 1.3rem;
+        width: 100%;
+    }
+    .footer-contact-card {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+	.email{
+		width: 200px;
+	}
+}
+@media (max-width: 600px) {
+	.email{
+		width: 200px;
+	}
+    .footer-main-container {
+        padding: 1.2rem 0.3rem 0.6rem 0.3rem;
+    }
+    .footer-col {
+        max-width: 98vw;
+        align-items: center;
+    }
+    .footer-brand .footer-app-buttons .btn {
+        width: 100%;
+        min-width: unset;
+    }
+    .footer-contact-card {
+        padding: 1rem 0.3rem;
+    }
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 0.7rem;
+        font-size: 0.98rem;
+    }
+    .footer-bottom-bar .footer-social {
+        gap: 1rem;
+    }
+    .footer-nav-list h5 {
+        font-size: 1.05rem;
+    }
+}
