@@ -255,7 +255,6 @@
 @media (max-width: 1400px){
 	.main-header {
 		font-size: 20px;
-		background: transparent;
 	}
 	.main-nav__link {
 		color: #333;
@@ -269,14 +268,14 @@
 		margin-right: 10px;
 	}
 	.search-input {
-	padding: 0.5rem 1rem;
-	padding-right: 2.5rem;
-	border-radius: 50px;
-	border: 1px solid #ddd;
-	background-color: #f8f9fa;
-	color: #333;
-	width: 150px;
-	transition: all 0.3s ease;
+		padding: 0.5rem 1rem;
+		padding-right: 2.5rem;
+		border-radius: 50px;
+		border: 1px solid #ddd;
+		background-color: #f8f9fa;
+		color: #333;
+		width: 150px;
+		transition: all 0.3s ease;
 	}
 	.search-input:focus {
 		background-color: white;
