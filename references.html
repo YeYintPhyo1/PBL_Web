@@ -6,6 +6,11 @@
     <title>NutriNest</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="Img/favicon_nutrinest.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="aboutus.css">
     <link rel="stylesheet" href="About_Us/aboutus.css">
     <style>
         :root {
@@ -116,6 +121,57 @@
     </style>
 </head>
 <body>
+    <header class="main-header navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Img/logo_remove_bg-nutri.png" alt="Logo" class="logo">
+                    <p><span>Nutri</span>Nest</p>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainOffcanvas" aria-controls="mainOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="mainOffcanvasLabel">NutriNest Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto my-1">
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="aboutus.html">About Us</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="main-nav__link nav-link"
+                                    href="services.html"
+                                    id="servicesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    tabindex="0">
+                                Meal Plan <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="services.html"><i class="bi bi-fork-knife me-2"></i>Meal Plan</a></li>
+                                    <li><a class="dropdown-item" href="breakfast_plan.html"><i class="bi bi-sun me-2"></i>Breakfast Plan</a></li>
+                                    <li><a class="dropdown-item" href="lunch_plan_first_view.html"><i class="bi bi-egg-fried me-2"></i>Lunch Plan</a></li>
+                                    <li><a class="dropdown-item" href="dinner_plan_first_view.html"><i class="bi bi-moon me-2"></i>Dinner Plan</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="main-nav__link nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <form class="search-form d-flex mt-1 mb-2">
+                            <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="search-btn" type="submit">
+                            <i class="bi bi-search search-glass"></i>
+                            </button>
+                        </form>
+                        <button class="button type1 mt-1 mb-2">
+                        <a href="sign_in.html" class="btn-txt">Sign In</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
     <section class="hero-section d-flex flex-column justify-content-center">
         <div class="container">
             <h1 class="display-5 fw-bold">References</h1>
@@ -199,5 +255,88 @@
             </div>
         </div>
     </div>
+    <footer class="text-dark py-5">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-md-4">
+                        <a href="#" class="d-inline-block mb-4">
+                        <img src="Img/logo_remove_bg-nutri.png" alt="Logo" height="80">
+                        </a>
+                        <p class="fs-5 text-muted mb-4">
+                            Wellness begins on your plate. Discover fresh recipes and smart habits<br>
+                            that make healthy living easy and enjoyable.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-dark btn-lg"><i class="bi bi-apple"></i> App Store</a>
+                            <a href="#" class="btn btn-outline-secondary btn-lg"><i class="bi bi-android2"></i> Play Store</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="fw-bold mb-4 section-title">Pages</h5>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="mb-3"><a href="index.html" class="text-decoration-none footer_links">Home</a></li>
+                                    <li class="mb-3"><a href="aboutus.html" class="text-decoration-none footer_links">About Us</a></li>
+                                    <li class="mb-3"><a href="services.html" class="text-decoration-none footer_links">Meal Plan</a></li>
+                                    <li class="mb-3"><a href="faq.html" class="text-decoration-none footer_links">FAQ</a></li>
+                                    <li><a href="contact.html" class="text-decoration-none footer_links">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="fw-bold mb-4 section-title">Utility Pages</h5>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="mb-3"><a href="sign_in.html" class="text-decoration-none footer_links">Sign_In</a></li>
+                                    <li class="mb-3"><a href="sign_up.html" class="text-decoration-none footer_links">Sign_Up</a></li>
+                                    <li class="mb-3"><a href="privacy_policy.html" class="text-decoration-none footer_links">Privacy Policy</a></li>
+                                    <li class="mb-3"><a href="term of services.html" class="text-decoration-none footer_links">Term of Services</a></li>
+                                    <li><a href="references.html" class="text-decoration-none footer_links">Reference</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body py-4 px-4">
+                                <small class="color_change text-uppercase fs-6">Address</small>
+                                <h4 class="card-title mt-2 mb-3">Ready To Get Started?</h4>
+                                <p class="fs-6 text-muted mb-2">
+                                    No.483, Aye Yeik Thar Condo 9C, Aye Yeik Thar 2nd Street, Sayarsan Quarter, Bahan Township
+                                </p>
+                                <ul class="list-unstyled fs-6">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:contact.tech@gmail.com" class="text-decoration-none text-muted">info@edusn.co.uk</a>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-envelope-fill color_change me-3 fs-4"></i>
+                                        <a href="mailto:info@niotech.com" class="text-decoration-none text-muted email">nutrinest08@gmail.com</a>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">+65 0993979537</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="bi bi-telephone-fill color_change me-3 fs-4"></i>
+                                        <span class="text-muted">+95 09785008911</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Bar -->
+                <div class="row mt-5 pt-4 border-top">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 fs-6">
+                        &#169; 2025 Fuchsia Fantastic Four. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end fs-5">
+                        <a href="https://www.facebook.com/share/16bZNPtM7s/?mibextid=wwXIfr" class="text-muted me-4"><i class="bi bi-facebook bottom_icons"></i></a>
+                        <a href="https://x.com/nutrinest08?s=21" class="text-muted me-4"><i class="fa-brands fa-x-twitter bottom_icons"></i></a>
+                        <a href="https://www.instagram.com/nutrinest08?igsh=MWhzYzgzY2tnbWU1ZQ%3D%3D&utm_source=qr" class="text-muted"><i class="bi bi-instagram bottom_icons"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
